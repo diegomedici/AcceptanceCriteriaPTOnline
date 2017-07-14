@@ -69,7 +69,7 @@ Scenario: 525_4w_6m_fine_pt
 	| true  | 1                     | 1                 | 16/12/2017        | 31/12/2017      | 01/07/2017      | 31/12/2017    |
 
 
-Scenario: Codice fiscale sconosciuto
+Scenario: Piano terapeutico Inesistente
 	Given Il seguente piano terapeutico
 	| ATC     | FormaFarmaceutica     | DataInizio | Prescrizione                       | Posologia | Frequenza   | Durata | GuidCodiceFiscale                    |
 	| R03DX05 | SOLUZIONE INIETTABILE | 01/07/2017 | 525 mg ogni 4 settimane per 6 mesi | 525 mg    | 4 settimane | 6 mesi | 7a2c3353-12b6-47b1-b566-3f2779f6fc9d |
@@ -77,6 +77,19 @@ Scenario: Codice fiscale sconosciuto
 	| Minsan    | Confezioni | DataRicetta | CodiceFiscale    |
 	| 036892053 | 2          | 13/07/2017  | DLBMRC86B26C618P |
 	Then la risposta è la seguente
-	| Esito | ConfezioniAutorizzate | ConfezioniResidue | DataInizioPeriodo | DataFinePeriodo | DataInizioPiano | DataFinePiano | KeyError | DescrizioneErrore          |
-	| true  | 0                     | 0                 |                   |                 |                 |               | 1        | CODICE_FISCALE_SCONOSCIUTO |
+	| Esito | ConfezioniAutorizzate | ConfezioniResidue | DataInizioPeriodo | DataFinePeriodo | DataInizioPiano | DataFinePiano | KeyError | DescrizioneErrore |
+	| true  | 0                     | 0                 |                   |                 |                 |               | 2        | PT_INESISTENTE    |
+
+Scenario: Piano Terapeutico Scaduto 
+	Given Il seguente piano terapeutico
+	| ATC     | FormaFarmaceutica     | DataInizio | Prescrizione                       | Posologia | Frequenza   | Durata | GuidCodiceFiscale                    |
+	| R03DX05 | SOLUZIONE INIETTABILE | 01/07/2017 | 525 mg ogni 4 settimane per 6 mesi | 525 mg    | 4 settimane | 6 mesi | 7a2c3353-12b6-47b1-b566-3f2779f6fc9d |
+	When viene effettuata la chiamata al servizio VerificaPT con i seguenti parametri
+	| Minsan    | Confezioni | DataRicetta | CodiceFiscale    |
+	| 036892053 | 2          | 31/01/2018  | MDGDGI70B12E704B |
+	Then la risposta è la seguente
+	| Esito | ConfezioniAutorizzate | ConfezioniResidue | DataInizioPeriodo | DataFinePeriodo | DataInizioPiano | DataFinePiano | KeyError | DescrizioneErrore |
+	| false | 0                     | 0                 |                   |                 |                 |               | 2        | PT_INESISTENTE    |
+
+
 
