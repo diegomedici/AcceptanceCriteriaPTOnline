@@ -1,0 +1,1909 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="Ws PtOnline Lazio" resourceRoot="${projectDir}" soapui-version="5.0.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="basicHttpPTOnLine" type="wsdl" bindingName="{http://tempuri.org/}basicHttpPTOnLine" soapVersion="1_1" anonymous="optional" definition="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?wsdl"><con:part><con:url>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="WebServicePT" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://schemas.webcare.it/Lazio/2011/09/12/" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+  <wsp:Policy wsu:Id="wsHttpPTOnLine_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false"/>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256/>
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict/>
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing/>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="basicHttpPTOnLine_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false"/>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256/>
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict/>
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="wsHttpPTOnLineWithCredential_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false"/>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256/>
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict/>
+              </wsp:Policy>
+            </sp:Layout>
+            <sp:IncludeTimestamp/>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <sp:SignedSupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:UsernameToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+              <wsp:Policy>
+                <sp:WssUsernameToken10/>
+              </wsp:Policy>
+            </sp:UsernameToken>
+          </wsp:Policy>
+        </sp:SignedSupportingTokens>
+        <sp:Wss11 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy/>
+        </sp:Wss11>
+        <sp:Trust10 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:MustSupportIssuedTokens/>
+            <sp:RequireClientEntropy/>
+            <sp:RequireServerEntropy/>
+          </wsp:Policy>
+        </sp:Trust10>
+        <wsaw:UsingAddressing/>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="http://schemas.webcare.it/Lazio/2011/09/12/" location="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?wsdl=wsdl0"/>
+  <wsdl:types/>
+  <wsdl:binding name="wsHttpPTOnLine" type="i0:IWebServicePT">
+    <wsp:PolicyReference URI="#wsHttpPTOnLine_policy"/>
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="VerificaPT">
+      <soap12:operation soapAction="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/VerificaPT" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eroga">
+      <soap12:operation soapAction="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/Eroga" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnnullaErogazione">
+      <soap12:operation soapAction="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/AnnullaErogazione" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperaPt">
+      <soap12:operation soapAction="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/RecuperaPt" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="basicHttpPTOnLine" type="i0:IWebServicePT">
+    <wsp:PolicyReference URI="#basicHttpPTOnLine_policy"/>
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="VerificaPT">
+      <soap:operation soapAction="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/VerificaPT" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eroga">
+      <soap:operation soapAction="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/Eroga" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnnullaErogazione">
+      <soap:operation soapAction="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/AnnullaErogazione" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperaPt">
+      <soap:operation soapAction="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/RecuperaPt" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsHttpPTOnLineWithCredential" type="i0:IWebServicePT">
+    <wsp:PolicyReference URI="#wsHttpPTOnLineWithCredential_policy"/>
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="VerificaPT">
+      <soap12:operation soapAction="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/VerificaPT" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eroga">
+      <soap12:operation soapAction="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/Eroga" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnnullaErogazione">
+      <soap12:operation soapAction="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/AnnullaErogazione" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperaPt">
+      <soap12:operation soapAction="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/RecuperaPt" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebServicePT">
+    <wsdl:port name="wsHttpPTOnLine" binding="tns:wsHttpPTOnLine">
+      <soap12:address location="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/ws"/>
+      <wsa10:EndpointReference>
+        <wsa10:Address>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/ws</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="basicHttpPTOnLine" binding="tns:basicHttpPTOnLine">
+      <soap:address location="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/basic"/>
+    </wsdl:port>
+    <wsdl:port name="wsHttpPTOnLineWithCredential" binding="tns:wsHttpPTOnLineWithCredential">
+      <soap12:address location="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/wsCredential"/>
+      <wsa10:EndpointReference>
+        <wsa10:Address>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/wsCredential</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?wsdl=wsdl0</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://schemas.webcare.it/Lazio/2011/09/12/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://schemas.webcare.it/Lazio/2011/09/12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://schemas.webcare.it/Lazio/2011/09/12/Imports">
+      <xsd:import schemaLocation="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd0" namespace="http://schemas.webcare.it/Lazio/2011/09/12/"/>
+      <xsd:import schemaLocation="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      <xsd:import schemaLocation="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd2" namespace="http://schemas.webcare.it/Lazio/2012/07/18/"/>
+      <xsd:import schemaLocation="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/PTOnline.Service.Contract"/>
+      <xsd:import schemaLocation="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd4" namespace="http://schemas.webcare.it/Lazio/2011/10/12/"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWebServicePT_VerificaPT_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerificaPT"/>
+  </wsdl:message>
+  <wsdl:message name="IWebServicePT_VerificaPT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerificaPTResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IWebServicePT_Eroga_InputMessage">
+    <wsdl:part name="parameters" element="tns:Eroga"/>
+  </wsdl:message>
+  <wsdl:message name="IWebServicePT_Eroga_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ErogaResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IWebServicePT_AnnullaErogazione_InputMessage">
+    <wsdl:part name="parameters" element="tns:AnnullaErogazione"/>
+  </wsdl:message>
+  <wsdl:message name="IWebServicePT_AnnullaErogazione_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AnnullaErogazioneResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IWebServicePT_RecuperaPt_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperaPt"/>
+  </wsdl:message>
+  <wsdl:message name="IWebServicePT_RecuperaPt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperaPtResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="IWebServicePT">
+    <wsdl:operation name="VerificaPT">
+      <wsdl:input wsaw:Action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/VerificaPT" message="tns:IWebServicePT_VerificaPT_InputMessage"/>
+      <wsdl:output wsaw:Action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/VerificaPTResponse" message="tns:IWebServicePT_VerificaPT_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="Eroga">
+      <wsdl:input wsaw:Action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/Eroga" message="tns:IWebServicePT_Eroga_InputMessage"/>
+      <wsdl:output wsaw:Action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/ErogaResponse" message="tns:IWebServicePT_Eroga_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="AnnullaErogazione">
+      <wsdl:input wsaw:Action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/AnnullaErogazione" message="tns:IWebServicePT_AnnullaErogazione_InputMessage"/>
+      <wsdl:output wsaw:Action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/AnnullaErogazioneResponse" message="tns:IWebServicePT_AnnullaErogazione_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperaPt">
+      <wsdl:input wsaw:Action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/RecuperaPt" message="tns:IWebServicePT_RecuperaPt_InputMessage"/>
+      <wsdl:output wsaw:Action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/RecuperaPtResponse" message="tns:IWebServicePT_RecuperaPt_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd0</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.webcare.it/Lazio/2011/09/12/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.webcare.it/Lazio/2011/09/12/">
+  <xs:import schemaLocation="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd2" namespace="http://schemas.webcare.it/Lazio/2012/07/18/"/>
+  <xs:import schemaLocation="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd4" namespace="http://schemas.webcare.it/Lazio/2011/10/12/"/>
+  <xs:element name="VerificaPT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="message" nillable="true" type="tns:RequestVerificaPT"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RequestVerificaPT">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodiceFarmacia" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CodiceFiscale" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Minsan" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Quantita" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="Ricetta" nillable="true" type="tns:Ricettario"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RequestVerificaPT" nillable="true" type="tns:RequestVerificaPT"/>
+  <xs:complexType name="Ricettario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodiceRegionale" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CodiceRicettario" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DataMedico" nillable="true" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Ricettario" nillable="true" type="tns:Ricettario"/>
+  <xs:element name="VerificaPTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VerificaPTResult" nillable="true" type="q1:ResponseVerificaPT" xmlns:q1="http://schemas.webcare.it/Lazio/2012/07/18/"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Eroga">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="message" nillable="true" type="q2:RequestEroga" xmlns:q2="http://schemas.webcare.it/Lazio/2011/10/12/"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ErogaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ErogaResult" nillable="true" type="q3:ResponseEroga" xmlns:q3="http://schemas.webcare.it/Lazio/2012/07/18/"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AnnullaErogazione">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="message" nillable="true" type="tns:RequestAnnullaErogazione"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RequestAnnullaErogazione">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodiceFarmacia" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CodiceFiscale" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Ricetta" nillable="true" type="tns:Ricettario"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RequestAnnullaErogazione" nillable="true" type="tns:RequestAnnullaErogazione"/>
+  <xs:element name="AnnullaErogazioneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AnnullaErogazioneResult" nillable="true" type="q4:ResponseAnnullaErogazione" xmlns:q4="http://schemas.webcare.it/Lazio/2012/07/18/"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperaPt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="message" nillable="true" type="tns:RequestRecuperaPt"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RequestRecuperaPt">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodiceFiscale" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DataMedico" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Minsan" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RequestRecuperaPt" nillable="true" type="tns:RequestRecuperaPt"/>
+  <xs:element name="RecuperaPtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RecuperaPtResult" nillable="true" type="q5:ResponseRecuperaPt" xmlns:q5="http://schemas.webcare.it/Lazio/2012/07/18/"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd2</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.webcare.it/Lazio/2012/07/18/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.webcare.it/Lazio/2012/07/18/">
+  <xs:import schemaLocation="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/PTOnline.Service.Contract"/>
+  <xs:import schemaLocation="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd0" namespace="http://schemas.webcare.it/Lazio/2011/09/12/"/>
+  <xs:import schemaLocation="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd4" namespace="http://schemas.webcare.it/Lazio/2011/10/12/"/>
+  <xs:complexType name="ResponseVerificaPT">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodiceFiscale" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DataFine" nillable="true" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="DataInizio" nillable="true" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Minsan" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Piani" nillable="true" type="q1:ArrayOfPiano" xmlns:q1="http://schemas.datacontract.org/2004/07/PTOnline.Service.Contract"/>
+      <xs:element minOccurs="0" name="QuantitaAutorizzata" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="QuantitaResidua" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="Result" nillable="true" type="tns:Result"/>
+      <xs:element minOccurs="0" name="Ricetta" nillable="true" type="q2:Ricettario" xmlns:q2="http://schemas.webcare.it/Lazio/2011/09/12/"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseVerificaPT" nillable="true" type="tns:ResponseVerificaPT"/>
+  <xs:complexType name="Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DataFinePiano" nillable="true" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="DataInizioPiano" nillable="true" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Errori" nillable="true" type="q3:ErrorDict" xmlns:q3="http://schemas.webcare.it/Lazio/2011/10/12/"/>
+      <xs:element minOccurs="0" name="Esito" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Result" nillable="true" type="tns:Result"/>
+  <xs:complexType name="ResponseEroga">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Result" nillable="true" type="tns:Result"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseEroga" nillable="true" type="tns:ResponseEroga"/>
+  <xs:complexType name="ResponseAnnullaErogazione">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Result" nillable="true" type="tns:Result"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseAnnullaErogazione" nillable="true" type="tns:ResponseAnnullaErogazione"/>
+  <xs:complexType name="ResponseRecuperaPt">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConfezioniPrescritte" type="xs:int"/>
+      <xs:element minOccurs="0" name="DataFinePt" nillable="true" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="DataInizioPt" nillable="true" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Prescrizione" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="RitiriEffettuati" nillable="true" type="q4:ArrayOfRitiriEffettuati" xmlns:q4="http://schemas.datacontract.org/2004/07/PTOnline.Service.Contract"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseRecuperaPt" nillable="true" type="tns:ResponseRecuperaPt"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd3</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PTOnline.Service.Contract" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/PTOnline.Service.Contract">
+  <xs:complexType name="ArrayOfPiano">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Piano" nillable="true" type="tns:Piano"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPiano" nillable="true" type="tns:ArrayOfPiano"/>
+  <xs:complexType name="Piano">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DataFine" nillable="true" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="DataInizio" nillable="true" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Minsan" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Piano" nillable="true" type="tns:Piano"/>
+  <xs:complexType name="ArrayOfRitiriEffettuati">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RitiriEffettuati" nillable="true" type="tns:RitiriEffettuati"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRitiriEffettuati" nillable="true" type="tns:ArrayOfRitiriEffettuati"/>
+  <xs:complexType name="RitiriEffettuati">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DataRitiro" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="QuantitaRitirata" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RitiriEffettuati" nillable="true" type="tns:RitiriEffettuati"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd4</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.webcare.it/Lazio/2011/10/12/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.webcare.it/Lazio/2011/10/12/">
+  <xs:import schemaLocation="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd0" namespace="http://schemas.webcare.it/Lazio/2011/09/12/"/>
+  <xs:complexType name="ErrorDict">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsDictionary xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsDictionary>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="KeyValueOfintstring">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Key" type="xs:int"/>
+            <xs:element name="Value" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ErrorDict" nillable="true" type="tns:ErrorDict"/>
+  <xs:complexType name="RequestEroga">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AliquotaIva" nillable="true" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="CodiceFarmacia" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CodiceFiscale" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DataErogazione" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Minsan" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PrezzoAcquisto" nillable="true" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="Quantita" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="Ricetta" nillable="true" type="q1:Ricettario" xmlns:q1="http://schemas.webcare.it/Lazio/2011/09/12/"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RequestEroga" nillable="true" type="tns:RequestEroga"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd1</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+  <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+  <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+  <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+  <xs:element name="byte" nillable="true" type="xs:byte"/>
+  <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+  <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+  <xs:element name="double" nillable="true" type="xs:double"/>
+  <xs:element name="float" nillable="true" type="xs:float"/>
+  <xs:element name="int" nillable="true" type="xs:int"/>
+  <xs:element name="long" nillable="true" type="xs:long"/>
+  <xs:element name="QName" nillable="true" type="xs:QName"/>
+  <xs:element name="short" nillable="true" type="xs:short"/>
+  <xs:element name="string" nillable="true" type="xs:string"/>
+  <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+  <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+  <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+  <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+  <xs:element name="char" nillable="true" type="tns:char"/>
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:element name="duration" nillable="true" type="tns:duration"/>
+  <xs:simpleType name="duration">
+    <xs:restriction base="xs:duration">
+      <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+      <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+      <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="guid" nillable="true" type="tns:guid"/>
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attribute name="FactoryType" type="xs:QName"/>
+  <xs:attribute name="Id" type="xs:ID"/>
+  <xs:attribute name="Ref" type="xs:IDREF"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/basic</con:endpoint><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/wsCredential</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/AnnullaErogazione" name="AnnullaErogazione" bindingOperationName="AnnullaErogazione" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:AnnullaErogazione>
+         <!--Optional:-->
+         <ns:message>
+            <!--Optional:-->
+            <ns:CodiceFarmacia>?</ns:CodiceFarmacia>
+            <!--Optional:-->
+            <ns:CodiceFiscale>?</ns:CodiceFiscale>
+            <!--Optional:-->
+            <ns:Ricetta>
+               <!--Optional:-->
+               <ns:CodiceRegionale>?</ns:CodiceRegionale>
+               <!--Optional:-->
+               <ns:CodiceRicettario>?</ns:CodiceRicettario>
+               <!--Optional:-->
+               <ns:DataMedico>?</ns:DataMedico>
+            </ns:Ricetta>
+         </ns:message>
+      </ns:AnnullaErogazione>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/AnnullaErogazione"/></con:call></con:operation><con:operation isOneWay="false" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/Eroga" name="Eroga" bindingOperationName="Eroga" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/" xmlns:ns1="http://schemas.webcare.it/Lazio/2011/10/12/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:Eroga>
+         <!--Optional:-->
+         <ns:message>
+            <!--Optional:-->
+            <ns1:AliquotaIva>?</ns1:AliquotaIva>
+            <!--Optional:-->
+            <ns1:CodiceFarmacia>?</ns1:CodiceFarmacia>
+            <!--Optional:-->
+            <ns1:CodiceFiscale>?</ns1:CodiceFiscale>
+            <!--Optional:-->
+            <ns1:DataErogazione>?</ns1:DataErogazione>
+            <!--Optional:-->
+            <ns1:Minsan>?</ns1:Minsan>
+            <!--Optional:-->
+            <ns1:PrezzoAcquisto>?</ns1:PrezzoAcquisto>
+            <!--Optional:-->
+            <ns1:Quantita>?</ns1:Quantita>
+            <!--Optional:-->
+            <ns1:Ricetta>
+               <!--Optional:-->
+               <ns:CodiceRegionale>?</ns:CodiceRegionale>
+               <!--Optional:-->
+               <ns:CodiceRicettario>?</ns:CodiceRicettario>
+               <!--Optional:-->
+               <ns:DataMedico>?</ns:DataMedico>
+            </ns1:Ricetta>
+         </ns:message>
+      </ns:Eroga>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/Eroga"/></con:call></con:operation><con:operation isOneWay="false" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/VerificaPT" name="VerificaPT" bindingOperationName="VerificaPT" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:VerificaPT>
+         <!--Optional:-->
+         <ns:message>
+            <!--Optional:-->
+            <ns:CodiceFarmacia>FR00269</ns:CodiceFarmacia>
+            <!--Optional:-->
+            <ns:CodiceFiscale>btcmgv29a57g592m</ns:CodiceFiscale>
+            <!--Optional:-->
+            <ns:Minsan>038190498</ns:Minsan>
+            <!--Optional:-->
+            <ns:Quantita>1</ns:Quantita>
+            <!--Optional:-->
+            <ns:Ricetta>
+               <!--Optional:-->
+               <ns:CodiceRegionale>12016</ns:CodiceRegionale>
+               <!--Optional:-->
+               <ns:CodiceRicettario>1234567890</ns:CodiceRicettario>
+               <!--Optional:-->
+               <ns:DataMedico>2016-08-01T21:32:52.12679</ns:DataMedico>
+            </ns:Ricetta>
+         </ns:message>
+      </ns:VerificaPT>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/VerificaPT"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/RecuperaPt" name="RecuperaPt" bindingOperationName="RecuperaPt" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns:RecuperaPt>
+         <!--Optional:-->
+         <ns:message>
+            <!--Optional:-->
+            <ns:CodiceFiscale>?</ns:CodiceFiscale>
+            <!--Optional:-->
+            <ns:DataMedico>?</ns:DataMedico>
+            <!--Optional:-->
+            <ns:Minsan>?</ns:Minsan>
+         </ns:message>
+      </ns:RecuperaPt>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/RecuperaPt"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="200508" name="wsHttpPTOnLine" type="wsdl" bindingName="{http://tempuri.org/}wsHttpPTOnLine" soapVersion="1_2" anonymous="optional" definition="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?wsdl"><con:part><con:url>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="WebServicePT" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://schemas.webcare.it/Lazio/2011/09/12/" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+  <wsp:Policy wsu:Id="wsHttpPTOnLine_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false"/>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256/>
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict/>
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing/>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="basicHttpPTOnLine_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false"/>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256/>
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict/>
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="wsHttpPTOnLineWithCredential_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false"/>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256/>
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict/>
+              </wsp:Policy>
+            </sp:Layout>
+            <sp:IncludeTimestamp/>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <sp:SignedSupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:UsernameToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+              <wsp:Policy>
+                <sp:WssUsernameToken10/>
+              </wsp:Policy>
+            </sp:UsernameToken>
+          </wsp:Policy>
+        </sp:SignedSupportingTokens>
+        <sp:Wss11 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy/>
+        </sp:Wss11>
+        <sp:Trust10 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:MustSupportIssuedTokens/>
+            <sp:RequireClientEntropy/>
+            <sp:RequireServerEntropy/>
+          </wsp:Policy>
+        </sp:Trust10>
+        <wsaw:UsingAddressing/>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="http://schemas.webcare.it/Lazio/2011/09/12/" location="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?wsdl=wsdl0"/>
+  <wsdl:types/>
+  <wsdl:binding name="wsHttpPTOnLine" type="i0:IWebServicePT">
+    <wsp:PolicyReference URI="#wsHttpPTOnLine_policy"/>
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="VerificaPT">
+      <soap12:operation soapAction="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/VerificaPT" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eroga">
+      <soap12:operation soapAction="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/Eroga" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnnullaErogazione">
+      <soap12:operation soapAction="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/AnnullaErogazione" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperaPt">
+      <soap12:operation soapAction="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/RecuperaPt" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="basicHttpPTOnLine" type="i0:IWebServicePT">
+    <wsp:PolicyReference URI="#basicHttpPTOnLine_policy"/>
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="VerificaPT">
+      <soap:operation soapAction="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/VerificaPT" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eroga">
+      <soap:operation soapAction="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/Eroga" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnnullaErogazione">
+      <soap:operation soapAction="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/AnnullaErogazione" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperaPt">
+      <soap:operation soapAction="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/RecuperaPt" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsHttpPTOnLineWithCredential" type="i0:IWebServicePT">
+    <wsp:PolicyReference URI="#wsHttpPTOnLineWithCredential_policy"/>
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="VerificaPT">
+      <soap12:operation soapAction="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/VerificaPT" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eroga">
+      <soap12:operation soapAction="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/Eroga" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnnullaErogazione">
+      <soap12:operation soapAction="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/AnnullaErogazione" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperaPt">
+      <soap12:operation soapAction="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/RecuperaPt" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebServicePT">
+    <wsdl:port name="wsHttpPTOnLine" binding="tns:wsHttpPTOnLine">
+      <soap12:address location="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/ws"/>
+      <wsa10:EndpointReference>
+        <wsa10:Address>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/ws</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="basicHttpPTOnLine" binding="tns:basicHttpPTOnLine">
+      <soap:address location="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/basic"/>
+    </wsdl:port>
+    <wsdl:port name="wsHttpPTOnLineWithCredential" binding="tns:wsHttpPTOnLineWithCredential">
+      <soap12:address location="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/wsCredential"/>
+      <wsa10:EndpointReference>
+        <wsa10:Address>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/wsCredential</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?wsdl=wsdl0</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://schemas.webcare.it/Lazio/2011/09/12/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://schemas.webcare.it/Lazio/2011/09/12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://schemas.webcare.it/Lazio/2011/09/12/Imports">
+      <xsd:import schemaLocation="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd0" namespace="http://schemas.webcare.it/Lazio/2011/09/12/"/>
+      <xsd:import schemaLocation="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      <xsd:import schemaLocation="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd2" namespace="http://schemas.webcare.it/Lazio/2012/07/18/"/>
+      <xsd:import schemaLocation="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/PTOnline.Service.Contract"/>
+      <xsd:import schemaLocation="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd4" namespace="http://schemas.webcare.it/Lazio/2011/10/12/"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWebServicePT_VerificaPT_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerificaPT"/>
+  </wsdl:message>
+  <wsdl:message name="IWebServicePT_VerificaPT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerificaPTResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IWebServicePT_Eroga_InputMessage">
+    <wsdl:part name="parameters" element="tns:Eroga"/>
+  </wsdl:message>
+  <wsdl:message name="IWebServicePT_Eroga_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ErogaResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IWebServicePT_AnnullaErogazione_InputMessage">
+    <wsdl:part name="parameters" element="tns:AnnullaErogazione"/>
+  </wsdl:message>
+  <wsdl:message name="IWebServicePT_AnnullaErogazione_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AnnullaErogazioneResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IWebServicePT_RecuperaPt_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperaPt"/>
+  </wsdl:message>
+  <wsdl:message name="IWebServicePT_RecuperaPt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperaPtResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="IWebServicePT">
+    <wsdl:operation name="VerificaPT">
+      <wsdl:input wsaw:Action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/VerificaPT" message="tns:IWebServicePT_VerificaPT_InputMessage"/>
+      <wsdl:output wsaw:Action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/VerificaPTResponse" message="tns:IWebServicePT_VerificaPT_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="Eroga">
+      <wsdl:input wsaw:Action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/Eroga" message="tns:IWebServicePT_Eroga_InputMessage"/>
+      <wsdl:output wsaw:Action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/ErogaResponse" message="tns:IWebServicePT_Eroga_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="AnnullaErogazione">
+      <wsdl:input wsaw:Action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/AnnullaErogazione" message="tns:IWebServicePT_AnnullaErogazione_InputMessage"/>
+      <wsdl:output wsaw:Action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/AnnullaErogazioneResponse" message="tns:IWebServicePT_AnnullaErogazione_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperaPt">
+      <wsdl:input wsaw:Action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/RecuperaPt" message="tns:IWebServicePT_RecuperaPt_InputMessage"/>
+      <wsdl:output wsaw:Action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/RecuperaPtResponse" message="tns:IWebServicePT_RecuperaPt_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd0</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.webcare.it/Lazio/2011/09/12/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.webcare.it/Lazio/2011/09/12/">
+  <xs:import schemaLocation="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd2" namespace="http://schemas.webcare.it/Lazio/2012/07/18/"/>
+  <xs:import schemaLocation="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd4" namespace="http://schemas.webcare.it/Lazio/2011/10/12/"/>
+  <xs:element name="VerificaPT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="message" nillable="true" type="tns:RequestVerificaPT"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RequestVerificaPT">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodiceFarmacia" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CodiceFiscale" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Minsan" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Quantita" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="Ricetta" nillable="true" type="tns:Ricettario"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RequestVerificaPT" nillable="true" type="tns:RequestVerificaPT"/>
+  <xs:complexType name="Ricettario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodiceRegionale" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CodiceRicettario" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DataMedico" nillable="true" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Ricettario" nillable="true" type="tns:Ricettario"/>
+  <xs:element name="VerificaPTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VerificaPTResult" nillable="true" type="q1:ResponseVerificaPT" xmlns:q1="http://schemas.webcare.it/Lazio/2012/07/18/"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Eroga">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="message" nillable="true" type="q2:RequestEroga" xmlns:q2="http://schemas.webcare.it/Lazio/2011/10/12/"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ErogaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ErogaResult" nillable="true" type="q3:ResponseEroga" xmlns:q3="http://schemas.webcare.it/Lazio/2012/07/18/"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AnnullaErogazione">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="message" nillable="true" type="tns:RequestAnnullaErogazione"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RequestAnnullaErogazione">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodiceFarmacia" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CodiceFiscale" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Ricetta" nillable="true" type="tns:Ricettario"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RequestAnnullaErogazione" nillable="true" type="tns:RequestAnnullaErogazione"/>
+  <xs:element name="AnnullaErogazioneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AnnullaErogazioneResult" nillable="true" type="q4:ResponseAnnullaErogazione" xmlns:q4="http://schemas.webcare.it/Lazio/2012/07/18/"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperaPt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="message" nillable="true" type="tns:RequestRecuperaPt"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RequestRecuperaPt">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodiceFiscale" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DataMedico" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Minsan" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RequestRecuperaPt" nillable="true" type="tns:RequestRecuperaPt"/>
+  <xs:element name="RecuperaPtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RecuperaPtResult" nillable="true" type="q5:ResponseRecuperaPt" xmlns:q5="http://schemas.webcare.it/Lazio/2012/07/18/"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd2</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.webcare.it/Lazio/2012/07/18/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.webcare.it/Lazio/2012/07/18/">
+  <xs:import schemaLocation="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/PTOnline.Service.Contract"/>
+  <xs:import schemaLocation="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd0" namespace="http://schemas.webcare.it/Lazio/2011/09/12/"/>
+  <xs:import schemaLocation="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd4" namespace="http://schemas.webcare.it/Lazio/2011/10/12/"/>
+  <xs:complexType name="ResponseVerificaPT">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodiceFiscale" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DataFine" nillable="true" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="DataInizio" nillable="true" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Minsan" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Piani" nillable="true" type="q1:ArrayOfPiano" xmlns:q1="http://schemas.datacontract.org/2004/07/PTOnline.Service.Contract"/>
+      <xs:element minOccurs="0" name="QuantitaAutorizzata" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="QuantitaResidua" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="Result" nillable="true" type="tns:Result"/>
+      <xs:element minOccurs="0" name="Ricetta" nillable="true" type="q2:Ricettario" xmlns:q2="http://schemas.webcare.it/Lazio/2011/09/12/"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseVerificaPT" nillable="true" type="tns:ResponseVerificaPT"/>
+  <xs:complexType name="Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DataFinePiano" nillable="true" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="DataInizioPiano" nillable="true" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Errori" nillable="true" type="q3:ErrorDict" xmlns:q3="http://schemas.webcare.it/Lazio/2011/10/12/"/>
+      <xs:element minOccurs="0" name="Esito" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Result" nillable="true" type="tns:Result"/>
+  <xs:complexType name="ResponseEroga">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Result" nillable="true" type="tns:Result"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseEroga" nillable="true" type="tns:ResponseEroga"/>
+  <xs:complexType name="ResponseAnnullaErogazione">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Result" nillable="true" type="tns:Result"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseAnnullaErogazione" nillable="true" type="tns:ResponseAnnullaErogazione"/>
+  <xs:complexType name="ResponseRecuperaPt">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConfezioniPrescritte" type="xs:int"/>
+      <xs:element minOccurs="0" name="DataFinePt" nillable="true" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="DataInizioPt" nillable="true" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Prescrizione" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="RitiriEffettuati" nillable="true" type="q4:ArrayOfRitiriEffettuati" xmlns:q4="http://schemas.datacontract.org/2004/07/PTOnline.Service.Contract"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseRecuperaPt" nillable="true" type="tns:ResponseRecuperaPt"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd3</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PTOnline.Service.Contract" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/PTOnline.Service.Contract">
+  <xs:complexType name="ArrayOfPiano">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Piano" nillable="true" type="tns:Piano"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPiano" nillable="true" type="tns:ArrayOfPiano"/>
+  <xs:complexType name="Piano">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DataFine" nillable="true" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="DataInizio" nillable="true" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Minsan" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Piano" nillable="true" type="tns:Piano"/>
+  <xs:complexType name="ArrayOfRitiriEffettuati">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RitiriEffettuati" nillable="true" type="tns:RitiriEffettuati"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRitiriEffettuati" nillable="true" type="tns:ArrayOfRitiriEffettuati"/>
+  <xs:complexType name="RitiriEffettuati">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DataRitiro" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="QuantitaRitirata" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RitiriEffettuati" nillable="true" type="tns:RitiriEffettuati"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd4</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.webcare.it/Lazio/2011/10/12/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.webcare.it/Lazio/2011/10/12/">
+  <xs:import schemaLocation="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd0" namespace="http://schemas.webcare.it/Lazio/2011/09/12/"/>
+  <xs:complexType name="ErrorDict">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsDictionary xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsDictionary>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="KeyValueOfintstring">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Key" type="xs:int"/>
+            <xs:element name="Value" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ErrorDict" nillable="true" type="tns:ErrorDict"/>
+  <xs:complexType name="RequestEroga">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AliquotaIva" nillable="true" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="CodiceFarmacia" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CodiceFiscale" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DataErogazione" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Minsan" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PrezzoAcquisto" nillable="true" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="Quantita" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="Ricetta" nillable="true" type="q1:Ricettario" xmlns:q1="http://schemas.webcare.it/Lazio/2011/09/12/"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RequestEroga" nillable="true" type="tns:RequestEroga"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd1</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+  <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+  <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+  <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+  <xs:element name="byte" nillable="true" type="xs:byte"/>
+  <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+  <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+  <xs:element name="double" nillable="true" type="xs:double"/>
+  <xs:element name="float" nillable="true" type="xs:float"/>
+  <xs:element name="int" nillable="true" type="xs:int"/>
+  <xs:element name="long" nillable="true" type="xs:long"/>
+  <xs:element name="QName" nillable="true" type="xs:QName"/>
+  <xs:element name="short" nillable="true" type="xs:short"/>
+  <xs:element name="string" nillable="true" type="xs:string"/>
+  <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+  <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+  <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+  <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+  <xs:element name="char" nillable="true" type="tns:char"/>
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:element name="duration" nillable="true" type="tns:duration"/>
+  <xs:simpleType name="duration">
+    <xs:restriction base="xs:duration">
+      <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+      <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+      <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="guid" nillable="true" type="tns:guid"/>
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attribute name="FactoryType" type="xs:QName"/>
+  <xs:attribute name="Id" type="xs:ID"/>
+  <xs:attribute name="Ref" type="xs:IDREF"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/ws</con:endpoint><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/wsCredential</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/AnnullaErogazione" name="AnnullaErogazione" bindingOperationName="AnnullaErogazione" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/ws</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/">
+   <soap:Header/>
+   <soap:Body>
+      <ns:AnnullaErogazione>
+         <!--Optional:-->
+         <ns:message>
+            <!--Optional:-->
+            <ns:CodiceFarmacia>?</ns:CodiceFarmacia>
+            <!--Optional:-->
+            <ns:CodiceFiscale>?</ns:CodiceFiscale>
+            <!--Optional:-->
+            <ns:Ricetta>
+               <!--Optional:-->
+               <ns:CodiceRegionale>?</ns:CodiceRegionale>
+               <!--Optional:-->
+               <ns:CodiceRicettario>?</ns:CodiceRicettario>
+               <!--Optional:-->
+               <ns:DataMedico>?</ns:DataMedico>
+            </ns:Ricetta>
+         </ns:message>
+      </ns:AnnullaErogazione>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/AnnullaErogazione"/></con:call></con:operation><con:operation isOneWay="false" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/Eroga" name="Eroga" bindingOperationName="Eroga" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/ws</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/" xmlns:ns1="http://schemas.webcare.it/Lazio/2011/10/12/">
+   <soap:Header/>
+   <soap:Body>
+      <ns:Eroga>
+         <!--Optional:-->
+         <ns:message>
+            <!--Optional:-->
+            <ns1:AliquotaIva>?</ns1:AliquotaIva>
+            <!--Optional:-->
+            <ns1:CodiceFarmacia>?</ns1:CodiceFarmacia>
+            <!--Optional:-->
+            <ns1:CodiceFiscale>?</ns1:CodiceFiscale>
+            <!--Optional:-->
+            <ns1:DataErogazione>?</ns1:DataErogazione>
+            <!--Optional:-->
+            <ns1:Minsan>?</ns1:Minsan>
+            <!--Optional:-->
+            <ns1:PrezzoAcquisto>?</ns1:PrezzoAcquisto>
+            <!--Optional:-->
+            <ns1:Quantita>?</ns1:Quantita>
+            <!--Optional:-->
+            <ns1:Ricetta>
+               <!--Optional:-->
+               <ns:CodiceRegionale>?</ns:CodiceRegionale>
+               <!--Optional:-->
+               <ns:CodiceRicettario>?</ns:CodiceRicettario>
+               <!--Optional:-->
+               <ns:DataMedico>?</ns:DataMedico>
+            </ns1:Ricetta>
+         </ns:message>
+      </ns:Eroga>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/Eroga"/></con:call></con:operation><con:operation isOneWay="false" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/VerificaPT" name="VerificaPT" bindingOperationName="VerificaPT" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/ws</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/">
+   <soap:Header/>
+   <soap:Body>
+      <ns:VerificaPT>
+         <!--Optional:-->
+         <ns:message>
+            <!--Optional:-->
+            <ns:CodiceFarmacia>?</ns:CodiceFarmacia>
+            <!--Optional:-->
+            <ns:CodiceFiscale>?</ns:CodiceFiscale>
+            <!--Optional:-->
+            <ns:Minsan>?</ns:Minsan>
+            <!--Optional:-->
+            <ns:Quantita>?</ns:Quantita>
+            <!--Optional:-->
+            <ns:Ricetta>
+               <!--Optional:-->
+               <ns:CodiceRegionale>?</ns:CodiceRegionale>
+               <!--Optional:-->
+               <ns:CodiceRicettario>?</ns:CodiceRicettario>
+               <!--Optional:-->
+               <ns:DataMedico>?</ns:DataMedico>
+            </ns:Ricetta>
+         </ns:message>
+      </ns:VerificaPT>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/VerificaPT"/></con:call></con:operation><con:operation isOneWay="false" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/RecuperaPt" name="RecuperaPt" bindingOperationName="RecuperaPt" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/ws</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/">
+   <soap:Header/>
+   <soap:Body>
+      <ns:RecuperaPt>
+         <!--Optional:-->
+         <ns:message>
+            <!--Optional:-->
+            <ns:CodiceFiscale>?</ns:CodiceFiscale>
+            <!--Optional:-->
+            <ns:DataMedico>?</ns:DataMedico>
+            <!--Optional:-->
+            <ns:Minsan>?</ns:Minsan>
+         </ns:message>
+      </ns:RecuperaPt>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/RecuperaPt"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="200508" name="wsHttpPTOnLineWithCredential" type="wsdl" bindingName="{http://tempuri.org/}wsHttpPTOnLineWithCredential" soapVersion="1_2" anonymous="optional" definition="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?wsdl"><con:part><con:url>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="WebServicePT" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://schemas.webcare.it/Lazio/2011/09/12/" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+  <wsp:Policy wsu:Id="wsHttpPTOnLine_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false"/>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256/>
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict/>
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing/>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="basicHttpPTOnLine_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false"/>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256/>
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict/>
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="wsHttpPTOnLineWithCredential_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false"/>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256/>
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict/>
+              </wsp:Policy>
+            </sp:Layout>
+            <sp:IncludeTimestamp/>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <sp:SignedSupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:UsernameToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+              <wsp:Policy>
+                <sp:WssUsernameToken10/>
+              </wsp:Policy>
+            </sp:UsernameToken>
+          </wsp:Policy>
+        </sp:SignedSupportingTokens>
+        <sp:Wss11 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy/>
+        </sp:Wss11>
+        <sp:Trust10 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:MustSupportIssuedTokens/>
+            <sp:RequireClientEntropy/>
+            <sp:RequireServerEntropy/>
+          </wsp:Policy>
+        </sp:Trust10>
+        <wsaw:UsingAddressing/>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="http://schemas.webcare.it/Lazio/2011/09/12/" location="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?wsdl=wsdl0"/>
+  <wsdl:types/>
+  <wsdl:binding name="wsHttpPTOnLine" type="i0:IWebServicePT">
+    <wsp:PolicyReference URI="#wsHttpPTOnLine_policy"/>
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="VerificaPT">
+      <soap12:operation soapAction="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/VerificaPT" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eroga">
+      <soap12:operation soapAction="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/Eroga" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnnullaErogazione">
+      <soap12:operation soapAction="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/AnnullaErogazione" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperaPt">
+      <soap12:operation soapAction="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/RecuperaPt" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="basicHttpPTOnLine" type="i0:IWebServicePT">
+    <wsp:PolicyReference URI="#basicHttpPTOnLine_policy"/>
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="VerificaPT">
+      <soap:operation soapAction="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/VerificaPT" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eroga">
+      <soap:operation soapAction="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/Eroga" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnnullaErogazione">
+      <soap:operation soapAction="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/AnnullaErogazione" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperaPt">
+      <soap:operation soapAction="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/RecuperaPt" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsHttpPTOnLineWithCredential" type="i0:IWebServicePT">
+    <wsp:PolicyReference URI="#wsHttpPTOnLineWithCredential_policy"/>
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="VerificaPT">
+      <soap12:operation soapAction="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/VerificaPT" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eroga">
+      <soap12:operation soapAction="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/Eroga" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnnullaErogazione">
+      <soap12:operation soapAction="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/AnnullaErogazione" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperaPt">
+      <soap12:operation soapAction="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/RecuperaPt" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebServicePT">
+    <wsdl:port name="wsHttpPTOnLine" binding="tns:wsHttpPTOnLine">
+      <soap12:address location="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/ws"/>
+      <wsa10:EndpointReference>
+        <wsa10:Address>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/ws</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="basicHttpPTOnLine" binding="tns:basicHttpPTOnLine">
+      <soap:address location="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/basic"/>
+    </wsdl:port>
+    <wsdl:port name="wsHttpPTOnLineWithCredential" binding="tns:wsHttpPTOnLineWithCredential">
+      <soap12:address location="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/wsCredential"/>
+      <wsa10:EndpointReference>
+        <wsa10:Address>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/wsCredential</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?wsdl=wsdl0</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://schemas.webcare.it/Lazio/2011/09/12/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://schemas.webcare.it/Lazio/2011/09/12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://schemas.webcare.it/Lazio/2011/09/12/Imports">
+      <xsd:import schemaLocation="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd0" namespace="http://schemas.webcare.it/Lazio/2011/09/12/"/>
+      <xsd:import schemaLocation="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      <xsd:import schemaLocation="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd2" namespace="http://schemas.webcare.it/Lazio/2012/07/18/"/>
+      <xsd:import schemaLocation="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/PTOnline.Service.Contract"/>
+      <xsd:import schemaLocation="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd4" namespace="http://schemas.webcare.it/Lazio/2011/10/12/"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWebServicePT_VerificaPT_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerificaPT"/>
+  </wsdl:message>
+  <wsdl:message name="IWebServicePT_VerificaPT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerificaPTResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IWebServicePT_Eroga_InputMessage">
+    <wsdl:part name="parameters" element="tns:Eroga"/>
+  </wsdl:message>
+  <wsdl:message name="IWebServicePT_Eroga_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ErogaResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IWebServicePT_AnnullaErogazione_InputMessage">
+    <wsdl:part name="parameters" element="tns:AnnullaErogazione"/>
+  </wsdl:message>
+  <wsdl:message name="IWebServicePT_AnnullaErogazione_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AnnullaErogazioneResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IWebServicePT_RecuperaPt_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperaPt"/>
+  </wsdl:message>
+  <wsdl:message name="IWebServicePT_RecuperaPt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperaPtResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="IWebServicePT">
+    <wsdl:operation name="VerificaPT">
+      <wsdl:input wsaw:Action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/VerificaPT" message="tns:IWebServicePT_VerificaPT_InputMessage"/>
+      <wsdl:output wsaw:Action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/VerificaPTResponse" message="tns:IWebServicePT_VerificaPT_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="Eroga">
+      <wsdl:input wsaw:Action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/Eroga" message="tns:IWebServicePT_Eroga_InputMessage"/>
+      <wsdl:output wsaw:Action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/ErogaResponse" message="tns:IWebServicePT_Eroga_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="AnnullaErogazione">
+      <wsdl:input wsaw:Action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/AnnullaErogazione" message="tns:IWebServicePT_AnnullaErogazione_InputMessage"/>
+      <wsdl:output wsaw:Action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/AnnullaErogazioneResponse" message="tns:IWebServicePT_AnnullaErogazione_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperaPt">
+      <wsdl:input wsaw:Action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/RecuperaPt" message="tns:IWebServicePT_RecuperaPt_InputMessage"/>
+      <wsdl:output wsaw:Action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/RecuperaPtResponse" message="tns:IWebServicePT_RecuperaPt_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd0</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.webcare.it/Lazio/2011/09/12/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.webcare.it/Lazio/2011/09/12/">
+  <xs:import schemaLocation="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd2" namespace="http://schemas.webcare.it/Lazio/2012/07/18/"/>
+  <xs:import schemaLocation="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd4" namespace="http://schemas.webcare.it/Lazio/2011/10/12/"/>
+  <xs:element name="VerificaPT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="message" nillable="true" type="tns:RequestVerificaPT"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RequestVerificaPT">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodiceFarmacia" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CodiceFiscale" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Minsan" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Quantita" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="Ricetta" nillable="true" type="tns:Ricettario"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RequestVerificaPT" nillable="true" type="tns:RequestVerificaPT"/>
+  <xs:complexType name="Ricettario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodiceRegionale" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CodiceRicettario" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DataMedico" nillable="true" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Ricettario" nillable="true" type="tns:Ricettario"/>
+  <xs:element name="VerificaPTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VerificaPTResult" nillable="true" type="q1:ResponseVerificaPT" xmlns:q1="http://schemas.webcare.it/Lazio/2012/07/18/"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Eroga">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="message" nillable="true" type="q2:RequestEroga" xmlns:q2="http://schemas.webcare.it/Lazio/2011/10/12/"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ErogaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ErogaResult" nillable="true" type="q3:ResponseEroga" xmlns:q3="http://schemas.webcare.it/Lazio/2012/07/18/"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AnnullaErogazione">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="message" nillable="true" type="tns:RequestAnnullaErogazione"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RequestAnnullaErogazione">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodiceFarmacia" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CodiceFiscale" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Ricetta" nillable="true" type="tns:Ricettario"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RequestAnnullaErogazione" nillable="true" type="tns:RequestAnnullaErogazione"/>
+  <xs:element name="AnnullaErogazioneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AnnullaErogazioneResult" nillable="true" type="q4:ResponseAnnullaErogazione" xmlns:q4="http://schemas.webcare.it/Lazio/2012/07/18/"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperaPt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="message" nillable="true" type="tns:RequestRecuperaPt"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RequestRecuperaPt">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodiceFiscale" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DataMedico" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Minsan" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RequestRecuperaPt" nillable="true" type="tns:RequestRecuperaPt"/>
+  <xs:element name="RecuperaPtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RecuperaPtResult" nillable="true" type="q5:ResponseRecuperaPt" xmlns:q5="http://schemas.webcare.it/Lazio/2012/07/18/"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd2</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.webcare.it/Lazio/2012/07/18/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.webcare.it/Lazio/2012/07/18/">
+  <xs:import schemaLocation="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/PTOnline.Service.Contract"/>
+  <xs:import schemaLocation="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd0" namespace="http://schemas.webcare.it/Lazio/2011/09/12/"/>
+  <xs:import schemaLocation="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd4" namespace="http://schemas.webcare.it/Lazio/2011/10/12/"/>
+  <xs:complexType name="ResponseVerificaPT">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodiceFiscale" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DataFine" nillable="true" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="DataInizio" nillable="true" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Minsan" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Piani" nillable="true" type="q1:ArrayOfPiano" xmlns:q1="http://schemas.datacontract.org/2004/07/PTOnline.Service.Contract"/>
+      <xs:element minOccurs="0" name="QuantitaAutorizzata" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="QuantitaResidua" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="Result" nillable="true" type="tns:Result"/>
+      <xs:element minOccurs="0" name="Ricetta" nillable="true" type="q2:Ricettario" xmlns:q2="http://schemas.webcare.it/Lazio/2011/09/12/"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseVerificaPT" nillable="true" type="tns:ResponseVerificaPT"/>
+  <xs:complexType name="Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DataFinePiano" nillable="true" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="DataInizioPiano" nillable="true" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Errori" nillable="true" type="q3:ErrorDict" xmlns:q3="http://schemas.webcare.it/Lazio/2011/10/12/"/>
+      <xs:element minOccurs="0" name="Esito" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Result" nillable="true" type="tns:Result"/>
+  <xs:complexType name="ResponseEroga">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Result" nillable="true" type="tns:Result"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseEroga" nillable="true" type="tns:ResponseEroga"/>
+  <xs:complexType name="ResponseAnnullaErogazione">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Result" nillable="true" type="tns:Result"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseAnnullaErogazione" nillable="true" type="tns:ResponseAnnullaErogazione"/>
+  <xs:complexType name="ResponseRecuperaPt">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConfezioniPrescritte" type="xs:int"/>
+      <xs:element minOccurs="0" name="DataFinePt" nillable="true" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="DataInizioPt" nillable="true" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Prescrizione" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="RitiriEffettuati" nillable="true" type="q4:ArrayOfRitiriEffettuati" xmlns:q4="http://schemas.datacontract.org/2004/07/PTOnline.Service.Contract"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseRecuperaPt" nillable="true" type="tns:ResponseRecuperaPt"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd3</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PTOnline.Service.Contract" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/PTOnline.Service.Contract">
+  <xs:complexType name="ArrayOfPiano">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Piano" nillable="true" type="tns:Piano"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPiano" nillable="true" type="tns:ArrayOfPiano"/>
+  <xs:complexType name="Piano">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DataFine" nillable="true" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="DataInizio" nillable="true" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Minsan" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Piano" nillable="true" type="tns:Piano"/>
+  <xs:complexType name="ArrayOfRitiriEffettuati">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RitiriEffettuati" nillable="true" type="tns:RitiriEffettuati"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRitiriEffettuati" nillable="true" type="tns:ArrayOfRitiriEffettuati"/>
+  <xs:complexType name="RitiriEffettuati">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DataRitiro" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="QuantitaRitirata" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RitiriEffettuati" nillable="true" type="tns:RitiriEffettuati"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd4</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.webcare.it/Lazio/2011/10/12/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.webcare.it/Lazio/2011/10/12/">
+  <xs:import schemaLocation="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd0" namespace="http://schemas.webcare.it/Lazio/2011/09/12/"/>
+  <xs:complexType name="ErrorDict">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsDictionary xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsDictionary>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="KeyValueOfintstring">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Key" type="xs:int"/>
+            <xs:element name="Value" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ErrorDict" nillable="true" type="tns:ErrorDict"/>
+  <xs:complexType name="RequestEroga">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AliquotaIva" nillable="true" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="CodiceFarmacia" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CodiceFiscale" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DataErogazione" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="Minsan" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PrezzoAcquisto" nillable="true" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="Quantita" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="Ricetta" nillable="true" type="q1:Ricettario" xmlns:q1="http://schemas.webcare.it/Lazio/2011/09/12/"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RequestEroga" nillable="true" type="tns:RequestEroga"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?xsd=xsd1</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+  <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+  <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+  <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+  <xs:element name="byte" nillable="true" type="xs:byte"/>
+  <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+  <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+  <xs:element name="double" nillable="true" type="xs:double"/>
+  <xs:element name="float" nillable="true" type="xs:float"/>
+  <xs:element name="int" nillable="true" type="xs:int"/>
+  <xs:element name="long" nillable="true" type="xs:long"/>
+  <xs:element name="QName" nillable="true" type="xs:QName"/>
+  <xs:element name="short" nillable="true" type="xs:short"/>
+  <xs:element name="string" nillable="true" type="xs:string"/>
+  <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+  <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+  <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+  <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+  <xs:element name="char" nillable="true" type="tns:char"/>
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:element name="duration" nillable="true" type="tns:duration"/>
+  <xs:simpleType name="duration">
+    <xs:restriction base="xs:duration">
+      <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+      <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+      <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="guid" nillable="true" type="tns:guid"/>
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attribute name="FactoryType" type="xs:QName"/>
+  <xs:attribute name="Id" type="xs:ID"/>
+  <xs:attribute name="Ref" type="xs:IDREF"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/wsCredential</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/AnnullaErogazione" name="AnnullaErogazione" bindingOperationName="AnnullaErogazione" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/wsCredential</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/">
+   <soap:Header/>
+   <soap:Body>
+      <ns:AnnullaErogazione>
+         <!--Optional:-->
+         <ns:message>
+            <!--Optional:-->
+            <ns:CodiceFarmacia>?</ns:CodiceFarmacia>
+            <!--Optional:-->
+            <ns:CodiceFiscale>?</ns:CodiceFiscale>
+            <!--Optional:-->
+            <ns:Ricetta>
+               <!--Optional:-->
+               <ns:CodiceRegionale>?</ns:CodiceRegionale>
+               <!--Optional:-->
+               <ns:CodiceRicettario>?</ns:CodiceRicettario>
+               <!--Optional:-->
+               <ns:DataMedico>?</ns:DataMedico>
+            </ns:Ricetta>
+         </ns:message>
+      </ns:AnnullaErogazione>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/AnnullaErogazione"/></con:call></con:operation><con:operation isOneWay="false" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/Eroga" name="Eroga" bindingOperationName="Eroga" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/wsCredential</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/" xmlns:ns1="http://schemas.webcare.it/Lazio/2011/10/12/">
+   <soap:Header/>
+   <soap:Body>
+      <ns:Eroga>
+         <!--Optional:-->
+         <ns:message>
+            <!--Optional:-->
+            <ns1:AliquotaIva>?</ns1:AliquotaIva>
+            <!--Optional:-->
+            <ns1:CodiceFarmacia>?</ns1:CodiceFarmacia>
+            <!--Optional:-->
+            <ns1:CodiceFiscale>?</ns1:CodiceFiscale>
+            <!--Optional:-->
+            <ns1:DataErogazione>?</ns1:DataErogazione>
+            <!--Optional:-->
+            <ns1:Minsan>?</ns1:Minsan>
+            <!--Optional:-->
+            <ns1:PrezzoAcquisto>?</ns1:PrezzoAcquisto>
+            <!--Optional:-->
+            <ns1:Quantita>?</ns1:Quantita>
+            <!--Optional:-->
+            <ns1:Ricetta>
+               <!--Optional:-->
+               <ns:CodiceRegionale>?</ns:CodiceRegionale>
+               <!--Optional:-->
+               <ns:CodiceRicettario>?</ns:CodiceRicettario>
+               <!--Optional:-->
+               <ns:DataMedico>?</ns:DataMedico>
+            </ns1:Ricetta>
+         </ns:message>
+      </ns:Eroga>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/Eroga"/></con:call></con:operation><con:operation isOneWay="false" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/VerificaPT" name="VerificaPT" bindingOperationName="VerificaPT" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 2" useWsAddressing="true" wssPasswordType="PasswordText"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/wsCredential</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/">
+   <soap:Header/>
+   <soap:Body>
+      <ns:VerificaPT>
+         <!--Optional:-->
+         <ns:message>
+            <!--Optional:-->
+            <ns:CodiceFarmacia>RM02092</ns:CodiceFarmacia>
+            <!--Optional:-->
+            <ns:CodiceFiscale>CRLLSN49T28H501F</ns:CodiceFiscale>
+            <!--Optional:-->
+            <ns:Minsan>040158077</ns:Minsan>
+            <!--Optional:-->
+            <ns:Quantita>1</ns:Quantita>
+            <!--Optional:-->
+            <ns:Ricetta>
+               <!--Optional:-->
+               <ns:CodiceRegionale>12016</ns:CodiceRegionale>
+               <!--Optional:-->
+               <ns:CodiceRicettario>1234567890</ns:CodiceRicettario>
+               <!--Optional:-->
+               <ns:DataMedico>2016-04-06T21:32:52.12679</ns:DataMedico>
+            </ns:Ricetta>
+         </ns:message>
+      </ns:VerificaPT>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:username>webdpc</con:username><con:password>stud10f4rm4</con:password><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/VerificaPT" addDefaultTo="true"/><con:wsrmConfig version="1.2"/></con:call><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/wsCredential</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/">
+   <soap:Header/>
+   <soap:Body>
+      <ns:VerificaPT>
+         <!--Optional:-->
+         <ns:message>
+            <!--Optional:-->
+            <ns:CodiceFarmacia>?</ns:CodiceFarmacia>
+            <!--Optional:-->
+            <ns:CodiceFiscale>?</ns:CodiceFiscale>
+            <!--Optional:-->
+            <ns:Minsan>?</ns:Minsan>
+            <!--Optional:-->
+            <ns:Quantita>?</ns:Quantita>
+            <!--Optional:-->
+            <ns:Ricetta>
+               <!--Optional:-->
+               <ns:CodiceRegionale>?</ns:CodiceRegionale>
+               <!--Optional:-->
+               <ns:CodiceRicettario>?</ns:CodiceRicettario>
+               <!--Optional:-->
+               <ns:DataMedico>?</ns:DataMedico>
+            </ns:Ricetta>
+         </ns:message>
+      </ns:VerificaPT>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/VerificaPT"/></con:call></con:operation><con:operation isOneWay="false" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/RecuperaPt" name="RecuperaPt" bindingOperationName="RecuperaPt" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/wsCredential</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/">
+   <soap:Header/>
+   <soap:Body>
+      <ns:RecuperaPt>
+         <!--Optional:-->
+         <ns:message>
+            <!--Optional:-->
+            <ns:CodiceFiscale>?</ns:CodiceFiscale>
+            <!--Optional:-->
+            <ns:DataMedico>?</ns:DataMedico>
+            <!--Optional:-->
+            <ns:Minsan>?</ns:Minsan>
+         </ns:message>
+      </ns:RecuperaPt>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/RecuperaPt"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
