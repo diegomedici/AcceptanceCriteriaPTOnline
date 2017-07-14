@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project activeEnvironment="Default" name="Ws PtOnline Lazio" resourceRoot="${projectDir}" soapui-version="5.0.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="basicHttpPTOnLine" type="wsdl" bindingName="{http://tempuri.org/}basicHttpPTOnLine" soapVersion="1_1" anonymous="optional" definition="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?wsdl"><con:part><con:url>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="WebServicePT" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://schemas.webcare.it/Lazio/2011/09/12/" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+<con:soapui-project activeEnvironment="Default" name="Ws PtOnline Lazio" resourceRoot="${projectDir}" soapui-version="5.3.0" abortOnError="false" runType="SEQUENTIAL" id="126acdfb-e96c-43ab-b7ee-1c635340c4c0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="basicHttpPTOnLine" type="wsdl" bindingName="{http://tempuri.org/}basicHttpPTOnLine" soapVersion="1_1" anonymous="optional" definition="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?wsdl" id="dc873f0a-89b6-4dcc-bbd6-9b16f9d39887" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?wsdl"><con:part><con:url>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="WebServicePT" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://schemas.webcare.it/Lazio/2011/09/12/" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
   <wsp:Policy wsu:Id="wsHttpPTOnLine_policy">
     <wsp:ExactlyOne>
       <wsp:All>
@@ -531,7 +531,7 @@
   <xs:attribute name="FactoryType" type="xs:QName"/>
   <xs:attribute name="Id" type="xs:ID"/>
   <xs:attribute name="Ref" type="xs:IDREF"/>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/basic</con:endpoint><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/wsCredential</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/AnnullaErogazione" name="AnnullaErogazione" bindingOperationName="AnnullaErogazione" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/basic</con:endpoint><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/wsCredential</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/AnnullaErogazione" name="AnnullaErogazione" bindingOperationName="AnnullaErogazione" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="01d234e3-2ff5-4ab0-906b-11710d9e5daf"><con:settings/><con:call name="Request 1" id="12291eb4-2d1d-4087-83db-0961d231293b"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/">
    <soapenv:Header/>
    <soapenv:Body>
       <ns:AnnullaErogazione>
@@ -553,7 +553,7 @@
          </ns:message>
       </ns:AnnullaErogazione>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/AnnullaErogazione"/></con:call></con:operation><con:operation isOneWay="false" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/Eroga" name="Eroga" bindingOperationName="Eroga" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/" xmlns:ns1="http://schemas.webcare.it/Lazio/2011/10/12/">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/AnnullaErogazione"/></con:call></con:operation><con:operation isOneWay="false" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/Eroga" name="Eroga" bindingOperationName="Eroga" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="7fa75033-c82a-4f11-bd54-d9df57e0366e"><con:settings/><con:call name="Request 1" id="f756436b-16cc-480c-9509-79528d0abaa5"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/" xmlns:ns1="http://schemas.webcare.it/Lazio/2011/10/12/">
    <soapenv:Header/>
    <soapenv:Body>
       <ns:Eroga>
@@ -585,33 +585,33 @@
          </ns:message>
       </ns:Eroga>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/Eroga"/></con:call></con:operation><con:operation isOneWay="false" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/VerificaPT" name="VerificaPT" bindingOperationName="VerificaPT" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/">
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/Eroga"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/VerificaPT" name="VerificaPT" bindingOperationName="VerificaPT" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="a9d3eace-8bf8-40b8-9520-a1f900a32b03"><con:settings/><con:call name="Request 1" id="5e4a6b45-5247-41ae-90a9-5da2e4afe7d8"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/">
    <soapenv:Header/>
    <soapenv:Body>
       <ns:VerificaPT>
          <!--Optional:-->
          <ns:message>
             <!--Optional:-->
-            <ns:CodiceFarmacia>FR00269</ns:CodiceFarmacia>
+            <ns:CodiceFarmacia>RM02451</ns:CodiceFarmacia>
             <!--Optional:-->
-            <ns:CodiceFiscale>btcmgv29a57g592m</ns:CodiceFiscale>
+            <ns:CodiceFiscale>RSTMRC67C01H501F</ns:CodiceFiscale>
             <!--Optional:-->
-            <ns:Minsan>038190498</ns:Minsan>
+            <ns:Minsan>027772096</ns:Minsan>
             <!--Optional:-->
-            <ns:Quantita>1</ns:Quantita>
+            <ns:Quantita>5</ns:Quantita>
             <!--Optional:-->
             <ns:Ricetta>
                <!--Optional:-->
-               <ns:CodiceRegionale>12016</ns:CodiceRegionale>
+               <ns:CodiceRegionale>12015</ns:CodiceRegionale>
                <!--Optional:-->
-               <ns:CodiceRicettario>1234567890</ns:CodiceRicettario>
+               <ns:CodiceRicettario>0959155380</ns:CodiceRicettario>
                <!--Optional:-->
-               <ns:DataMedico>2016-08-01T21:32:52.12679</ns:DataMedico>
+               <ns:DataMedico>2016-09-05</ns:DataMedico>
             </ns:Ricetta>
          </ns:message>
       </ns:VerificaPT>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/VerificaPT"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/RecuperaPt" name="RecuperaPt" bindingOperationName="RecuperaPt" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/">
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/VerificaPT"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/RecuperaPt" name="RecuperaPt" bindingOperationName="RecuperaPt" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="43598720-0160-426f-8c42-3830b3654621"><con:settings/><con:call name="Request 1" id="380d5f63-8950-4166-b915-0959f8fa80fc"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/basic</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/">
    <soapenv:Header/>
    <soapenv:Body>
       <ns:RecuperaPt>
@@ -626,7 +626,7 @@
          </ns:message>
       </ns:RecuperaPt>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/RecuperaPt"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="200508" name="wsHttpPTOnLine" type="wsdl" bindingName="{http://tempuri.org/}wsHttpPTOnLine" soapVersion="1_2" anonymous="optional" definition="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?wsdl"><con:part><con:url>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="WebServicePT" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://schemas.webcare.it/Lazio/2011/09/12/" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/RecuperaPt"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="200508" name="wsHttpPTOnLine" type="wsdl" bindingName="{http://tempuri.org/}wsHttpPTOnLine" soapVersion="1_2" anonymous="optional" definition="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?wsdl" id="09755236-6e38-476b-97ec-0346e18d772a" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?wsdl"><con:part><con:url>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="WebServicePT" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://schemas.webcare.it/Lazio/2011/09/12/" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
   <wsp:Policy wsu:Id="wsHttpPTOnLine_policy">
     <wsp:ExactlyOne>
       <wsp:All>
@@ -1158,7 +1158,7 @@
   <xs:attribute name="FactoryType" type="xs:QName"/>
   <xs:attribute name="Id" type="xs:ID"/>
   <xs:attribute name="Ref" type="xs:IDREF"/>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/ws</con:endpoint><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/wsCredential</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/AnnullaErogazione" name="AnnullaErogazione" bindingOperationName="AnnullaErogazione" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/ws</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/ws</con:endpoint><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/wsCredential</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/AnnullaErogazione" name="AnnullaErogazione" bindingOperationName="AnnullaErogazione" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="45bbe80e-d4ac-4146-ad0c-8ad3d9892974"><con:settings/><con:call name="Request 1" useWsAddressing="true" id="32e95df1-cd7a-4932-b8ee-dfab32c87f0a"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/ws</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/">
    <soap:Header/>
    <soap:Body>
       <ns:AnnullaErogazione>
@@ -1180,7 +1180,7 @@
          </ns:message>
       </ns:AnnullaErogazione>
    </soap:Body>
-</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/AnnullaErogazione"/></con:call></con:operation><con:operation isOneWay="false" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/Eroga" name="Eroga" bindingOperationName="Eroga" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/ws</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/" xmlns:ns1="http://schemas.webcare.it/Lazio/2011/10/12/">
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/AnnullaErogazione"/></con:call></con:operation><con:operation isOneWay="false" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/Eroga" name="Eroga" bindingOperationName="Eroga" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="50e20be4-0f04-420d-8fdc-0f3915657cce"><con:settings/><con:call name="Request 1" useWsAddressing="true" id="a3506553-2f02-4858-a81c-7344522093be"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/ws</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/" xmlns:ns1="http://schemas.webcare.it/Lazio/2011/10/12/">
    <soap:Header/>
    <soap:Body>
       <ns:Eroga>
@@ -1212,7 +1212,7 @@
          </ns:message>
       </ns:Eroga>
    </soap:Body>
-</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/Eroga"/></con:call></con:operation><con:operation isOneWay="false" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/VerificaPT" name="VerificaPT" bindingOperationName="VerificaPT" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/ws</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/">
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/Eroga"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/VerificaPT" name="VerificaPT" bindingOperationName="VerificaPT" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="45a83e72-98ea-47b9-8e4c-226bcaf77620"><con:settings/><con:call name="Request 1" useWsAddressing="true" id="6a582324-37af-4d6a-b67d-98163fdae6c9"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/ws</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/">
    <soap:Header/>
    <soap:Body>
       <ns:VerificaPT>
@@ -1238,7 +1238,7 @@
          </ns:message>
       </ns:VerificaPT>
    </soap:Body>
-</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/VerificaPT"/></con:call></con:operation><con:operation isOneWay="false" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/RecuperaPt" name="RecuperaPt" bindingOperationName="RecuperaPt" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/ws</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/">
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/VerificaPT"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/RecuperaPt" name="RecuperaPt" bindingOperationName="RecuperaPt" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="6e5a3082-0ca3-4314-b4bc-ea37da8d5a6b"><con:settings/><con:call name="Request 1" useWsAddressing="true" id="06b7ede3-4a01-4d17-88e5-feb2314cd6d7"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/ws</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/">
    <soap:Header/>
    <soap:Body>
       <ns:RecuperaPt>
@@ -1253,7 +1253,7 @@
          </ns:message>
       </ns:RecuperaPt>
    </soap:Body>
-</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/RecuperaPt"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="200508" name="wsHttpPTOnLineWithCredential" type="wsdl" bindingName="{http://tempuri.org/}wsHttpPTOnLineWithCredential" soapVersion="1_2" anonymous="optional" definition="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?wsdl"><con:part><con:url>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="WebServicePT" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://schemas.webcare.it/Lazio/2011/09/12/" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/RecuperaPt"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="200508" name="wsHttpPTOnLineWithCredential" type="wsdl" bindingName="{http://tempuri.org/}wsHttpPTOnLineWithCredential" soapVersion="1_2" anonymous="optional" definition="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?wsdl" id="0cf7801c-46ac-411d-9e16-9cb48137580b" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?wsdl"><con:part><con:url>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="WebServicePT" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://schemas.webcare.it/Lazio/2011/09/12/" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
   <wsp:Policy wsu:Id="wsHttpPTOnLine_policy">
     <wsp:ExactlyOne>
       <wsp:All>
@@ -1785,7 +1785,7 @@
   <xs:attribute name="FactoryType" type="xs:QName"/>
   <xs:attribute name="Id" type="xs:ID"/>
   <xs:attribute name="Ref" type="xs:IDREF"/>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/wsCredential</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/AnnullaErogazione" name="AnnullaErogazione" bindingOperationName="AnnullaErogazione" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/wsCredential</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/wsCredential</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/AnnullaErogazione" name="AnnullaErogazione" bindingOperationName="AnnullaErogazione" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="92c65821-a6c2-49a8-acc5-9f8429ebae1a"><con:settings/><con:call name="Request 1" useWsAddressing="true" id="948dcb22-94c7-4937-9df7-b0bcbe3eb183"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/wsCredential</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/">
    <soap:Header/>
    <soap:Body>
       <ns:AnnullaErogazione>
@@ -1807,91 +1807,100 @@
          </ns:message>
       </ns:AnnullaErogazione>
    </soap:Body>
-</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/AnnullaErogazione"/></con:call></con:operation><con:operation isOneWay="false" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/Eroga" name="Eroga" bindingOperationName="Eroga" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/wsCredential</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/" xmlns:ns1="http://schemas.webcare.it/Lazio/2011/10/12/">
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/AnnullaErogazione"/></con:call></con:operation><con:operation isOneWay="false" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/Eroga" name="Eroga" bindingOperationName="Eroga" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="1ed20ec1-58fc-4521-bb41-2e04d9a7a436"><con:settings/><con:call name="Request 1" useWsAddressing="true" id="bd3e39dd-0623-4984-907b-59ee6ea116a4"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/wsCredential</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/" xmlns:ns1="http://schemas.webcare.it/Lazio/2011/10/12/">
    <soap:Header/>
    <soap:Body>
       <ns:Eroga>
          <!--Optional:-->
          <ns:message>
             <!--Optional:-->
-            <ns1:AliquotaIva>?</ns1:AliquotaIva>
+            <ns1:AliquotaIva>22.00</ns1:AliquotaIva>
             <!--Optional:-->
-            <ns1:CodiceFarmacia>?</ns1:CodiceFarmacia>
+            <ns1:CodiceFarmacia>RM02488</ns1:CodiceFarmacia>
             <!--Optional:-->
-            <ns1:CodiceFiscale>?</ns1:CodiceFiscale>
+            <ns1:CodiceFiscale>MNTFNC47E30L719V</ns1:CodiceFiscale>
             <!--Optional:-->
-            <ns1:DataErogazione>?</ns1:DataErogazione>
+            <ns1:DataErogazione>2017-03-15</ns1:DataErogazione>
             <!--Optional:-->
-            <ns1:Minsan>?</ns1:Minsan>
+            <ns1:Minsan>027015282</ns1:Minsan>
             <!--Optional:-->
-            <ns1:PrezzoAcquisto>?</ns1:PrezzoAcquisto>
+            <ns1:PrezzoAcquisto>0.00</ns1:PrezzoAcquisto>
             <!--Optional:-->
-            <ns1:Quantita>?</ns1:Quantita>
+            <ns1:Quantita>2</ns1:Quantita>
             <!--Optional:-->
             <ns1:Ricetta>
                <!--Optional:-->
-               <ns:CodiceRegionale>?</ns:CodiceRegionale>
+               <ns:CodiceRegionale>12015</ns:CodiceRegionale>
                <!--Optional:-->
-               <ns:CodiceRicettario>?</ns:CodiceRicettario>
+               <ns:CodiceRicettario>0990750925</ns:CodiceRicettario>
                <!--Optional:-->
-               <ns:DataMedico>?</ns:DataMedico>
+               <ns:DataMedico>2017-03-16</ns:DataMedico>
             </ns1:Ricetta>
          </ns:message>
       </ns:Eroga>
    </soap:Body>
-</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/Eroga"/></con:call></con:operation><con:operation isOneWay="false" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/VerificaPT" name="VerificaPT" bindingOperationName="VerificaPT" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 2" useWsAddressing="true" wssPasswordType="PasswordText"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/wsCredential</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/">
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/Eroga"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/VerificaPT" name="VerificaPT" bindingOperationName="VerificaPT" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="6d5ce798-5a70-4621-8a33-a3c417d33b02"><con:settings/><con:call name="Request 2" useWsAddressing="true" wssPasswordType="PasswordText" id="e8053653-c789-4df2-ab0a-9fca6dddaa8c"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://lazio.webcare.it/PTOnline.Service/WebServicePT.svc/wsCredential</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/">
    <soap:Header/>
    <soap:Body>
       <ns:VerificaPT>
          <!--Optional:-->
          <ns:message>
             <!--Optional:-->
-            <ns:CodiceFarmacia>RM02092</ns:CodiceFarmacia>
+            <ns:CodiceFarmacia>RM02488</ns:CodiceFarmacia>
             <!--Optional:-->
-            <ns:CodiceFiscale>CRLLSN49T28H501F</ns:CodiceFiscale>
+            <ns:CodiceFiscale>ENI1234567897895</ns:CodiceFiscale>
             <!--Optional:-->
-            <ns:Minsan>040158077</ns:Minsan>
+            <ns:Minsan>036892089</ns:Minsan>
             <!--Optional:-->
-            <ns:Quantita>1</ns:Quantita>
+            <ns:Quantita>3</ns:Quantita>
             <!--Optional:-->
             <ns:Ricetta>
                <!--Optional:-->
-               <ns:CodiceRegionale>12016</ns:CodiceRegionale>
+               <ns:CodiceRegionale>12010</ns:CodiceRegionale>
                <!--Optional:-->
-               <ns:CodiceRicettario>1234567890</ns:CodiceRicettario>
+               <ns:CodiceRicettario>0000000011</ns:CodiceRicettario>
                <!--Optional:-->
-               <ns:DataMedico>2016-04-06T21:32:52.12679</ns:DataMedico>
+               <ns:DataMedico>2017-07-13</ns:DataMedico>
             </ns:Ricetta>
          </ns:message>
       </ns:VerificaPT>
    </soap:Body>
-</soap:Envelope>]]></con:request><con:credentials><con:username>webdpc</con:username><con:password>stud10f4rm4</con:password><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/VerificaPT" addDefaultTo="true"/><con:wsrmConfig version="1.2"/></con:call><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/wsCredential</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/">
-   <soap:Header/>
-   <soap:Body>
-      <ns:VerificaPT>
-         <!--Optional:-->
-         <ns:message>
-            <!--Optional:-->
-            <ns:CodiceFarmacia>?</ns:CodiceFarmacia>
-            <!--Optional:-->
-            <ns:CodiceFiscale>?</ns:CodiceFiscale>
-            <!--Optional:-->
-            <ns:Minsan>?</ns:Minsan>
-            <!--Optional:-->
-            <ns:Quantita>?</ns:Quantita>
-            <!--Optional:-->
-            <ns:Ricetta>
-               <!--Optional:-->
-               <ns:CodiceRegionale>?</ns:CodiceRegionale>
-               <!--Optional:-->
-               <ns:CodiceRicettario>?</ns:CodiceRicettario>
-               <!--Optional:-->
-               <ns:DataMedico>?</ns:DataMedico>
-            </ns:Ricetta>
-         </ns:message>
-      </ns:VerificaPT>
-   </soap:Body>
-</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/VerificaPT"/></con:call></con:operation><con:operation isOneWay="false" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/RecuperaPt" name="RecuperaPt" bindingOperationName="RecuperaPt" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" useWsAddressing="true"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/wsCredential</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/">
+</soap:Envelope>]]></con:request><con:credentials><con:username>webdpc</con:username><con:password>stud10f4rm4</con:password><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/VerificaPT" addDefaultTo="true"/><con:wsrmConfig version="1.2"/></con:call><con:call name="Request 1" useWsAddressing="true" id="c663ec30-9650-4d6b-ade9-6f1dbfbda476" wssPasswordType="PasswordText"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/wsCredential</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/" xmlns:soap="http://www.w3.org/2003/05/soap-envelope">\r
+   <soap:Header>\r
+      <wsse:Security soap:mustUnderstand="true" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r
+         <wsse:UsernameToken wsu:Id="UsernameToken-E64BF54E74DF5F5B8C14715895674772">\r
+            <wsse:Username>webdpc</wsse:Username>\r
+            <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">stud10f4rm4</wsse:Password>\r
+            <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">ULycLYOEY7pC6HslButS1A==</wsse:Nonce>\r
+            <wsu:Created>2016-08-19T06:52:47.477Z</wsu:Created>\r
+         </wsse:UsernameToken>\r
+      </wsse:Security>\r
+   </soap:Header>\r
+   <soap:Body>\r
+      <ns:VerificaPT>\r
+         <!--Optional:-->\r
+         <ns:message>\r
+            <!--Optional:-->\r
+            <ns:CodiceFarmacia>RM02488</ns:CodiceFarmacia>\r
+            <!--Optional:-->\r
+            <ns:CodiceFiscale>MNTFNC47E30L719V</ns:CodiceFiscale>\r
+            <!--Optional:-->\r
+            <ns:Minsan>027015282</ns:Minsan>\r
+            <!--Optional:-->\r
+            <ns:Quantita>2</ns:Quantita>\r
+            <!--Optional:-->\r
+            <ns:Ricetta>\r
+               <!--Optional:-->\r
+               <ns:CodiceRegionale>12010</ns:CodiceRegionale>\r
+               <!--Optional:-->\r
+               <ns:CodiceRicettario>0000000011</ns:CodiceRicettario>\r
+               <!--Optional:-->\r
+               <ns:DataMedico>2017-03-16T14:40:52.12679</ns:DataMedico>\r
+            </ns:Ricetta>\r
+         </ns:message>\r
+      </ns:VerificaPT>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:username>webdpc</con:username><con:password>stud10f4rm4</con:password><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/VerificaPT"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/RecuperaPt" name="RecuperaPt" bindingOperationName="RecuperaPt" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="d7dc7259-de27-4401-a792-8f657f29d68e"><con:settings/><con:call name="Request 1" useWsAddressing="true" id="29beebb8-fd91-49c5-b0a1-fc1e23cc3707"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.webcare.it/lazio/PTOnline.Service/WebServicePT.svc/wsCredential</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ns="http://schemas.webcare.it/Lazio/2011/09/12/">
    <soap:Header/>
    <soap:Body>
       <ns:RecuperaPt>
@@ -1906,4 +1915,4 @@
          </ns:message>
       </ns:RecuperaPt>
    </soap:Body>
-</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/RecuperaPt"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.webcare.it/Lazio/2011/09/12/IWebServicePT/RecuperaPt"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
