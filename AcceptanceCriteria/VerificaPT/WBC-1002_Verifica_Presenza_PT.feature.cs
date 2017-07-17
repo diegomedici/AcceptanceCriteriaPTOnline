@@ -17,22 +17,22 @@ namespace AcceptanceCriteria.VerificaPT
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.2.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("VerificaPTOmalizumab", Description="\tIn order to avoid silly mistakes\r\n\tAs a math idiot\r\n\tI want to be told the sum o" +
-        "f two numbers", SourceFile="VerificaPT\\VerificaPTOmalizumab.feature", SourceLine=0)]
-    public partial class VerificaPTOmalizumabFeature
+    [TechTalk.SpecRun.FeatureAttribute("WBC-1002_Verifica_Presenza_PT", Description="\tIN ORDER TO sapere se posso procedere con un ordine di OMALIZUMAB \r\n\tAS farmacia" +
+        "\r\n\tI WANT TO verificare la presenza di un PT di OMALIZUMAB ", SourceFile="VerificaPT\\WBC-1002_Verifica_Presenza_PT.feature", SourceLine=0)]
+    public partial class WBC_1002_Verifica_Presenza_PTFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "VerificaPTOmalizumab.feature"
+#line 1 "WBC-1002_Verifica_Presenza_PT.feature"
 #line hidden
         
         [TechTalk.SpecRun.FeatureInitialize()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "VerificaPTOmalizumab", "\tIn order to avoid silly mistakes\r\n\tAs a math idiot\r\n\tI want to be told the sum o" +
-                    "f two numbers", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "WBC-1002_Verifica_Presenza_PT", "\tIN ORDER TO sapere se posso procedere con un ordine di OMALIZUMAB \r\n\tAS farmacia" +
+                    "\r\n\tI WANT TO verificare la presenza di un PT di OMALIZUMAB ", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         

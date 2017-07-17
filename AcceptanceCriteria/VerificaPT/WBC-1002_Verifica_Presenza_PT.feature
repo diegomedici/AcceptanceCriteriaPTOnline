@@ -1,7 +1,7 @@
-﻿Feature: VerificaPTOmalizumab
-	In order to avoid silly mistakes
-	As a math idiot
-	I want to be told the sum of two numbers
+﻿Feature: WBC-1002_Verifica_Presenza_PT
+	IN ORDER TO sapere se posso procedere con un ordine di OMALIZUMAB 
+	AS farmacia
+	I WANT TO verificare la presenza di un PT di OMALIZUMAB 
 
 Background: 
 	Given i seguenti dati dalla BD 

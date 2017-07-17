@@ -68,10 +68,15 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="VerificaPT\VerificaPTOmalizumab.feature.cs">
+    <Compile Include="VerificaPT\WBC-1002_Verifica_Presenza_PT.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>VerificaPTOmalizumab.feature</DependentUpon>
+      <DependentUpon>WBC-1002_Verifica_Presenza_PT.feature</DependentUpon>
+    </Compile>
+    <Compile Include="VerificaPT\WBC-994_Anonimizzazione_Dati_Paziente.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WBC-994_Anonimizzazione_Dati_Paziente.feature</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -91,9 +96,13 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>VerificaPTOmalizumabErrori.feature.cs</LastGenOutput>
     </None>
-    <None Include="VerificaPT\VerificaPTOmalizumab.feature">
+    <None Include="VerificaPT\WBC-1002_Verifica_Presenza_PT.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>VerificaPTOmalizumab.feature.cs</LastGenOutput>
+      <LastGenOutput>WBC-1002_Verifica_Presenza_PT.feature.cs</LastGenOutput>
+    </None>
+    <None Include="VerificaPT\WBC-994_Anonimizzazione_Dati_Paziente.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>WBC-994_Anonimizzazione_Dati_Paziente.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
