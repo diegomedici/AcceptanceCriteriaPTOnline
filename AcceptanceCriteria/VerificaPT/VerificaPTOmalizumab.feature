@@ -22,7 +22,7 @@ Background:
 	| CodiceFiscale    | Guid                                 |
 	| MDGDGI70B12E704B | 7a2c3353-12b6-47b1-b566-3f2779f6fc9d |
 
-Scenario: 525_4w_6m
+Scenario: 525_4w_6m_75mg
 	Given Il seguente piano terapeutico
 	| ATC     | FormaFarmaceutica     | DataInizio | Prescrizione                       | Posologia | Frequenza   | Durata | GuidCodiceFiscale                    |
 	| R03DX05 | SOLUZIONE INIETTABILE | 01/07/2017 | 525 mg ogni 4 settimane per 6 mesi | 525 mg    | 4 settimane | 6 mesi | 7a2c3353-12b6-47b1-b566-3f2779f6fc9d |
@@ -32,6 +32,18 @@ Scenario: 525_4w_6m
 	Then la risposta è la seguente
 	| Esito | ConfezioniAutorizzate | ConfezioniResidue | DataInizioPeriodo | DataFinePeriodo | DataInizioPiano | DataFinePiano |
 	| true  | 2                     | 2                 | 01/07/2017        | 25/08/2017      | 01/07/2017      | 31/12/2017    |
+
+Scenario: 525_4w_6m_150mg
+	Given Il seguente piano terapeutico
+	| ATC     | FormaFarmaceutica     | DataInizio | Prescrizione                       | Posologia | Frequenza   | Durata | GuidCodiceFiscale                    |
+	| R03DX05 | SOLUZIONE INIETTABILE | 01/07/2017 | 525 mg ogni 4 settimane per 6 mesi | 525 mg    | 4 settimane | 6 mesi | 7a2c3353-12b6-47b1-b566-3f2779f6fc9d |
+	When viene effettuata la chiamata al servizio VerificaPT con i seguenti parametri
+	| Minsan    | Confezioni | DataRicetta | CodiceFiscale    |
+	| 036892089 | 2          | 13/07/2017  | MDGDGI70B12E704B |
+	Then la risposta è la seguente
+	| Esito | ConfezioniAutorizzate | ConfezioniResidue | DataInizioPeriodo | DataFinePeriodo | DataInizioPiano | DataFinePiano |
+	| true  | 6                     | 6                 | 01/07/2017        | 25/08/2017      | 01/07/2017      | 31/12/2017    |
+
 
 Scenario: 525_2w_6m
 	Given Il seguente piano terapeutico
@@ -89,7 +101,7 @@ Scenario: Piano Terapeutico Scaduto
 	| 036892053 | 2          | 31/01/2018  | MDGDGI70B12E704B |
 	Then la risposta è la seguente
 	| Esito | ConfezioniAutorizzate | ConfezioniResidue | DataInizioPeriodo | DataFinePeriodo | DataInizioPiano | DataFinePiano | KeyError | DescrizioneErrore |
-	| false | 0                     | 0                 |                   |                 |                 |               | 2        | PT_INESISTENTE    |
+	| true  | 0                     | 0                 |                   |                 |                 |               | 2        | PT_INESISTENTE    |
 
 
 

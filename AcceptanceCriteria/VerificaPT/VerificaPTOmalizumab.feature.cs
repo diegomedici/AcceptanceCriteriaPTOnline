@@ -142,10 +142,10 @@ namespace AcceptanceCriteria.VerificaPT
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("525_4w_6m", SourceLine=24)]
-        public virtual void _525_4W_6M()
+        [TechTalk.SpecRun.ScenarioAttribute("525_4w_6m_75mg", SourceLine=24)]
+        public virtual void _525_4W_6M_75Mg()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("525_4w_6m", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("525_4w_6m_75mg", ((string[])(null)));
 #line 25
 this.ScenarioSetup(scenarioInfo);
 #line 6
@@ -207,10 +207,10 @@ this.FeatureBackground();
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("525_2w_6m", SourceLine=35)]
-        public virtual void _525_2W_6M()
+        [TechTalk.SpecRun.ScenarioAttribute("525_4w_6m_150mg", SourceLine=35)]
+        public virtual void _525_4W_6M_150Mg()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("525_2w_6m", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("525_4w_6m_150mg", ((string[])(null)));
 #line 36
 this.ScenarioSetup(scenarioInfo);
 #line 6
@@ -229,9 +229,9 @@ this.FeatureBackground();
                         "R03DX05",
                         "SOLUZIONE INIETTABILE",
                         "01/07/2017",
-                        "525 mg ogni 2 settimane per 6 mesi",
+                        "525 mg ogni 4 settimane per 6 mesi",
                         "525 mg",
-                        "2 settimane",
+                        "4 settimane",
                         "6 mesi",
                         "7a2c3353-12b6-47b1-b566-3f2779f6fc9d"});
 #line 37
@@ -243,7 +243,7 @@ this.FeatureBackground();
                         "DataRicetta",
                         "CodiceFiscale"});
             table8.AddRow(new string[] {
-                        "036892053",
+                        "036892089",
                         "2",
                         "13/07/2017",
                         "MDGDGI70B12E704B"});
@@ -260,10 +260,10 @@ this.FeatureBackground();
                         "DataFinePiano"});
             table9.AddRow(new string[] {
                         "true",
-                        "5",
-                        "5",
+                        "6",
+                        "6",
                         "01/07/2017",
-                        "08/09/2017",
+                        "25/08/2017",
                         "01/07/2017",
                         "31/12/2017"});
 #line 43
@@ -272,10 +272,10 @@ this.FeatureBackground();
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("150_4w_5m", SourceLine=47)]
-        public virtual void _150_4W_5M()
+        [TechTalk.SpecRun.ScenarioAttribute("525_2w_6m", SourceLine=47)]
+        public virtual void _525_2W_6M()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("150_4w_5m", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("525_2w_6m", ((string[])(null)));
 #line 48
 this.ScenarioSetup(scenarioInfo);
 #line 6
@@ -294,10 +294,10 @@ this.FeatureBackground();
                         "R03DX05",
                         "SOLUZIONE INIETTABILE",
                         "01/07/2017",
-                        "150 mg ogni 4 settimane per 5 mesi",
-                        "150 mg",
-                        "4 settimane",
-                        "5 mesi",
+                        "525 mg ogni 2 settimane per 6 mesi",
+                        "525 mg",
+                        "2 settimane",
+                        "6 mesi",
                         "7a2c3353-12b6-47b1-b566-3f2779f6fc9d"});
 #line 49
  testRunner.Given("Il seguente piano terapeutico", ((string)(null)), table10, "Given ");
@@ -308,8 +308,8 @@ this.FeatureBackground();
                         "DataRicetta",
                         "CodiceFiscale"});
             table11.AddRow(new string[] {
-                        "036892089",
-                        "3",
+                        "036892053",
+                        "2",
                         "13/07/2017",
                         "MDGDGI70B12E704B"});
 #line 52
@@ -322,29 +322,25 @@ this.FeatureBackground();
                         "DataInizioPeriodo",
                         "DataFinePeriodo",
                         "DataInizioPiano",
-                        "DataFinePiano",
-                        "KeyError",
-                        "DescrizioneErrore"});
+                        "DataFinePiano"});
             table12.AddRow(new string[] {
                         "true",
-                        "2",
-                        "2",
-                        "01/07/2017",
-                        "25/08/2017",
-                        "01/07/2017",
-                        "30/11/2017",
                         "5",
-                        "RESIDUO_INSUFFICIENTE"});
+                        "5",
+                        "01/07/2017",
+                        "08/09/2017",
+                        "01/07/2017",
+                        "31/12/2017"});
 #line 55
  testRunner.Then("la risposta è la seguente", ((string)(null)), table12, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("525_4w_6m_fine_pt", SourceLine=59)]
-        public virtual void _525_4W_6M_Fine_Pt()
+        [TechTalk.SpecRun.ScenarioAttribute("150_4w_5m", SourceLine=59)]
+        public virtual void _150_4W_5M()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("525_4w_6m_fine_pt", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("150_4w_5m", ((string[])(null)));
 #line 60
 this.ScenarioSetup(scenarioInfo);
 #line 6
@@ -363,10 +359,10 @@ this.FeatureBackground();
                         "R03DX05",
                         "SOLUZIONE INIETTABILE",
                         "01/07/2017",
-                        "525 mg ogni 4 settimane per 6 mesi",
-                        "525 mg",
+                        "150 mg ogni 4 settimane per 5 mesi",
+                        "150 mg",
                         "4 settimane",
-                        "6 mesi",
+                        "5 mesi",
                         "7a2c3353-12b6-47b1-b566-3f2779f6fc9d"});
 #line 61
  testRunner.Given("Il seguente piano terapeutico", ((string)(null)), table13, "Given ");
@@ -377,9 +373,9 @@ this.FeatureBackground();
                         "DataRicetta",
                         "CodiceFiscale"});
             table14.AddRow(new string[] {
-                        "036892053",
-                        "2",
-                        "20/12/2017",
+                        "036892089",
+                        "3",
+                        "13/07/2017",
                         "MDGDGI70B12E704B"});
 #line 64
  testRunner.When("viene effettuata la chiamata al servizio VerificaPT con i seguenti parametri", ((string)(null)), table14, "When ");
@@ -391,25 +387,29 @@ this.FeatureBackground();
                         "DataInizioPeriodo",
                         "DataFinePeriodo",
                         "DataInizioPiano",
-                        "DataFinePiano"});
+                        "DataFinePiano",
+                        "KeyError",
+                        "DescrizioneErrore"});
             table15.AddRow(new string[] {
                         "true",
-                        "1",
-                        "1",
-                        "16/12/2017",
-                        "31/12/2017",
+                        "2",
+                        "2",
                         "01/07/2017",
-                        "31/12/2017"});
+                        "25/08/2017",
+                        "01/07/2017",
+                        "30/11/2017",
+                        "5",
+                        "RESIDUO_INSUFFICIENTE"});
 #line 67
  testRunner.Then("la risposta è la seguente", ((string)(null)), table15, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Piano terapeutico Inesistente", SourceLine=71)]
-        public virtual void PianoTerapeuticoInesistente()
+        [TechTalk.SpecRun.ScenarioAttribute("525_4w_6m_fine_pt", SourceLine=71)]
+        public virtual void _525_4W_6M_Fine_Pt()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Piano terapeutico Inesistente", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("525_4w_6m_fine_pt", ((string[])(null)));
 #line 72
 this.ScenarioSetup(scenarioInfo);
 #line 6
@@ -444,8 +444,8 @@ this.FeatureBackground();
             table17.AddRow(new string[] {
                         "036892053",
                         "2",
-                        "13/07/2017",
-                        "DLBMRC86B26C618P"});
+                        "20/12/2017",
+                        "MDGDGI70B12E704B"});
 #line 76
  testRunner.When("viene effettuata la chiamata al servizio VerificaPT con i seguenti parametri", ((string)(null)), table17, "When ");
 #line hidden
@@ -456,30 +456,26 @@ this.FeatureBackground();
                         "DataInizioPeriodo",
                         "DataFinePeriodo",
                         "DataInizioPiano",
-                        "DataFinePiano",
-                        "KeyError",
-                        "DescrizioneErrore"});
+                        "DataFinePiano"});
             table18.AddRow(new string[] {
                         "true",
-                        "0",
-                        "0",
-                        "",
-                        "",
-                        "",
-                        "",
-                        "2",
-                        "PT_INESISTENTE"});
+                        "1",
+                        "1",
+                        "16/12/2017",
+                        "31/12/2017",
+                        "01/07/2017",
+                        "31/12/2017"});
 #line 79
  testRunner.Then("la risposta è la seguente", ((string)(null)), table18, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Piano Terapeutico Scaduto", SourceLine=82)]
-        public virtual void PianoTerapeuticoScaduto()
+        [TechTalk.SpecRun.ScenarioAttribute("Piano terapeutico Inesistente", SourceLine=83)]
+        public virtual void PianoTerapeuticoInesistente()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Piano Terapeutico Scaduto", ((string[])(null)));
-#line 83
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Piano terapeutico Inesistente", ((string[])(null)));
+#line 84
 this.ScenarioSetup(scenarioInfo);
 #line 6
 this.FeatureBackground();
@@ -502,7 +498,7 @@ this.FeatureBackground();
                         "4 settimane",
                         "6 mesi",
                         "7a2c3353-12b6-47b1-b566-3f2779f6fc9d"});
-#line 84
+#line 85
  testRunner.Given("Il seguente piano terapeutico", ((string)(null)), table19, "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table20 = new TechTalk.SpecFlow.Table(new string[] {
@@ -513,9 +509,9 @@ this.FeatureBackground();
             table20.AddRow(new string[] {
                         "036892053",
                         "2",
-                        "31/01/2018",
-                        "MDGDGI70B12E704B"});
-#line 87
+                        "13/07/2017",
+                        "DLBMRC86B26C618P"});
+#line 88
  testRunner.When("viene effettuata la chiamata al servizio VerificaPT con i seguenti parametri", ((string)(null)), table20, "When ");
 #line hidden
             TechTalk.SpecFlow.Table table21 = new TechTalk.SpecFlow.Table(new string[] {
@@ -529,7 +525,7 @@ this.FeatureBackground();
                         "KeyError",
                         "DescrizioneErrore"});
             table21.AddRow(new string[] {
-                        "false",
+                        "true",
                         "0",
                         "0",
                         "",
@@ -538,8 +534,77 @@ this.FeatureBackground();
                         "",
                         "2",
                         "PT_INESISTENTE"});
-#line 90
+#line 91
  testRunner.Then("la risposta è la seguente", ((string)(null)), table21, "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Piano Terapeutico Scaduto", SourceLine=94)]
+        public virtual void PianoTerapeuticoScaduto()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Piano Terapeutico Scaduto", ((string[])(null)));
+#line 95
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
+#line hidden
+            TechTalk.SpecFlow.Table table22 = new TechTalk.SpecFlow.Table(new string[] {
+                        "ATC",
+                        "FormaFarmaceutica",
+                        "DataInizio",
+                        "Prescrizione",
+                        "Posologia",
+                        "Frequenza",
+                        "Durata",
+                        "GuidCodiceFiscale"});
+            table22.AddRow(new string[] {
+                        "R03DX05",
+                        "SOLUZIONE INIETTABILE",
+                        "01/07/2017",
+                        "525 mg ogni 4 settimane per 6 mesi",
+                        "525 mg",
+                        "4 settimane",
+                        "6 mesi",
+                        "7a2c3353-12b6-47b1-b566-3f2779f6fc9d"});
+#line 96
+ testRunner.Given("Il seguente piano terapeutico", ((string)(null)), table22, "Given ");
+#line hidden
+            TechTalk.SpecFlow.Table table23 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Minsan",
+                        "Confezioni",
+                        "DataRicetta",
+                        "CodiceFiscale"});
+            table23.AddRow(new string[] {
+                        "036892053",
+                        "2",
+                        "31/01/2018",
+                        "MDGDGI70B12E704B"});
+#line 99
+ testRunner.When("viene effettuata la chiamata al servizio VerificaPT con i seguenti parametri", ((string)(null)), table23, "When ");
+#line hidden
+            TechTalk.SpecFlow.Table table24 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Esito",
+                        "ConfezioniAutorizzate",
+                        "ConfezioniResidue",
+                        "DataInizioPeriodo",
+                        "DataFinePeriodo",
+                        "DataInizioPiano",
+                        "DataFinePiano",
+                        "KeyError",
+                        "DescrizioneErrore"});
+            table24.AddRow(new string[] {
+                        "true",
+                        "0",
+                        "0",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "2",
+                        "PT_INESISTENTE"});
+#line 102
+ testRunner.Then("la risposta è la seguente", ((string)(null)), table24, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
