@@ -30,8 +30,8 @@ Scenario: 525_4w_6m_75mg
 	| Minsan    | Confezioni | DataRicetta | CodiceFiscale    |
 	| 036892053 | 2          | 13/07/2017  | MDGDGI70B12E704B |
 	Then la risposta è la seguente
-	| Esito | ConfezioniAutorizzate | ConfezioniResidue | DataInizioPeriodo | DataFinePeriodo | DataInizioPiano | DataFinePiano |
-	| true  | 2                     | 2                 | 01/07/2017        | 25/08/2017      | 01/07/2017      | 31/12/2017    |
+	| Esito | ConfezioniAutorizzate | ConfezioniResidue | DataInizioPeriodo | DataFinePeriodo | DataInizioPiano | DataFinePiano | CodicePT         |
+	| true  | 2                     | 2                 | 01/07/2017        | 25/08/2017      | 01/07/2017      | 31/12/2017    | NH6F5J20K2C5TCPD |
 
 Scenario: 525_4w_6m_150mg
 	Given Il seguente piano terapeutico
@@ -41,8 +41,8 @@ Scenario: 525_4w_6m_150mg
 	| Minsan    | Confezioni | DataRicetta | CodiceFiscale    |
 	| 036892089 | 2          | 13/07/2017  | MDGDGI70B12E704B |
 	Then la risposta è la seguente
-	| Esito | ConfezioniAutorizzate | ConfezioniResidue | DataInizioPeriodo | DataFinePeriodo | DataInizioPiano | DataFinePiano |
-	| true  | 6                     | 6                 | 01/07/2017        | 25/08/2017      | 01/07/2017      | 31/12/2017    |
+	| Esito | ConfezioniAutorizzate | ConfezioniResidue | DataInizioPeriodo | DataFinePeriodo | DataInizioPiano | DataFinePiano | CodicePT         |
+	| true  | 6                     | 6                 | 01/07/2017        | 25/08/2017      | 01/07/2017      | 31/12/2017    | NH6F5J20K2C5TCPD |
 
 
 Scenario: 525_2w_6m
@@ -53,8 +53,8 @@ Scenario: 525_2w_6m
 	| Minsan    | Confezioni | DataRicetta | CodiceFiscale    |
 	| 036892053 | 2          | 13/07/2017  | MDGDGI70B12E704B |
 	Then la risposta è la seguente
-	| Esito | ConfezioniAutorizzate | ConfezioniResidue | DataInizioPeriodo | DataFinePeriodo | DataInizioPiano | DataFinePiano |
-	| true  | 5                     | 5                 | 01/07/2017        | 08/09/2017      | 01/07/2017      | 31/12/2017    |
+	| Esito | ConfezioniAutorizzate | ConfezioniResidue | DataInizioPeriodo | DataFinePeriodo | DataInizioPiano | DataFinePiano | CodicePT         |
+	| true  | 5                     | 5                 | 01/07/2017        | 08/09/2017      | 01/07/2017      | 31/12/2017    | NH6F5J20K2C5TCPD |
 
 
 Scenario: 150_4w_5m
@@ -65,8 +65,8 @@ Scenario: 150_4w_5m
 	| Minsan    | Confezioni | DataRicetta | CodiceFiscale    |
 	| 036892089 | 3          | 13/07/2017  | MDGDGI70B12E704B |
 	Then la risposta è la seguente
-	| Esito | ConfezioniAutorizzate | ConfezioniResidue | DataInizioPeriodo | DataFinePeriodo | DataInizioPiano | DataFinePiano | KeyError | DescrizioneErrore     |
-	| true  | 2                     | 2                 | 01/07/2017        | 25/08/2017      | 01/07/2017      | 30/11/2017    | 5        | RESIDUO_INSUFFICIENTE |
+	| Esito | ConfezioniAutorizzate | ConfezioniResidue | DataInizioPeriodo | DataFinePeriodo | DataInizioPiano | DataFinePiano | KeyError | DescrizioneErrore     | CodicePT         |
+	| true  | 2                     | 2                 | 01/07/2017        | 25/08/2017      | 01/07/2017      | 30/11/2017    | 5        | RESIDUO_INSUFFICIENTE | NH6F5J20K2C5TCPD |
 
 
 Scenario: 525_4w_6m_fine_pt
@@ -77,8 +77,8 @@ Scenario: 525_4w_6m_fine_pt
 	| Minsan    | Confezioni | DataRicetta | CodiceFiscale    |
 	| 036892053 | 2          | 20/12/2017  | MDGDGI70B12E704B |
 	Then la risposta è la seguente
-	| Esito | ConfezioniAutorizzate | ConfezioniResidue | DataInizioPeriodo | DataFinePeriodo | DataInizioPiano | DataFinePiano |
-	| true  | 1                     | 1                 | 16/12/2017        | 31/12/2017      | 01/07/2017      | 31/12/2017    |
+	| Esito | ConfezioniAutorizzate | ConfezioniResidue | DataInizioPeriodo | DataFinePeriodo | DataInizioPiano | DataFinePiano | CodicePT         |
+	| true  | 1                     | 1                 | 16/12/2017        | 31/12/2017      | 01/07/2017      | 31/12/2017    | NH6F5J20K2C5TCPD |
 
 
 Scenario: Piano terapeutico Inesistente
@@ -89,8 +89,8 @@ Scenario: Piano terapeutico Inesistente
 	| Minsan    | Confezioni | DataRicetta | CodiceFiscale    |
 	| 036892053 | 2          | 13/07/2017  | DLBMRC86B26C618P |
 	Then la risposta è la seguente
-	| Esito | ConfezioniAutorizzate | ConfezioniResidue | DataInizioPeriodo | DataFinePeriodo | DataInizioPiano | DataFinePiano | KeyError | DescrizioneErrore |
-	| true  | 0                     | 0                 |                   |                 |                 |               | 2        | PT_INESISTENTE    |
+	| Esito | ConfezioniAutorizzate | ConfezioniResidue | DataInizioPeriodo | DataFinePeriodo | DataInizioPiano | DataFinePiano | KeyError | DescrizioneErrore | CodicePT         |
+	| true  | 0                     | 0                 |                   |                 |                 |               | 2        | PT_INESISTENTE    |                  |
 
 Scenario: Piano Terapeutico Scaduto 
 	Given Il seguente piano terapeutico
@@ -100,8 +100,8 @@ Scenario: Piano Terapeutico Scaduto
 	| Minsan    | Confezioni | DataRicetta | CodiceFiscale    |
 	| 036892053 | 2          | 31/01/2018  | MDGDGI70B12E704B |
 	Then la risposta è la seguente
-	| Esito | ConfezioniAutorizzate | ConfezioniResidue | DataInizioPeriodo | DataFinePeriodo | DataInizioPiano | DataFinePiano | KeyError | DescrizioneErrore |
-	| true  | 0                     | 0                 |                   |                 |                 |               | 2        | PT_INESISTENTE    |
+	| Esito | ConfezioniAutorizzate | ConfezioniResidue | DataInizioPeriodo | DataFinePeriodo | DataInizioPiano | DataFinePiano | KeyError | DescrizioneErrore | CodicePT         |
+	| true  | 0                     | 0                 |                   |                 |                 |               | 2        | PT_INESISTENTE    |                  |
 
 
 
