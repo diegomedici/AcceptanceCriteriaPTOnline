@@ -159,7 +159,8 @@ this.FeatureBackground();
                         "Posologia",
                         "Frequenza",
                         "Durata",
-                        "GuidCodiceFiscale"});
+                        "GuidCodiceFiscale",
+                        "CodicePT"});
             table4.AddRow(new string[] {
                         "R03DX05",
                         "SOLUZIONE INIETTABILE",
@@ -168,7 +169,8 @@ this.FeatureBackground();
                         "525 mg",
                         "4 settimane",
                         "6 mesi",
-                        "7a2c3353-12b6-47b1-b566-3f2779f6fc9d"});
+                        "7a2c3353-12b6-47b1-b566-3f2779f6fc9d",
+                        "NH6F5J20K2C5TCPD"});
 #line 26
  testRunner.Given("Il seguente piano terapeutico", ((string)(null)), table4, "Given ");
 #line hidden
@@ -192,7 +194,8 @@ this.FeatureBackground();
                         "DataInizioPeriodo",
                         "DataFinePeriodo",
                         "DataInizioPiano",
-                        "DataFinePiano"});
+                        "DataFinePiano",
+                        "CodicePT"});
             table6.AddRow(new string[] {
                         "true",
                         "2",
@@ -200,7 +203,8 @@ this.FeatureBackground();
                         "01/07/2017",
                         "25/08/2017",
                         "01/07/2017",
-                        "31/12/2017"});
+                        "31/12/2017",
+                        "NH6F5J20K2C5TCPD"});
 #line 32
  testRunner.Then("la risposta è la seguente", ((string)(null)), table6, "Then ");
 #line hidden
@@ -224,7 +228,8 @@ this.FeatureBackground();
                         "Posologia",
                         "Frequenza",
                         "Durata",
-                        "GuidCodiceFiscale"});
+                        "GuidCodiceFiscale",
+                        "CodicePT"});
             table7.AddRow(new string[] {
                         "R03DX05",
                         "SOLUZIONE INIETTABILE",
@@ -233,7 +238,8 @@ this.FeatureBackground();
                         "525 mg",
                         "4 settimane",
                         "6 mesi",
-                        "7a2c3353-12b6-47b1-b566-3f2779f6fc9d"});
+                        "7a2c3353-12b6-47b1-b566-3f2779f6fc9d",
+                        "NH6F5J20K2C5TCPD"});
 #line 37
  testRunner.Given("Il seguente piano terapeutico", ((string)(null)), table7, "Given ");
 #line hidden
@@ -257,7 +263,8 @@ this.FeatureBackground();
                         "DataInizioPeriodo",
                         "DataFinePeriodo",
                         "DataInizioPiano",
-                        "DataFinePiano"});
+                        "DataFinePiano",
+                        "CodicePT"});
             table9.AddRow(new string[] {
                         "true",
                         "6",
@@ -265,7 +272,8 @@ this.FeatureBackground();
                         "01/07/2017",
                         "25/08/2017",
                         "01/07/2017",
-                        "31/12/2017"});
+                        "31/12/2017",
+                        "NH6F5J20K2C5TCPD"});
 #line 43
  testRunner.Then("la risposta è la seguente", ((string)(null)), table9, "Then ");
 #line hidden
@@ -289,7 +297,8 @@ this.FeatureBackground();
                         "Posologia",
                         "Frequenza",
                         "Durata",
-                        "GuidCodiceFiscale"});
+                        "GuidCodiceFiscale",
+                        "CodicePT"});
             table10.AddRow(new string[] {
                         "R03DX05",
                         "SOLUZIONE INIETTABILE",
@@ -298,7 +307,8 @@ this.FeatureBackground();
                         "525 mg",
                         "2 settimane",
                         "6 mesi",
-                        "7a2c3353-12b6-47b1-b566-3f2779f6fc9d"});
+                        "7a2c3353-12b6-47b1-b566-3f2779f6fc9d",
+                        "NH6F5J20K2C5TCPD"});
 #line 49
  testRunner.Given("Il seguente piano terapeutico", ((string)(null)), table10, "Given ");
 #line hidden
@@ -322,7 +332,8 @@ this.FeatureBackground();
                         "DataInizioPeriodo",
                         "DataFinePeriodo",
                         "DataInizioPiano",
-                        "DataFinePiano"});
+                        "DataFinePiano",
+                        "CodicePT"});
             table12.AddRow(new string[] {
                         "true",
                         "5",
@@ -330,7 +341,8 @@ this.FeatureBackground();
                         "01/07/2017",
                         "08/09/2017",
                         "01/07/2017",
-                        "31/12/2017"});
+                        "31/12/2017",
+                        "NH6F5J20K2C5TCPD"});
 #line 55
  testRunner.Then("la risposta è la seguente", ((string)(null)), table12, "Then ");
 #line hidden
@@ -354,7 +366,8 @@ this.FeatureBackground();
                         "Posologia",
                         "Frequenza",
                         "Durata",
-                        "GuidCodiceFiscale"});
+                        "GuidCodiceFiscale",
+                        "CodicePT"});
             table13.AddRow(new string[] {
                         "R03DX05",
                         "SOLUZIONE INIETTABILE",
@@ -363,7 +376,8 @@ this.FeatureBackground();
                         "150 mg",
                         "4 settimane",
                         "5 mesi",
-                        "7a2c3353-12b6-47b1-b566-3f2779f6fc9d"});
+                        "7a2c3353-12b6-47b1-b566-3f2779f6fc9d",
+                        "NH6F5J20K2C5TCPD"});
 #line 61
  testRunner.Given("Il seguente piano terapeutico", ((string)(null)), table13, "Given ");
 #line hidden
@@ -389,7 +403,8 @@ this.FeatureBackground();
                         "DataInizioPiano",
                         "DataFinePiano",
                         "KeyError",
-                        "DescrizioneErrore"});
+                        "DescrizioneErrore",
+                        "CodicePT"});
             table15.AddRow(new string[] {
                         "true",
                         "2",
@@ -399,7 +414,8 @@ this.FeatureBackground();
                         "01/07/2017",
                         "30/11/2017",
                         "5",
-                        "RESIDUO_INSUFFICIENTE"});
+                        "RESIDUO_INSUFFICIENTE",
+                        "NH6F5J20K2C5TCPD"});
 #line 67
  testRunner.Then("la risposta è la seguente", ((string)(null)), table15, "Then ");
 #line hidden
@@ -423,7 +439,8 @@ this.FeatureBackground();
                         "Posologia",
                         "Frequenza",
                         "Durata",
-                        "GuidCodiceFiscale"});
+                        "GuidCodiceFiscale",
+                        "CodicePT"});
             table16.AddRow(new string[] {
                         "R03DX05",
                         "SOLUZIONE INIETTABILE",
@@ -432,7 +449,8 @@ this.FeatureBackground();
                         "525 mg",
                         "4 settimane",
                         "6 mesi",
-                        "7a2c3353-12b6-47b1-b566-3f2779f6fc9d"});
+                        "7a2c3353-12b6-47b1-b566-3f2779f6fc9d",
+                        "NH6F5J20K2C5TCPD"});
 #line 73
  testRunner.Given("Il seguente piano terapeutico", ((string)(null)), table16, "Given ");
 #line hidden
@@ -456,7 +474,8 @@ this.FeatureBackground();
                         "DataInizioPeriodo",
                         "DataFinePeriodo",
                         "DataInizioPiano",
-                        "DataFinePiano"});
+                        "DataFinePiano",
+                        "CodicePT"});
             table18.AddRow(new string[] {
                         "true",
                         "1",
@@ -464,7 +483,8 @@ this.FeatureBackground();
                         "16/12/2017",
                         "31/12/2017",
                         "01/07/2017",
-                        "31/12/2017"});
+                        "31/12/2017",
+                        "NH6F5J20K2C5TCPD"});
 #line 79
  testRunner.Then("la risposta è la seguente", ((string)(null)), table18, "Then ");
 #line hidden
@@ -488,7 +508,8 @@ this.FeatureBackground();
                         "Posologia",
                         "Frequenza",
                         "Durata",
-                        "GuidCodiceFiscale"});
+                        "GuidCodiceFiscale",
+                        "CodicePT"});
             table19.AddRow(new string[] {
                         "R03DX05",
                         "SOLUZIONE INIETTABILE",
@@ -497,7 +518,8 @@ this.FeatureBackground();
                         "525 mg",
                         "4 settimane",
                         "6 mesi",
-                        "7a2c3353-12b6-47b1-b566-3f2779f6fc9d"});
+                        "7a2c3353-12b6-47b1-b566-3f2779f6fc9d",
+                        "NH6F5J20K2C5TCPD"});
 #line 85
  testRunner.Given("Il seguente piano terapeutico", ((string)(null)), table19, "Given ");
 #line hidden
@@ -523,7 +545,8 @@ this.FeatureBackground();
                         "DataInizioPiano",
                         "DataFinePiano",
                         "KeyError",
-                        "DescrizioneErrore"});
+                        "DescrizioneErrore",
+                        "CodicePT"});
             table21.AddRow(new string[] {
                         "true",
                         "0",
@@ -533,7 +556,8 @@ this.FeatureBackground();
                         "",
                         "",
                         "2",
-                        "PT_INESISTENTE"});
+                        "PT_INESISTENTE",
+                        ""});
 #line 91
  testRunner.Then("la risposta è la seguente", ((string)(null)), table21, "Then ");
 #line hidden
@@ -557,7 +581,8 @@ this.FeatureBackground();
                         "Posologia",
                         "Frequenza",
                         "Durata",
-                        "GuidCodiceFiscale"});
+                        "GuidCodiceFiscale",
+                        "CodicePT"});
             table22.AddRow(new string[] {
                         "R03DX05",
                         "SOLUZIONE INIETTABILE",
@@ -566,7 +591,8 @@ this.FeatureBackground();
                         "525 mg",
                         "4 settimane",
                         "6 mesi",
-                        "7a2c3353-12b6-47b1-b566-3f2779f6fc9d"});
+                        "7a2c3353-12b6-47b1-b566-3f2779f6fc9d",
+                        "NH6F5J20K2C5TCPD"});
 #line 96
  testRunner.Given("Il seguente piano terapeutico", ((string)(null)), table22, "Given ");
 #line hidden
@@ -592,7 +618,8 @@ this.FeatureBackground();
                         "DataInizioPiano",
                         "DataFinePiano",
                         "KeyError",
-                        "DescrizioneErrore"});
+                        "DescrizioneErrore",
+                        "CodicePT"});
             table24.AddRow(new string[] {
                         "true",
                         "0",
@@ -602,7 +629,8 @@ this.FeatureBackground();
                         "",
                         "",
                         "2",
-                        "PT_INESISTENTE"});
+                        "PT_INESISTENTE",
+                        ""});
 #line 102
  testRunner.Then("la risposta è la seguente", ((string)(null)), table24, "Then ");
 #line hidden

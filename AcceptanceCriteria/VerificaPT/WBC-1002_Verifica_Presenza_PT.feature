@@ -24,8 +24,8 @@ Background:
 
 Scenario: 525_4w_6m_75mg
 	Given Il seguente piano terapeutico
-	| ATC     | FormaFarmaceutica     | DataInizio | Prescrizione                       | Posologia | Frequenza   | Durata | GuidCodiceFiscale                    |
-	| R03DX05 | SOLUZIONE INIETTABILE | 01/07/2017 | 525 mg ogni 4 settimane per 6 mesi | 525 mg    | 4 settimane | 6 mesi | 7a2c3353-12b6-47b1-b566-3f2779f6fc9d |
+	| ATC     | FormaFarmaceutica     | DataInizio | Prescrizione                       | Posologia | Frequenza   | Durata | GuidCodiceFiscale                    | CodicePT         |
+	| R03DX05 | SOLUZIONE INIETTABILE | 01/07/2017 | 525 mg ogni 4 settimane per 6 mesi | 525 mg    | 4 settimane | 6 mesi | 7a2c3353-12b6-47b1-b566-3f2779f6fc9d | NH6F5J20K2C5TCPD |
 	When viene effettuata la chiamata al servizio VerificaPT con i seguenti parametri
 	| Minsan    | Confezioni | DataRicetta | CodiceFiscale    |
 	| 036892053 | 2          | 13/07/2017  | MDGDGI70B12E704B |
@@ -35,8 +35,8 @@ Scenario: 525_4w_6m_75mg
 
 Scenario: 525_4w_6m_150mg
 	Given Il seguente piano terapeutico
-	| ATC     | FormaFarmaceutica     | DataInizio | Prescrizione                       | Posologia | Frequenza   | Durata | GuidCodiceFiscale                    |
-	| R03DX05 | SOLUZIONE INIETTABILE | 01/07/2017 | 525 mg ogni 4 settimane per 6 mesi | 525 mg    | 4 settimane | 6 mesi | 7a2c3353-12b6-47b1-b566-3f2779f6fc9d |
+	| ATC     | FormaFarmaceutica     | DataInizio | Prescrizione                       | Posologia | Frequenza   | Durata | GuidCodiceFiscale                    | CodicePT         |
+	| R03DX05 | SOLUZIONE INIETTABILE | 01/07/2017 | 525 mg ogni 4 settimane per 6 mesi | 525 mg    | 4 settimane | 6 mesi | 7a2c3353-12b6-47b1-b566-3f2779f6fc9d | NH6F5J20K2C5TCPD |
 	When viene effettuata la chiamata al servizio VerificaPT con i seguenti parametri
 	| Minsan    | Confezioni | DataRicetta | CodiceFiscale    |
 	| 036892089 | 2          | 13/07/2017  | MDGDGI70B12E704B |
@@ -47,8 +47,8 @@ Scenario: 525_4w_6m_150mg
 
 Scenario: 525_2w_6m
 	Given Il seguente piano terapeutico
-    | ATC     | FormaFarmaceutica     | DataInizio | Prescrizione                       | Posologia | Frequenza   | Durata | GuidCodiceFiscale                    |
-    | R03DX05 | SOLUZIONE INIETTABILE | 01/07/2017 | 525 mg ogni 2 settimane per 6 mesi | 525 mg    | 2 settimane | 6 mesi | 7a2c3353-12b6-47b1-b566-3f2779f6fc9d |
+    | ATC     | FormaFarmaceutica     | DataInizio | Prescrizione                       | Posologia | Frequenza   | Durata | GuidCodiceFiscale                    | CodicePT         |
+    | R03DX05 | SOLUZIONE INIETTABILE | 01/07/2017 | 525 mg ogni 2 settimane per 6 mesi | 525 mg    | 2 settimane | 6 mesi | 7a2c3353-12b6-47b1-b566-3f2779f6fc9d | NH6F5J20K2C5TCPD |
 	When viene effettuata la chiamata al servizio VerificaPT con i seguenti parametri
 	| Minsan    | Confezioni | DataRicetta | CodiceFiscale    |
 	| 036892053 | 2          | 13/07/2017  | MDGDGI70B12E704B |
@@ -59,8 +59,8 @@ Scenario: 525_2w_6m
 
 Scenario: 150_4w_5m
 	Given Il seguente piano terapeutico
-    | ATC     | FormaFarmaceutica     | DataInizio | Prescrizione                       | Posologia | Frequenza   | Durata | GuidCodiceFiscale                    |
-    | R03DX05 | SOLUZIONE INIETTABILE | 01/07/2017 | 150 mg ogni 4 settimane per 5 mesi | 150 mg    | 4 settimane | 5 mesi | 7a2c3353-12b6-47b1-b566-3f2779f6fc9d |
+    | ATC     | FormaFarmaceutica     | DataInizio | Prescrizione                       | Posologia | Frequenza   | Durata | GuidCodiceFiscale                    | CodicePT         |
+    | R03DX05 | SOLUZIONE INIETTABILE | 01/07/2017 | 150 mg ogni 4 settimane per 5 mesi | 150 mg    | 4 settimane | 5 mesi | 7a2c3353-12b6-47b1-b566-3f2779f6fc9d | NH6F5J20K2C5TCPD |
 	When viene effettuata la chiamata al servizio VerificaPT con i seguenti parametri
 	| Minsan    | Confezioni | DataRicetta | CodiceFiscale    |
 	| 036892089 | 3          | 13/07/2017  | MDGDGI70B12E704B |
@@ -71,8 +71,8 @@ Scenario: 150_4w_5m
 
 Scenario: 525_4w_6m_fine_pt
 	Given Il seguente piano terapeutico
-	| ATC     | FormaFarmaceutica     | DataInizio | Prescrizione                       | Posologia | Frequenza   | Durata | GuidCodiceFiscale                    |
-	| R03DX05 | SOLUZIONE INIETTABILE | 01/07/2017 | 525 mg ogni 4 settimane per 6 mesi | 525 mg    | 4 settimane | 6 mesi | 7a2c3353-12b6-47b1-b566-3f2779f6fc9d |
+	| ATC     | FormaFarmaceutica     | DataInizio | Prescrizione                       | Posologia | Frequenza   | Durata | GuidCodiceFiscale                    | CodicePT         |
+	| R03DX05 | SOLUZIONE INIETTABILE | 01/07/2017 | 525 mg ogni 4 settimane per 6 mesi | 525 mg    | 4 settimane | 6 mesi | 7a2c3353-12b6-47b1-b566-3f2779f6fc9d | NH6F5J20K2C5TCPD |
 	When viene effettuata la chiamata al servizio VerificaPT con i seguenti parametri
 	| Minsan    | Confezioni | DataRicetta | CodiceFiscale    |
 	| 036892053 | 2          | 20/12/2017  | MDGDGI70B12E704B |
@@ -83,8 +83,8 @@ Scenario: 525_4w_6m_fine_pt
 
 Scenario: Piano terapeutico Inesistente
 	Given Il seguente piano terapeutico
-	| ATC     | FormaFarmaceutica     | DataInizio | Prescrizione                       | Posologia | Frequenza   | Durata | GuidCodiceFiscale                    |
-	| R03DX05 | SOLUZIONE INIETTABILE | 01/07/2017 | 525 mg ogni 4 settimane per 6 mesi | 525 mg    | 4 settimane | 6 mesi | 7a2c3353-12b6-47b1-b566-3f2779f6fc9d |
+	| ATC     | FormaFarmaceutica     | DataInizio | Prescrizione                       | Posologia | Frequenza   | Durata | GuidCodiceFiscale                    | CodicePT         |
+	| R03DX05 | SOLUZIONE INIETTABILE | 01/07/2017 | 525 mg ogni 4 settimane per 6 mesi | 525 mg    | 4 settimane | 6 mesi | 7a2c3353-12b6-47b1-b566-3f2779f6fc9d | NH6F5J20K2C5TCPD |
 	When viene effettuata la chiamata al servizio VerificaPT con i seguenti parametri
 	| Minsan    | Confezioni | DataRicetta | CodiceFiscale    |
 	| 036892053 | 2          | 13/07/2017  | DLBMRC86B26C618P |
@@ -94,8 +94,8 @@ Scenario: Piano terapeutico Inesistente
 
 Scenario: Piano Terapeutico Scaduto 
 	Given Il seguente piano terapeutico
-	| ATC     | FormaFarmaceutica     | DataInizio | Prescrizione                       | Posologia | Frequenza   | Durata | GuidCodiceFiscale                    |
-	| R03DX05 | SOLUZIONE INIETTABILE | 01/07/2017 | 525 mg ogni 4 settimane per 6 mesi | 525 mg    | 4 settimane | 6 mesi | 7a2c3353-12b6-47b1-b566-3f2779f6fc9d |
+	| ATC     | FormaFarmaceutica     | DataInizio | Prescrizione                       | Posologia | Frequenza   | Durata | GuidCodiceFiscale                    | CodicePT         |
+	| R03DX05 | SOLUZIONE INIETTABILE | 01/07/2017 | 525 mg ogni 4 settimane per 6 mesi | 525 mg    | 4 settimane | 6 mesi | 7a2c3353-12b6-47b1-b566-3f2779f6fc9d | NH6F5J20K2C5TCPD |
 	When viene effettuata la chiamata al servizio VerificaPT con i seguenti parametri
 	| Minsan    | Confezioni | DataRicetta | CodiceFiscale    |
 	| 036892053 | 2          | 31/01/2018  | MDGDGI70B12E704B |
