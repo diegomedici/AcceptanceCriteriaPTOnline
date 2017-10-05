@@ -78,8 +78,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="VerificaPT\WBC-1028_Verifica_Presenza_PT_ConErogazioni - Copy.feature.cs">
-      <DependentUpon>WBC-1028_Verifica_Presenza_PT_ConErogazioni - Copy.feature</DependentUpon>
+    <Compile Include="VerificaPT\DPC-1146_Gestione CodicePT per integrazione PTOL.feature.cs">
+      <DependentUpon>DPC-1146_Gestione CodicePT per integrazione PTOL.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="VerificaPT\WBC-1028_Verifica_Presenza_PT_ConErogazioni.feature.cs">
+      <DependentUpon>WBC-1028_Verifica_Presenza_PT_ConErogazioni.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="VerificaPT\WBC-1047_InoltroErogazioniPT WebCare-PTOnline.feature.cs">
+      <DependentUpon>WBC-1047_InoltroErogazioniPT WebCare-PTOnline.feature</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -121,9 +131,17 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>VerificaPTOmalizumabErrori.feature.cs</LastGenOutput>
     </None>
-    <None Include="VerificaPT\WBC-1028_Verifica_Presenza_PT_ConErogazioni - Copy.feature">
+    <None Include="VerificaPT\DPC-1146_Gestione CodicePT per integrazione PTOL.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>WBC-1028_Verifica_Presenza_PT_ConErogazioni - Copy.feature.cs</LastGenOutput>
+      <LastGenOutput>DPC-1146_Gestione CodicePT per integrazione PTOL.feature.cs</LastGenOutput>
+    </None>
+    <None Include="VerificaPT\WBC-1028_Verifica_Presenza_PT_ConErogazioni.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>WBC-1028_Verifica_Presenza_PT_ConErogazioni.feature.cs</LastGenOutput>
+    </None>
+    <None Include="VerificaPT\WBC-1047_InoltroErogazioniPT WebCare-PTOnline.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>WBC-1047_InoltroErogazioniPT WebCare-PTOnline.feature.cs</LastGenOutput>
     </None>
     <None Include="VerificaPT\WBC-1051_InoltroVerificaPT webCare-PTOnline.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
