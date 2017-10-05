@@ -78,8 +78,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="VerificaPT\WBC-1028_Verifica_Presenza_PT_ConErogazioni.feature.cs">
-      <DependentUpon>WBC-1028_Verifica_Presenza_PT_ConErogazioni.feature</DependentUpon>
+    <Compile Include="VerificaPT\WBC-1028_Verifica_Presenza_PT_ConErogazioni - Copy.feature.cs">
+      <DependentUpon>WBC-1028_Verifica_Presenza_PT_ConErogazioni - Copy.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="VerificaPT\WBC-1051_InoltroVerificaPT webCare-PTOnline.feature.cs">
+      <DependentUpon>WBC-1051_InoltroVerificaPT webCare-PTOnline.feature</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -116,9 +121,13 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>VerificaPTOmalizumabErrori.feature.cs</LastGenOutput>
     </None>
-    <None Include="VerificaPT\WBC-1028_Verifica_Presenza_PT_ConErogazioni.feature">
+    <None Include="VerificaPT\WBC-1028_Verifica_Presenza_PT_ConErogazioni - Copy.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>WBC-1028_Verifica_Presenza_PT_ConErogazioni.feature.cs</LastGenOutput>
+      <LastGenOutput>WBC-1028_Verifica_Presenza_PT_ConErogazioni - Copy.feature.cs</LastGenOutput>
+    </None>
+    <None Include="VerificaPT\WBC-1051_InoltroVerificaPT webCare-PTOnline.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>WBC-1051_InoltroVerificaPT webCare-PTOnline.feature.cs</LastGenOutput>
     </None>
     <None Include="VerificaPT\WBC-1015_Erogazione PT.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
