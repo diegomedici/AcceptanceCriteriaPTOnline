@@ -113,3 +113,36 @@ Scenario: 6. GUID Codice Fiscale non presente su WBC
 	| Esito | ConfezioniAutorizzate | ConfezioniResidue | DataInizioPeriodo | DataFinePeriodo | DataInizioPiano | DataFinePiano | KeyError | DescrizioneErrore | CodicePT         |
 	| true  | 0                     | 0                 |                   |                 |                 |               | 2        | PT_INESISTENTE    |                  |
 	#non effettua nemmeno la chiamata a PTOL in quanto non ha il guid con cui fare la chiamata
+
+Scenario: 7. PT scaduto su WBC e NON presente PTOL
+	Given  Nessun piano terapeutico su PTOL per che abbia questi dati
+	| ATC     | FormaFarmaceutica     | Data       |  | GuidCodiceFiscale                    |
+	| R03DX05 | SOLUZIONE INIETTABILE | 13/07/2017 |  | 7a2c3353-12b6-47b1-b566-3f2779f6fc9d |
+	And Il seguente piano terapeutico su WebCare
+	| CodiceFiscale    | Minsan    | DataInizioPiano | DataFinePiano | Prescrizione                        |
+	| MDGDGI70B12E704B | 036892053 | 01/06/2017      | 30/06/2017    | 1 FIALA OGNI 2 SETTIMANE PER 1 MESE |
+	When viene effettuata la chiamata al servizio VerificaPT con i seguenti parametri
+	| Minsan    | Confezioni | DataRicetta | CodiceFiscale    |
+	| 036892053 | 2          | 13/07/2017  | MDGDGI70B12E704B |
+	Then la risposta è la seguente
+	| Esito | ConfezioniAutorizzate | ConfezioniResidue | DataInizioPeriodo | DataFinePeriodo | DataInizioPiano | DataFinePiano | KeyError | DescrizioneErrore | CodicePT         |
+	| true  | 0                     | 0                 |                   |                 |                 |               | 2        | PT_INESISTENTE    |                  |
+	
+
+Scenario: 8. PT alternativo presente in WBC e PTOL
+	Given  Il seguente piano terapeutico su PTOL
+	| ATC     | FormaFarmaceutica     | DataInizio | Prescrizione                       | Posologia | Frequenza   | Durata | GuidCodiceFiscale                    | CodicePT         |
+	| R03DX05 | SOLUZIONE INIETTABILE | 01/07/2017 | 525 mg ogni 4 settimane per 6 mesi | 525 mg    | 4 settimane | 6 mesi | 7a2c3353-12b6-47b1-b566-3f2779f6fc9d | NH6F5J20K2C5TCPD |
+	And Il seguente piano terapeutico su WebCare
+	| CodiceFiscale    | Minsan    | DataInizioPiano | DataFinePiano | Prescrizione                        |
+	| MDGDGI70B12E704B | 036892089 | 01/07/2017      | 31/07/2017    | 1 FIALA OGNI 2 SETTIMANE PER 1 MESE |
+	When viene effettuata la chiamata al servizio VerificaPT con i seguenti parametri
+	| Minsan    | Confezioni | DataRicetta | CodiceFiscale    |
+	| 036892053 | 2          | 13/07/2017  | MDGDGI70B12E704B |
+	Then la risposta è la seguente
+	| Esito | ConfezioniAutorizzate | ConfezioniResidue | DataInizioPeriodo | DataFinePeriodo | DataInizioPiano | DataFinePiano | KeyError | DescrizioneErrore | CodicePT         |
+	| true  | 0                     | 0                 |                   |                 |                 |               | 2        | PT_INESISTENTE    |                  |
+	And vengono indicati i seguenti piani terapeutici alternativi
+	| DataInizio | DataFine   | Minsan    |
+	| 01/07/2017 | 31/07/2017 | 036892089 |
+

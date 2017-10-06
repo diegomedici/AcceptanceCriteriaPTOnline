@@ -156,40 +156,53 @@ this.ScenarioSetup(scenarioInfo);
 this.FeatureBackground();
 #line hidden
             TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
-                        "CodicePT",
-                        "Confezioni",
-                        "Minsan",
-                        "DataRicetta",
-                        "DataErogazione",
-                        "NumeroRicetta",
-                        "CodiceFarmacia",
-                        "CodiceFiscale"});
+                        "ATC",
+                        "FormaFarmaceutica",
+                        "DataInizio",
+                        "Prescrizione",
+                        "Posologia",
+                        "Frequenza",
+                        "Durata",
+                        "GuidCodiceFiscale",
+                        "CodicePT"});
             table4.AddRow(new string[] {
-                        "NH6F5J20K2C5TCPD",
-                        "2",
-                        "036892053",
-                        "2017-09-06",
-                        "2017-09-07",
-                        "120171000000001",
-                        "1234",
-                        "MDGDGI70B12E704B"});
+                        "R03DX05",
+                        "SOLUZIONE INIETTABILE",
+                        "01/07/2017",
+                        "525 mg ogni 4 settimane per 6 mesi",
+                        "525 mg",
+                        "4 settimane",
+                        "6 mesi",
+                        "7a2c3353-12b6-47b1-b566-3f2779f6fc9d",
+                        "NH6F5J20K2C5TCPD"});
 #line 26
- testRunner.Given("La seguente Erogazione ricevuta", ((string)(null)), table4, "Given ");
+ testRunner.Given("Il seguente piano terapeutico su PTOL", ((string)(null)), table4, "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                        "CodiceFiscale",
+                        "Minsan",
+                        "Data"});
+            table5.AddRow(new string[] {
+                        "MDGDGI70B12E704B",
+                        "036892053",
+                        "13/07/2017"});
+#line 29
+ testRunner.And("su WBC non è presente nessun PT che abbia questi dati", ((string)(null)), table5, "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                         "Minsan",
                         "Confezioni",
                         "DataRicetta",
                         "CodiceFiscale"});
-            table5.AddRow(new string[] {
+            table6.AddRow(new string[] {
                         "036892053",
                         "2",
                         "13/07/2017",
                         "MDGDGI70B12E704B"});
-#line 29
- testRunner.When("viene effettuata la chiamata al servizio Eroga", ((string)(null)), table5, "When ");
+#line 32
+ testRunner.When("viene effettuata la chiamata al servizio VerificaPT con i seguenti parametri", ((string)(null)), table6, "When ");
 #line hidden
-            TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
                         "Esito",
                         "ConfezioniAutorizzate",
                         "ConfezioniResidue",
@@ -200,7 +213,7 @@ this.FeatureBackground();
                         "CodicePT",
                         "KeyError",
                         "DescrizioneErrore"});
-            table6.AddRow(new string[] {
+            table7.AddRow(new string[] {
                         "true",
                         "2",
                         "1",
@@ -211,22 +224,22 @@ this.FeatureBackground();
                         "NH6F5J20K2C5TCPD",
                         "5",
                         "RESIDUO_INSUFFICIENTE"});
-#line 32
- testRunner.Then("la risposta è la seguente", ((string)(null)), table6, "Then ");
+#line 35
+ testRunner.Then("la risposta è la seguente", ((string)(null)), table7, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("2. PT presente in WBC e PTOL", SourceLine=37)]
+        [TechTalk.SpecRun.ScenarioAttribute("2. PT presente in WBC e PTOL", SourceLine=38)]
         public virtual void _2_PTPresenteInWBCEPTOL()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("2. PT presente in WBC e PTOL", ((string[])(null)));
-#line 38
+#line 39
 this.ScenarioSetup(scenarioInfo);
 #line 6
 this.FeatureBackground();
 #line hidden
-            TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
                         "ATC",
                         "FormaFarmaceutica",
                         "DataInizio",
@@ -236,7 +249,7 @@ this.FeatureBackground();
                         "Durata",
                         "GuidCodiceFiscale",
                         "CodicePT"});
-            table7.AddRow(new string[] {
+            table8.AddRow(new string[] {
                         "R03DX05",
                         "SOLUZIONE INIETTABILE",
                         "01/07/2017",
@@ -246,38 +259,38 @@ this.FeatureBackground();
                         "6 mesi",
                         "7a2c3353-12b6-47b1-b566-3f2779f6fc9d",
                         "NH6F5J20K2C5TCPD"});
-#line 39
- testRunner.Given("Il seguente piano terapeutico su PTOL", ((string)(null)), table7, "Given ");
+#line 40
+ testRunner.Given("Il seguente piano terapeutico su PTOL", ((string)(null)), table8, "Given ");
 #line hidden
-            TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
                         "CodiceFiscale",
                         "Minsan",
                         "DataInizioPiano",
                         "DataFinePiano",
                         "Prescrizione"});
-            table8.AddRow(new string[] {
+            table9.AddRow(new string[] {
                         "MDGDGI70B12E704B",
                         "036892053",
                         "01/07/2017",
                         "31/07/2017",
                         "1 FIALA OGNI 2 SETTIMANE PER 1 MESE"});
-#line 42
- testRunner.And("Il seguente piano terapeutico su WebCare", ((string)(null)), table8, "And ");
+#line 43
+ testRunner.And("Il seguente piano terapeutico su WebCare", ((string)(null)), table9, "And ");
 #line hidden
-            TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
                         "Minsan",
                         "Confezioni",
                         "DataRicetta",
                         "CodiceFiscale"});
-            table9.AddRow(new string[] {
+            table10.AddRow(new string[] {
                         "036892053",
                         "2",
                         "13/07/2017",
                         "MDGDGI70B12E704B"});
-#line 45
- testRunner.When("viene effettuata la chiamata al servizio VerificaPT con i seguenti parametri", ((string)(null)), table9, "When ");
+#line 46
+ testRunner.When("viene effettuata la chiamata al servizio VerificaPT con i seguenti parametri", ((string)(null)), table10, "When ");
 #line hidden
-            TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
                         "Esito",
                         "ConfezioniAutorizzate",
                         "ConfezioniResidue",
@@ -288,7 +301,7 @@ this.FeatureBackground();
                         "CodicePT",
                         "KeyError",
                         "DescrizioneErrore"});
-            table10.AddRow(new string[] {
+            table11.AddRow(new string[] {
                         "true",
                         "2",
                         "2",
@@ -299,61 +312,61 @@ this.FeatureBackground();
                         "",
                         "",
                         ""});
-#line 48
- testRunner.Then("la risposta è la seguente", ((string)(null)), table10, "Then ");
+#line 49
+ testRunner.Then("la risposta è la seguente", ((string)(null)), table11, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("3. PT non presente né in WBC né in PTOL", SourceLine=52)]
+        [TechTalk.SpecRun.ScenarioAttribute("3. PT non presente né in WBC né in PTOL", SourceLine=53)]
         public virtual void _3_PTNonPresenteNeInWBCNeInPTOL()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("3. PT non presente né in WBC né in PTOL", ((string[])(null)));
-#line 53
+#line 54
 this.ScenarioSetup(scenarioInfo);
 #line 6
 this.FeatureBackground();
 #line hidden
-            TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
                         "ATC",
                         "FormaFarmaceutica",
                         "Data",
                         "",
                         "GuidCodiceFiscale"});
-            table11.AddRow(new string[] {
+            table12.AddRow(new string[] {
                         "R03DX05",
                         "SOLUZIONE INIETTABILE",
                         "13/07/2017",
                         "",
                         "7a2c3353-12b6-47b1-b566-3f2779f6fc9d"});
-#line 54
- testRunner.Given("Nessun piano terapeutico su PTOL per che abbia questi dati", ((string)(null)), table11, "Given ");
+#line 55
+ testRunner.Given("Nessun piano terapeutico su PTOL per che abbia questi dati", ((string)(null)), table12, "Given ");
 #line hidden
-            TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
                         "CodiceFiscale",
                         "Minsan",
                         "Data"});
-            table12.AddRow(new string[] {
+            table13.AddRow(new string[] {
                         "MDGDGI70B12E704B",
                         "036892053",
                         "13/07/2017"});
-#line 57
- testRunner.And("su WBC non è presente nessun PT che abbia questi dati", ((string)(null)), table12, "And ");
+#line 58
+ testRunner.And("su WBC non è presente nessun PT che abbia questi dati", ((string)(null)), table13, "And ");
 #line hidden
-            TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table14 = new TechTalk.SpecFlow.Table(new string[] {
                         "Minsan",
                         "Confezioni",
                         "DataRicetta",
                         "CodiceFiscale"});
-            table13.AddRow(new string[] {
+            table14.AddRow(new string[] {
                         "036892053",
                         "2",
                         "13/07/2017",
                         "MDGDGI70B12E704B"});
-#line 60
- testRunner.When("viene effettuata la chiamata al servizio VerificaPT con i seguenti parametri", ((string)(null)), table13, "When ");
+#line 61
+ testRunner.When("viene effettuata la chiamata al servizio VerificaPT con i seguenti parametri", ((string)(null)), table14, "When ");
 #line hidden
-            TechTalk.SpecFlow.Table table14 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table15 = new TechTalk.SpecFlow.Table(new string[] {
                         "Esito",
                         "ConfezioniAutorizzate",
                         "ConfezioniResidue",
@@ -364,7 +377,7 @@ this.FeatureBackground();
                         "KeyError",
                         "DescrizioneErrore",
                         "CodicePT"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "true",
                         "0",
                         "0",
@@ -375,22 +388,22 @@ this.FeatureBackground();
                         "2",
                         "PT_INESISTENTE",
                         ""});
-#line 63
- testRunner.Then("la risposta è la seguente", ((string)(null)), table14, "Then ");
+#line 64
+ testRunner.Then("la risposta è la seguente", ((string)(null)), table15, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("4. PT scaduto su WBC e presente PTOL", SourceLine=66)]
+        [TechTalk.SpecRun.ScenarioAttribute("4. PT scaduto su WBC e presente PTOL", SourceLine=67)]
         public virtual void _4_PTScadutoSuWBCEPresentePTOL()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("4. PT scaduto su WBC e presente PTOL", ((string[])(null)));
-#line 67
+#line 68
 this.ScenarioSetup(scenarioInfo);
 #line 6
 this.FeatureBackground();
 #line hidden
-            TechTalk.SpecFlow.Table table15 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table16 = new TechTalk.SpecFlow.Table(new string[] {
                         "ATC",
                         "FormaFarmaceutica",
                         "DataInizio",
@@ -400,7 +413,7 @@ this.FeatureBackground();
                         "Durata",
                         "GuidCodiceFiscale",
                         "CodicePT"});
-            table15.AddRow(new string[] {
+            table16.AddRow(new string[] {
                         "R03DX05",
                         "SOLUZIONE INIETTABILE",
                         "01/07/2017",
@@ -410,38 +423,38 @@ this.FeatureBackground();
                         "6 mesi",
                         "7a2c3353-12b6-47b1-b566-3f2779f6fc9d",
                         "NH6F5J20K2C5TCPD"});
-#line 68
- testRunner.Given("Il seguente piano terapeutico su PTOL", ((string)(null)), table15, "Given ");
+#line 69
+ testRunner.Given("Il seguente piano terapeutico su PTOL", ((string)(null)), table16, "Given ");
 #line hidden
-            TechTalk.SpecFlow.Table table16 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table17 = new TechTalk.SpecFlow.Table(new string[] {
                         "CodiceFiscale",
                         "Minsan",
                         "DataInizioPiano",
                         "DataFinePiano",
                         "Prescrizione"});
-            table16.AddRow(new string[] {
+            table17.AddRow(new string[] {
                         "MDGDGI70B12E704B",
                         "036892053",
                         "01/06/2017",
                         "30/06/2017",
                         "1 FIALA OGNI 2 SETTIMANE PER 1 MESE"});
-#line 71
- testRunner.And("Il seguente piano terapeutico su WebCare", ((string)(null)), table16, "And ");
+#line 72
+ testRunner.And("Il seguente piano terapeutico su WebCare", ((string)(null)), table17, "And ");
 #line hidden
-            TechTalk.SpecFlow.Table table17 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table18 = new TechTalk.SpecFlow.Table(new string[] {
                         "Minsan",
                         "Confezioni",
                         "DataRicetta",
                         "CodiceFiscale"});
-            table17.AddRow(new string[] {
+            table18.AddRow(new string[] {
                         "036892053",
                         "2",
                         "13/07/2017",
                         "MDGDGI70B12E704B"});
-#line 74
- testRunner.When("viene effettuata la chiamata al servizio VerificaPT con i seguenti parametri", ((string)(null)), table17, "When ");
+#line 75
+ testRunner.When("viene effettuata la chiamata al servizio VerificaPT con i seguenti parametri", ((string)(null)), table18, "When ");
 #line hidden
-            TechTalk.SpecFlow.Table table18 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table19 = new TechTalk.SpecFlow.Table(new string[] {
                         "Esito",
                         "ConfezioniAutorizzate",
                         "ConfezioniResidue",
@@ -452,7 +465,7 @@ this.FeatureBackground();
                         "CodicePT",
                         "KeyError",
                         "DescrizioneErrore"});
-            table18.AddRow(new string[] {
+            table19.AddRow(new string[] {
                         "true",
                         "2",
                         "1",
@@ -463,22 +476,22 @@ this.FeatureBackground();
                         "NH6F5J20K2C5TCPD",
                         "5",
                         "RESIDUO_INSUFFICIENTE"});
-#line 77
- testRunner.Then("la risposta è la seguente", ((string)(null)), table18, "Then ");
+#line 78
+ testRunner.Then("la risposta è la seguente", ((string)(null)), table19, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("5. PT futuro su WBC e presente PTOL", SourceLine=81)]
+        [TechTalk.SpecRun.ScenarioAttribute("5. PT futuro su WBC e presente PTOL", SourceLine=82)]
         public virtual void _5_PTFuturoSuWBCEPresentePTOL()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("5. PT futuro su WBC e presente PTOL", ((string[])(null)));
-#line 82
+#line 83
 this.ScenarioSetup(scenarioInfo);
 #line 6
 this.FeatureBackground();
 #line hidden
-            TechTalk.SpecFlow.Table table19 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table20 = new TechTalk.SpecFlow.Table(new string[] {
                         "ATC",
                         "FormaFarmaceutica",
                         "DataInizio",
@@ -488,7 +501,7 @@ this.FeatureBackground();
                         "Durata",
                         "GuidCodiceFiscale",
                         "CodicePT"});
-            table19.AddRow(new string[] {
+            table20.AddRow(new string[] {
                         "R03DX05",
                         "SOLUZIONE INIETTABILE",
                         "01/07/2017",
@@ -498,38 +511,38 @@ this.FeatureBackground();
                         "6 mesi",
                         "7a2c3353-12b6-47b1-b566-3f2779f6fc9d",
                         "NH6F5J20K2C5TCPD"});
-#line 83
- testRunner.Given("Il seguente piano terapeutico su PTOL", ((string)(null)), table19, "Given ");
+#line 84
+ testRunner.Given("Il seguente piano terapeutico su PTOL", ((string)(null)), table20, "Given ");
 #line hidden
-            TechTalk.SpecFlow.Table table20 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table21 = new TechTalk.SpecFlow.Table(new string[] {
                         "CodiceFiscale",
                         "Minsan",
                         "DataInizioPiano",
                         "DataFinePiano",
                         "Prescrizione"});
-            table20.AddRow(new string[] {
+            table21.AddRow(new string[] {
                         "MDGDGI70B12E704B",
                         "036892053",
                         "01/08/2017",
                         "31/08/2017",
                         "1 FIALA OGNI 2 SETTIMANE PER 1 MESE"});
-#line 86
- testRunner.And("Il seguente piano terapeutico su WebCare", ((string)(null)), table20, "And ");
+#line 87
+ testRunner.And("Il seguente piano terapeutico su WebCare", ((string)(null)), table21, "And ");
 #line hidden
-            TechTalk.SpecFlow.Table table21 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table22 = new TechTalk.SpecFlow.Table(new string[] {
                         "Minsan",
                         "Confezioni",
                         "DataRicetta",
                         "CodiceFiscale"});
-            table21.AddRow(new string[] {
+            table22.AddRow(new string[] {
                         "036892053",
                         "2",
                         "13/07/2017",
                         "MDGDGI70B12E704B"});
-#line 89
- testRunner.When("viene effettuata la chiamata al servizio VerificaPT con i seguenti parametri", ((string)(null)), table21, "When ");
+#line 90
+ testRunner.When("viene effettuata la chiamata al servizio VerificaPT con i seguenti parametri", ((string)(null)), table22, "When ");
 #line hidden
-            TechTalk.SpecFlow.Table table22 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table23 = new TechTalk.SpecFlow.Table(new string[] {
                         "Esito",
                         "ConfezioniAutorizzate",
                         "ConfezioniResidue",
@@ -540,7 +553,7 @@ this.FeatureBackground();
                         "CodicePT",
                         "KeyError",
                         "DescrizioneErrore"});
-            table22.AddRow(new string[] {
+            table23.AddRow(new string[] {
                         "true",
                         "2",
                         "1",
@@ -551,22 +564,22 @@ this.FeatureBackground();
                         "NH6F5J20K2C5TCPD",
                         "5",
                         "RESIDUO_INSUFFICIENTE"});
-#line 92
- testRunner.Then("la risposta è la seguente", ((string)(null)), table22, "Then ");
+#line 93
+ testRunner.Then("la risposta è la seguente", ((string)(null)), table23, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("6. GUID Codice Fiscale non presente su WBC", SourceLine=97)]
+        [TechTalk.SpecRun.ScenarioAttribute("6. GUID Codice Fiscale non presente su WBC", SourceLine=98)]
         public virtual void _6_GUIDCodiceFiscaleNonPresenteSuWBC()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("6. GUID Codice Fiscale non presente su WBC", ((string[])(null)));
-#line 98
+#line 99
 this.ScenarioSetup(scenarioInfo);
 #line 6
 this.FeatureBackground();
 #line hidden
-            TechTalk.SpecFlow.Table table23 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table24 = new TechTalk.SpecFlow.Table(new string[] {
                         "ATC",
                         "FormaFarmaceutica",
                         "DataInizio",
@@ -576,7 +589,7 @@ this.FeatureBackground();
                         "Durata",
                         "GuidCodiceFiscale",
                         "CodicePT"});
-            table23.AddRow(new string[] {
+            table24.AddRow(new string[] {
                         "R03DX05",
                         "SOLUZIONE INIETTABILE",
                         "01/07/2017",
@@ -586,43 +599,43 @@ this.FeatureBackground();
                         "6 mesi",
                         "7a2c3353-12b6-47b1-b566-3f2779f6fc9d",
                         "NH6F5J20K2C5TCPD"});
-#line 99
- testRunner.Given("Il seguente piano terapeutico su PTOL", ((string)(null)), table23, "Given ");
-#line hidden
-            TechTalk.SpecFlow.Table table24 = new TechTalk.SpecFlow.Table(new string[] {
-                        "CodiceFiscale",
-                        "Guid"});
-            table24.AddRow(new string[] {
-                        "MDGDGI70B12E704B",
-                        "null"});
-#line 102
- testRunner.And("il codice fiscale ha il seguente guid", ((string)(null)), table24, "And ");
+#line 100
+ testRunner.Given("Il seguente piano terapeutico su PTOL", ((string)(null)), table24, "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table25 = new TechTalk.SpecFlow.Table(new string[] {
                         "CodiceFiscale",
+                        "Guid"});
+            table25.AddRow(new string[] {
+                        "MDGDGI70B12E704B",
+                        "null"});
+#line 103
+ testRunner.And("il codice fiscale ha il seguente guid", ((string)(null)), table25, "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table26 = new TechTalk.SpecFlow.Table(new string[] {
+                        "CodiceFiscale",
                         "Minsan",
                         "Data"});
-            table25.AddRow(new string[] {
+            table26.AddRow(new string[] {
                         "MDGDGI70B12E704B",
                         "036892053",
                         "13/07/2017"});
-#line 105
- testRunner.And("su WBC non è presente nessun PT che abbia questi dati", ((string)(null)), table25, "And ");
+#line 106
+ testRunner.And("su WBC non è presente nessun PT che abbia questi dati", ((string)(null)), table26, "And ");
 #line hidden
-            TechTalk.SpecFlow.Table table26 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table27 = new TechTalk.SpecFlow.Table(new string[] {
                         "Minsan",
                         "Confezioni",
                         "DataRicetta",
                         "CodiceFiscale"});
-            table26.AddRow(new string[] {
+            table27.AddRow(new string[] {
                         "036892053",
                         "2",
                         "13/07/2017",
                         "MDGDGI70B12E704B"});
-#line 108
- testRunner.When("viene effettuata la chiamata al servizio VerificaPT con i seguenti parametri", ((string)(null)), table26, "When ");
+#line 109
+ testRunner.When("viene effettuata la chiamata al servizio VerificaPT con i seguenti parametri", ((string)(null)), table27, "When ");
 #line hidden
-            TechTalk.SpecFlow.Table table27 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table28 = new TechTalk.SpecFlow.Table(new string[] {
                         "Esito",
                         "ConfezioniAutorizzate",
                         "ConfezioniResidue",
@@ -633,7 +646,7 @@ this.FeatureBackground();
                         "KeyError",
                         "DescrizioneErrore",
                         "CodicePT"});
-            table27.AddRow(new string[] {
+            table28.AddRow(new string[] {
                         "true",
                         "0",
                         "0",
@@ -644,8 +657,187 @@ this.FeatureBackground();
                         "2",
                         "PT_INESISTENTE",
                         ""});
-#line 111
- testRunner.Then("la risposta è la seguente", ((string)(null)), table27, "Then ");
+#line 112
+ testRunner.Then("la risposta è la seguente", ((string)(null)), table28, "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("7. PT scaduto su WBC e NON presente PTOL", SourceLine=116)]
+        public virtual void _7_PTScadutoSuWBCENONPresentePTOL()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("7. PT scaduto su WBC e NON presente PTOL", ((string[])(null)));
+#line 117
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
+#line hidden
+            TechTalk.SpecFlow.Table table29 = new TechTalk.SpecFlow.Table(new string[] {
+                        "ATC",
+                        "FormaFarmaceutica",
+                        "Data",
+                        "",
+                        "GuidCodiceFiscale"});
+            table29.AddRow(new string[] {
+                        "R03DX05",
+                        "SOLUZIONE INIETTABILE",
+                        "13/07/2017",
+                        "",
+                        "7a2c3353-12b6-47b1-b566-3f2779f6fc9d"});
+#line 118
+ testRunner.Given("Nessun piano terapeutico su PTOL per che abbia questi dati", ((string)(null)), table29, "Given ");
+#line hidden
+            TechTalk.SpecFlow.Table table30 = new TechTalk.SpecFlow.Table(new string[] {
+                        "CodiceFiscale",
+                        "Minsan",
+                        "DataInizioPiano",
+                        "DataFinePiano",
+                        "Prescrizione"});
+            table30.AddRow(new string[] {
+                        "MDGDGI70B12E704B",
+                        "036892053",
+                        "01/06/2017",
+                        "30/06/2017",
+                        "1 FIALA OGNI 2 SETTIMANE PER 1 MESE"});
+#line 121
+ testRunner.And("Il seguente piano terapeutico su WebCare", ((string)(null)), table30, "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table31 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Minsan",
+                        "Confezioni",
+                        "DataRicetta",
+                        "CodiceFiscale"});
+            table31.AddRow(new string[] {
+                        "036892053",
+                        "2",
+                        "13/07/2017",
+                        "MDGDGI70B12E704B"});
+#line 124
+ testRunner.When("viene effettuata la chiamata al servizio VerificaPT con i seguenti parametri", ((string)(null)), table31, "When ");
+#line hidden
+            TechTalk.SpecFlow.Table table32 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Esito",
+                        "ConfezioniAutorizzate",
+                        "ConfezioniResidue",
+                        "DataInizioPeriodo",
+                        "DataFinePeriodo",
+                        "DataInizioPiano",
+                        "DataFinePiano",
+                        "KeyError",
+                        "DescrizioneErrore",
+                        "CodicePT"});
+            table32.AddRow(new string[] {
+                        "true",
+                        "0",
+                        "0",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "2",
+                        "PT_INESISTENTE",
+                        ""});
+#line 127
+ testRunner.Then("la risposta è la seguente", ((string)(null)), table32, "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("8. PT alternativo presente in WBC e PTOL", SourceLine=131)]
+        public virtual void _8_PTAlternativoPresenteInWBCEPTOL()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("8. PT alternativo presente in WBC e PTOL", ((string[])(null)));
+#line 132
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
+#line hidden
+            TechTalk.SpecFlow.Table table33 = new TechTalk.SpecFlow.Table(new string[] {
+                        "ATC",
+                        "FormaFarmaceutica",
+                        "DataInizio",
+                        "Prescrizione",
+                        "Posologia",
+                        "Frequenza",
+                        "Durata",
+                        "GuidCodiceFiscale",
+                        "CodicePT"});
+            table33.AddRow(new string[] {
+                        "R03DX05",
+                        "SOLUZIONE INIETTABILE",
+                        "01/07/2017",
+                        "525 mg ogni 4 settimane per 6 mesi",
+                        "525 mg",
+                        "4 settimane",
+                        "6 mesi",
+                        "7a2c3353-12b6-47b1-b566-3f2779f6fc9d",
+                        "NH6F5J20K2C5TCPD"});
+#line 133
+ testRunner.Given("Il seguente piano terapeutico su PTOL", ((string)(null)), table33, "Given ");
+#line hidden
+            TechTalk.SpecFlow.Table table34 = new TechTalk.SpecFlow.Table(new string[] {
+                        "CodiceFiscale",
+                        "Minsan",
+                        "DataInizioPiano",
+                        "DataFinePiano",
+                        "Prescrizione"});
+            table34.AddRow(new string[] {
+                        "MDGDGI70B12E704B",
+                        "036892089",
+                        "01/07/2017",
+                        "31/07/2017",
+                        "1 FIALA OGNI 2 SETTIMANE PER 1 MESE"});
+#line 136
+ testRunner.And("Il seguente piano terapeutico su WebCare", ((string)(null)), table34, "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table35 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Minsan",
+                        "Confezioni",
+                        "DataRicetta",
+                        "CodiceFiscale"});
+            table35.AddRow(new string[] {
+                        "036892053",
+                        "2",
+                        "13/07/2017",
+                        "MDGDGI70B12E704B"});
+#line 139
+ testRunner.When("viene effettuata la chiamata al servizio VerificaPT con i seguenti parametri", ((string)(null)), table35, "When ");
+#line hidden
+            TechTalk.SpecFlow.Table table36 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Esito",
+                        "ConfezioniAutorizzate",
+                        "ConfezioniResidue",
+                        "DataInizioPeriodo",
+                        "DataFinePeriodo",
+                        "DataInizioPiano",
+                        "DataFinePiano",
+                        "KeyError",
+                        "DescrizioneErrore",
+                        "CodicePT"});
+            table36.AddRow(new string[] {
+                        "true",
+                        "0",
+                        "0",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "2",
+                        "PT_INESISTENTE",
+                        ""});
+#line 142
+ testRunner.Then("la risposta è la seguente", ((string)(null)), table36, "Then ");
+#line hidden
+            TechTalk.SpecFlow.Table table37 = new TechTalk.SpecFlow.Table(new string[] {
+                        "DataInizio",
+                        "DataFine",
+                        "Minsan"});
+            table37.AddRow(new string[] {
+                        "01/07/2017",
+                        "31/07/2017",
+                        "036892089"});
+#line 145
+ testRunner.And("vengono indicati i seguenti piani terapeutici alternativi", ((string)(null)), table37, "And ");
 #line hidden
             this.ScenarioCleanup();
         }
