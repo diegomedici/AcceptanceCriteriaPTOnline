@@ -17,9 +17,10 @@ namespace AcceptanceCriteria.VerificaPT
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.2.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("WBC-1002_Verifica_Presenza_PT", Description="\tIN ORDER TO sapere se posso procedere con un ordine di OMALIZUMAB \r\n\tAS farmacia" +
-        "\r\n\tI WANT TO verificare la presenza di un PT di OMALIZUMAB ", SourceFile="VerificaPT\\DPC-1146_Gestione CodicePT per integrazione PTOL.feature", SourceLine=0)]
-    public partial class WBC_1002_Verifica_Presenza_PTFeature
+    [TechTalk.SpecRun.FeatureAttribute("DPC-1146_Gestione CodicePT per integrazione PTOL", Description="\tIN ORDER TO gestire correttamente i PT sul nuovo PTOL\r\n\tAS studiofarma\r\n\tI WANT " +
+        "TO inoltrare in fase di erogazione il CodicePT restituito dopo la verifica del P" +
+        "T", SourceFile="VerificaPT\\DPC-1146_Gestione CodicePT per integrazione PTOL.feature", SourceLine=0)]
+    public partial class DPC_1146_GestioneCodicePTPerIntegrazionePTOLFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
@@ -31,8 +32,9 @@ namespace AcceptanceCriteria.VerificaPT
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "WBC-1002_Verifica_Presenza_PT", "\tIN ORDER TO sapere se posso procedere con un ordine di OMALIZUMAB \r\n\tAS farmacia" +
-                    "\r\n\tI WANT TO verificare la presenza di un PT di OMALIZUMAB ", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "DPC-1146_Gestione CodicePT per integrazione PTOL", "\tIN ORDER TO gestire correttamente i PT sul nuovo PTOL\r\n\tAS studiofarma\r\n\tI WANT " +
+                    "TO inoltrare in fase di erogazione il CodicePT restituito dopo la verifica del P" +
+                    "T", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         

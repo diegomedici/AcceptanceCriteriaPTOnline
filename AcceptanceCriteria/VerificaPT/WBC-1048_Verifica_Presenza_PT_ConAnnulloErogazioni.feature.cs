@@ -17,24 +17,24 @@ namespace AcceptanceCriteria.VerificaPT
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.2.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("WBC-1028_Verifica Presenza PT in presenza di erogazioni", Description="\tIN ORDER TO sapere se posso procedere con un ordine di OMALIZUMAB \r\n\tAS farmacia" +
-        "\r\n\tI WANT TO verificare la disponibilità di un PT di OMALIZUMAB in presenza di e" +
-        "rogazioni", SourceFile="VerificaPT\\WBC-1028_Verifica_Presenza_PT_ConErogazioni.feature", SourceLine=0)]
-    public partial class WBC_1028_VerificaPresenzaPTInPresenzaDiErogazioniFeature
+    [TechTalk.SpecRun.FeatureAttribute("WBC-1048_VerificaPT in caso di annullo erogazione", Description="\tIN ORDER TO rendere nuovamente disponibili sul PT le confezioni derivanti da ero" +
+        "gazioni annullate\r\n\tAS farmacia\r\n\tI WANT TO considerare anche gli annulli al fin" +
+        "e del computo delle confezioni disponibili.", SourceFile="VerificaPT\\WBC-1048_Verifica_Presenza_PT_ConAnnulloErogazioni.feature", SourceLine=0)]
+    public partial class WBC_1048_VerificaPTInCasoDiAnnulloErogazioneFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "WBC-1028_Verifica_Presenza_PT_ConErogazioni.feature"
+#line 1 "WBC-1048_Verifica_Presenza_PT_ConAnnulloErogazioni.feature"
 #line hidden
         
         [TechTalk.SpecRun.FeatureInitialize()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "WBC-1028_Verifica Presenza PT in presenza di erogazioni", "\tIN ORDER TO sapere se posso procedere con un ordine di OMALIZUMAB \r\n\tAS farmacia" +
-                    "\r\n\tI WANT TO verificare la disponibilità di un PT di OMALIZUMAB in presenza di e" +
-                    "rogazioni", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "WBC-1048_VerificaPT in caso di annullo erogazione", "\tIN ORDER TO rendere nuovamente disponibili sul PT le confezioni derivanti da ero" +
+                    "gazioni annullate\r\n\tAS farmacia\r\n\tI WANT TO considerare anche gli annulli al fin" +
+                    "e del computo delle confezioni disponibili.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -67,7 +67,7 @@ namespace AcceptanceCriteria.VerificaPT
         
         public virtual void FeatureBackground()
         {
-#line 7
+#line 6
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "Minsan",
@@ -90,7 +90,7 @@ namespace AcceptanceCriteria.VerificaPT
                         "SOLUZIONE INIETTABILE",
                         "1",
                         "150 mg"});
-#line 8
+#line 7
  testRunner.Given("i seguenti dati dalla BD", ((string)(null)), table1, "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
@@ -129,7 +129,7 @@ namespace AcceptanceCriteria.VerificaPT
                         "600",
                         "0",
                         "4"});
-#line 12
+#line 11
  testRunner.And("le seguenti combinazioni di unità posologiche di somministrazioni dell\'OMALIZIMAB" +
                     "", ((string)(null)), table2, "And ");
 #line hidden
@@ -139,18 +139,18 @@ namespace AcceptanceCriteria.VerificaPT
             table3.AddRow(new string[] {
                         "MDGDGI70B12E704B",
                         "7a2c3353-12b6-47b1-b566-3f2779f6fc9d"});
-#line 22
+#line 21
  testRunner.And("il codice fiscale ha il seguente guid", ((string)(null)), table3, "And ");
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("1. Erogazione con 1 movimento e residuo insufficiente", SourceLine=25)]
-        public virtual void _1_ErogazioneCon1MovimentoEResiduoInsufficiente()
+        [TechTalk.SpecRun.ScenarioAttribute("1. Erogazione con 1 movimento annullato", SourceLine=24)]
+        public virtual void _1_ErogazioneCon1MovimentoAnnullato()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("1. Erogazione con 1 movimento e residuo insufficiente", ((string[])(null)));
-#line 26
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("1. Erogazione con 1 movimento annullato", ((string[])(null)));
+#line 25
 this.ScenarioSetup(scenarioInfo);
-#line 7
+#line 6
 this.FeatureBackground();
 #line hidden
             TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
@@ -173,7 +173,7 @@ this.FeatureBackground();
                         "6 mesi",
                         "7a2c3353-12b6-47b1-b566-3f2779f6fc9d",
                         "NH6F5J20K2C5TCPD"});
-#line 27
+#line 26
  testRunner.Given("Il seguente piano terapeutico", ((string)(null)), table4, "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
@@ -183,16 +183,18 @@ this.FeatureBackground();
                         "DataRicetta",
                         "DataErogazione",
                         "NumeroRicetta",
-                        "CodiceFarmacia"});
+                        "CodiceFarmacia",
+                        "Annullato"});
             table5.AddRow(new string[] {
                         "NH6F5J20K2C5TCPD",
                         "1",
                         "036892053",
                         "05/07/2017",
                         "",
-                        "",
-                        ""});
-#line 30
+                        "120011000000001",
+                        "1234",
+                        "true"});
+#line 29
  testRunner.And("le seguenti erogazioni di prodotti associate al PT = NH6F5J20K2C5TCPD", ((string)(null)), table5, "And ");
 #line hidden
             TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
@@ -205,7 +207,7 @@ this.FeatureBackground();
                         "2",
                         "13/07/2017",
                         "MDGDGI70B12E704B"});
-#line 33
+#line 32
  testRunner.When("viene effettuata la chiamata al servizio VerificaPT con i seguenti parametri", ((string)(null)), table6, "When ");
 #line hidden
             TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
@@ -222,27 +224,27 @@ this.FeatureBackground();
             table7.AddRow(new string[] {
                         "true",
                         "2",
-                        "1",
+                        "2",
                         "01/07/2017",
                         "25/08/2017",
                         "01/07/2017",
                         "31/12/2017",
                         "NH6F5J20K2C5TCPD",
-                        "5",
-                        "RESIDUO_INSUFFICIENTE"});
-#line 36
+                        "",
+                        ""});
+#line 35
  testRunner.Then("la risposta è la seguente", ((string)(null)), table7, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("2. Erogazione con 2 movimenti e residuo 0", SourceLine=40)]
-        public virtual void _2_ErogazioneCon2MovimentiEResiduo0()
+        [TechTalk.SpecRun.ScenarioAttribute("2. Erogazione con 2 movimenti, 1 annullato", SourceLine=39)]
+        public virtual void _2_ErogazioneCon2Movimenti1Annullato()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("2. Erogazione con 2 movimenti e residuo 0", ((string[])(null)));
-#line 41
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("2. Erogazione con 2 movimenti, 1 annullato", ((string[])(null)));
+#line 40
 this.ScenarioSetup(scenarioInfo);
-#line 7
+#line 6
 this.FeatureBackground();
 #line hidden
             TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
@@ -265,7 +267,7 @@ this.FeatureBackground();
                         "6 mesi",
                         "7a2c3353-12b6-47b1-b566-3f2779f6fc9d",
                         "NH6F5J20K2C5TCPD"});
-#line 42
+#line 41
  testRunner.Given("Il seguente piano terapeutico", ((string)(null)), table8, "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
@@ -275,24 +277,27 @@ this.FeatureBackground();
                         "DataRicetta",
                         "DataErogazione",
                         "NumeroRicetta",
-                        "CodiceFarmacia"});
+                        "CodiceFarmacia",
+                        "Annullato"});
             table9.AddRow(new string[] {
                         "NH6F5J20K2C5TCPD",
                         "1",
                         "036892053",
                         "05/07/2017",
                         "",
-                        "",
-                        ""});
+                        "120011000000001",
+                        "1234",
+                        "true"});
             table9.AddRow(new string[] {
                         "NH6F5J20K2C5TCPD",
                         "1",
                         "036892053",
                         "10/07/2017",
                         "",
-                        "",
-                        ""});
-#line 45
+                        "120012000000002",
+                        "2345",
+                        "false"});
+#line 44
  testRunner.And("le seguenti erogazioni di prodotti associate al PT = NH6F5J20K2C5TCPD", ((string)(null)), table9, "And ");
 #line hidden
             TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
@@ -305,7 +310,7 @@ this.FeatureBackground();
                         "2",
                         "13/07/2017",
                         "MDGDGI70B12E704B"});
-#line 49
+#line 48
  testRunner.When("viene effettuata la chiamata al servizio VerificaPT con i seguenti parametri", ((string)(null)), table10, "When ");
 #line hidden
             TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
@@ -322,27 +327,27 @@ this.FeatureBackground();
             table11.AddRow(new string[] {
                         "true",
                         "2",
-                        "0",
+                        "1",
                         "01/07/2017",
                         "25/08/2017",
                         "01/07/2017",
                         "31/12/2017",
                         "NH6F5J20K2C5TCPD",
-                        "?",
-                        "RESIDUO_0"});
-#line 52
+                        "5",
+                        "RESIDUO_INSUFFICIENTE"});
+#line 51
  testRunner.Then("la risposta è la seguente", ((string)(null)), table11, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("2 BIS. Erogazione con 1 movimenti su 2 periodi e residuo 0", SourceLine=56)]
-        public virtual void _2BIS_ErogazioneCon1MovimentiSu2PeriodiEResiduo0()
+        [TechTalk.SpecRun.ScenarioAttribute("2 BIS. Erogazione con 1 movimento annullato su 2 periodi", SourceLine=55)]
+        public virtual void _2BIS_ErogazioneCon1MovimentoAnnullatoSu2Periodi()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("2 BIS. Erogazione con 1 movimenti su 2 periodi e residuo 0", ((string[])(null)));
-#line 57
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("2 BIS. Erogazione con 1 movimento annullato su 2 periodi", ((string[])(null)));
+#line 56
 this.ScenarioSetup(scenarioInfo);
-#line 7
+#line 6
 this.FeatureBackground();
 #line hidden
             TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
@@ -365,7 +370,7 @@ this.FeatureBackground();
                         "6 mesi",
                         "7a2c3353-12b6-47b1-b566-3f2779f6fc9d",
                         "NH6F5J20K2C5TCPD"});
-#line 58
+#line 57
  testRunner.Given("Il seguente piano terapeutico", ((string)(null)), table12, "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
@@ -375,16 +380,18 @@ this.FeatureBackground();
                         "DataRicetta",
                         "DataErogazione",
                         "NumeroRicetta",
-                        "CodiceFarmacia"});
+                        "CodiceFarmacia",
+                        "Annullato"});
             table13.AddRow(new string[] {
                         "NH6F5J20K2C5TCPD",
                         "2",
                         "036892053",
                         "05/07/2017",
                         "",
-                        "",
-                        ""});
-#line 61
+                        "120011000000001",
+                        "1234",
+                        "true"});
+#line 60
  testRunner.And("le seguenti erogazioni di prodotti associate al PT = NH6F5J20K2C5TCPD", ((string)(null)), table13, "And ");
 #line hidden
             TechTalk.SpecFlow.Table table14 = new TechTalk.SpecFlow.Table(new string[] {
@@ -397,7 +404,7 @@ this.FeatureBackground();
                         "2",
                         "13/07/2017",
                         "MDGDGI70B12E704B"});
-#line 64
+#line 63
  testRunner.When("viene effettuata la chiamata al servizio VerificaPT con i seguenti parametri", ((string)(null)), table14, "When ");
 #line hidden
             TechTalk.SpecFlow.Table table15 = new TechTalk.SpecFlow.Table(new string[] {
@@ -420,21 +427,21 @@ this.FeatureBackground();
                         "01/07/2017",
                         "31/12/2017",
                         "NH6F5J20K2C5TCPD",
-                        "?",
-                        "RESIDUO_0"});
-#line 67
+                        "",
+                        ""});
+#line 66
  testRunner.Then("la risposta è la seguente", ((string)(null)), table15, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("3. Erogazione con 2 movimenti e residuo insufficiente", SourceLine=71)]
-        public virtual void _3_ErogazioneCon2MovimentiEResiduoInsufficiente()
+        [TechTalk.SpecRun.ScenarioAttribute("2 TER. Erogazione con 2 movimenti e 1 annullato con residuo insufficiente", SourceLine=70)]
+        public virtual void _2TER_ErogazioneCon2MovimentiE1AnnullatoConResiduoInsufficiente()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("3. Erogazione con 2 movimenti e residuo insufficiente", ((string[])(null)));
-#line 72
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("2 TER. Erogazione con 2 movimenti e 1 annullato con residuo insufficiente", ((string[])(null)));
+#line 71
 this.ScenarioSetup(scenarioInfo);
-#line 7
+#line 6
 this.FeatureBackground();
 #line hidden
             TechTalk.SpecFlow.Table table16 = new TechTalk.SpecFlow.Table(new string[] {
@@ -457,7 +464,7 @@ this.FeatureBackground();
                         "6 mesi",
                         "7a2c3353-12b6-47b1-b566-3f2779f6fc9d",
                         "NH6F5J20K2C5TCPD"});
-#line 73
+#line 72
  testRunner.Given("Il seguente piano terapeutico", ((string)(null)), table16, "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table17 = new TechTalk.SpecFlow.Table(new string[] {
@@ -467,24 +474,27 @@ this.FeatureBackground();
                         "DataRicetta",
                         "DataErogazione",
                         "NumeroRicetta",
-                        "CodiceFarmacia"});
+                        "CodiceFarmacia",
+                        "Annullato"});
             table17.AddRow(new string[] {
                         "NH6F5J20K2C5TCPD",
                         "1",
                         "036892053",
                         "05/07/2017",
                         "",
-                        "",
-                        ""});
+                        "120011000000001",
+                        "1234",
+                        "true"});
             table17.AddRow(new string[] {
                         "NH6F5J20K2C5TCPD",
                         "1",
                         "036892053",
-                        "10/07/2017",
+                        "29/07/2017",
                         "",
-                        "",
-                        ""});
-#line 76
+                        "120012000000002",
+                        "1234",
+                        "false"});
+#line 75
  testRunner.And("le seguenti erogazioni di prodotti associate al PT = NH6F5J20K2C5TCPD", ((string)(null)), table17, "And ");
 #line hidden
             TechTalk.SpecFlow.Table table18 = new TechTalk.SpecFlow.Table(new string[] {
@@ -495,9 +505,9 @@ this.FeatureBackground();
             table18.AddRow(new string[] {
                         "036892053",
                         "2",
-                        "30/07/2017",
+                        "13/07/2017",
                         "MDGDGI70B12E704B"});
-#line 80
+#line 79
  testRunner.When("viene effettuata la chiamata al servizio VerificaPT con i seguenti parametri", ((string)(null)), table18, "When ");
 #line hidden
             TechTalk.SpecFlow.Table table19 = new TechTalk.SpecFlow.Table(new string[] {
@@ -515,26 +525,26 @@ this.FeatureBackground();
                         "true",
                         "2",
                         "1",
-                        "29/07/2017",
-                        "22/09/2017",
+                        "01/07/2017",
+                        "25/08/2017",
                         "01/07/2017",
                         "31/12/2017",
                         "NH6F5J20K2C5TCPD",
                         "5",
                         "RESIDUO_INSUFFICIENTE"});
-#line 83
+#line 82
  testRunner.Then("la risposta è la seguente", ((string)(null)), table19, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("4. Erogazione con 3 movimenti, 1 dei quali nel passato, e residuo 0", SourceLine=87)]
-        public virtual void _4_ErogazioneCon3Movimenti1DeiQualiNelPassatoEResiduo0()
+        [TechTalk.SpecRun.ScenarioAttribute("3. Erogazione con 2 movimenti e 1 annullato", SourceLine=86)]
+        public virtual void _3_ErogazioneCon2MovimentiE1Annullato()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("4. Erogazione con 3 movimenti, 1 dei quali nel passato, e residuo 0", ((string[])(null)));
-#line 88
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("3. Erogazione con 2 movimenti e 1 annullato", ((string[])(null)));
+#line 87
 this.ScenarioSetup(scenarioInfo);
-#line 7
+#line 6
 this.FeatureBackground();
 #line hidden
             TechTalk.SpecFlow.Table table20 = new TechTalk.SpecFlow.Table(new string[] {
@@ -557,7 +567,7 @@ this.FeatureBackground();
                         "6 mesi",
                         "7a2c3353-12b6-47b1-b566-3f2779f6fc9d",
                         "NH6F5J20K2C5TCPD"});
-#line 89
+#line 88
  testRunner.Given("Il seguente piano terapeutico", ((string)(null)), table20, "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table21 = new TechTalk.SpecFlow.Table(new string[] {
@@ -567,32 +577,27 @@ this.FeatureBackground();
                         "DataRicetta",
                         "DataErogazione",
                         "NumeroRicetta",
-                        "CodiceFarmacia"});
+                        "CodiceFarmacia",
+                        "Annullato"});
             table21.AddRow(new string[] {
                         "NH6F5J20K2C5TCPD",
                         "1",
                         "036892053",
                         "05/07/2017",
                         "",
-                        "",
-                        ""});
+                        "120011000000001",
+                        "1234",
+                        "true"});
             table21.AddRow(new string[] {
                         "NH6F5J20K2C5TCPD",
                         "1",
                         "036892053",
                         "10/07/2017",
                         "",
-                        "",
-                        ""});
-            table21.AddRow(new string[] {
-                        "NH6F5J20K2C5TCPD",
-                        "1",
-                        "036892053",
-                        "29/07/2017",
-                        "",
-                        "",
-                        ""});
-#line 92
+                        "120012000000002",
+                        "2345",
+                        "false"});
+#line 91
  testRunner.And("le seguenti erogazioni di prodotti associate al PT = NH6F5J20K2C5TCPD", ((string)(null)), table21, "And ");
 #line hidden
             TechTalk.SpecFlow.Table table22 = new TechTalk.SpecFlow.Table(new string[] {
@@ -605,7 +610,7 @@ this.FeatureBackground();
                         "2",
                         "30/07/2017",
                         "MDGDGI70B12E704B"});
-#line 97
+#line 95
  testRunner.When("viene effettuata la chiamata al servizio VerificaPT con i seguenti parametri", ((string)(null)), table22, "When ");
 #line hidden
             TechTalk.SpecFlow.Table table23 = new TechTalk.SpecFlow.Table(new string[] {
@@ -622,29 +627,29 @@ this.FeatureBackground();
             table23.AddRow(new string[] {
                         "true",
                         "2",
-                        "0",
+                        "2",
                         "29/07/2017",
                         "22/09/2017",
                         "01/07/2017",
                         "31/12/2017",
                         "NH6F5J20K2C5TCPD",
-                        "5",
-                        "RESIDUO_0"});
-#line 100
+                        "",
+                        ""});
+#line 98
  testRunner.Then("la risposta è la seguente", ((string)(null)), table23, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("5. PT con frequenza di 2w, erogazione con molti movimenti, alcuni nel passato, e " +
-            "disponibilità", SourceLine=104)]
-        public virtual void _5_PTConFrequenzaDi2WErogazioneConMoltiMovimentiAlcuniNelPassatoEDisponibilita()
+        [TechTalk.SpecRun.ScenarioAttribute("4. Erogazione con 3 movimenti, 1 dei quali nel passato e annullato, e residuo ins" +
+            "ufficiente", SourceLine=102)]
+        public virtual void _4_ErogazioneCon3Movimenti1DeiQualiNelPassatoEAnnullatoEResiduoInsufficiente()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("5. PT con frequenza di 2w, erogazione con molti movimenti, alcuni nel passato, e " +
-                    "disponibilità", ((string[])(null)));
-#line 105
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("4. Erogazione con 3 movimenti, 1 dei quali nel passato e annullato, e residuo ins" +
+                    "ufficiente", ((string[])(null)));
+#line 103
 this.ScenarioSetup(scenarioInfo);
-#line 7
+#line 6
 this.FeatureBackground();
 #line hidden
             TechTalk.SpecFlow.Table table24 = new TechTalk.SpecFlow.Table(new string[] {
@@ -661,13 +666,13 @@ this.FeatureBackground();
                         "R03DX05",
                         "SOLUZIONE INIETTABILE",
                         "01/07/2017",
-                        "525 mg ogni 2 settimane per 6 mesi",
+                        "525 mg ogni 4 settimane per 6 mesi",
                         "525 mg",
-                        "2 settimane",
+                        "4 settimane",
                         "6 mesi",
                         "7a2c3353-12b6-47b1-b566-3f2779f6fc9d",
                         "NH6F5J20K2C5TCPD"});
-#line 106
+#line 104
  testRunner.Given("Il seguente piano terapeutico", ((string)(null)), table24, "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table25 = new TechTalk.SpecFlow.Table(new string[] {
@@ -677,56 +682,36 @@ this.FeatureBackground();
                         "DataRicetta",
                         "DataErogazione",
                         "NumeroRicetta",
-                        "CodiceFarmacia"});
+                        "CodiceFarmacia",
+                        "Annullato"});
             table25.AddRow(new string[] {
                         "NH6F5J20K2C5TCPD",
                         "1",
                         "036892053",
                         "05/07/2017",
                         "",
-                        "",
-                        ""});
+                        "120011000000001",
+                        "1234",
+                        "true"});
             table25.AddRow(new string[] {
                         "NH6F5J20K2C5TCPD",
                         "1",
                         "036892053",
                         "10/07/2017",
                         "",
-                        "",
-                        ""});
+                        "120012000000002",
+                        "2345",
+                        "false"});
             table25.AddRow(new string[] {
                         "NH6F5J20K2C5TCPD",
                         "1",
                         "036892053",
                         "29/07/2017",
                         "",
-                        "",
-                        ""});
-            table25.AddRow(new string[] {
-                        "NH6F5J20K2C5TCPD",
-                        "3",
-                        "036892089",
-                        "28/07/2017",
-                        "",
-                        "",
-                        ""});
-            table25.AddRow(new string[] {
-                        "NH6F5J20K2C5TCPD",
-                        "3",
-                        "036892089",
-                        "29/07/2017",
-                        "",
-                        "",
-                        ""});
-            table25.AddRow(new string[] {
-                        "NH6F5J20K2C5TCPD",
-                        "3",
-                        "036892089",
-                        "05/08/2017",
-                        "",
-                        "",
-                        ""});
-#line 109
+                        "120013000000003",
+                        "4566",
+                        "false"});
+#line 107
  testRunner.And("le seguenti erogazioni di prodotti associate al PT = NH6F5J20K2C5TCPD", ((string)(null)), table25, "And ");
 #line hidden
             TechTalk.SpecFlow.Table table26 = new TechTalk.SpecFlow.Table(new string[] {
@@ -735,11 +720,11 @@ this.FeatureBackground();
                         "DataRicetta",
                         "CodiceFiscale"});
             table26.AddRow(new string[] {
-                        "036892089",
-                        "3",
-                        "11/08/2017",
+                        "036892053",
+                        "2",
+                        "30/07/2017",
                         "MDGDGI70B12E704B"});
-#line 117
+#line 112
  testRunner.When("viene effettuata la chiamata al servizio VerificaPT con i seguenti parametri", ((string)(null)), table26, "When ");
 #line hidden
             TechTalk.SpecFlow.Table table27 = new TechTalk.SpecFlow.Table(new string[] {
@@ -755,30 +740,28 @@ this.FeatureBackground();
                         "DescrizioneErrore"});
             table27.AddRow(new string[] {
                         "true",
-                        "15",
-                        "9",
+                        "2",
+                        "1",
                         "29/07/2017",
-                        "06/10/2017",
+                        "22/09/2017",
                         "01/07/2017",
                         "31/12/2017",
                         "NH6F5J20K2C5TCPD",
-                        "",
-                        ""});
-#line 120
+                        "5",
+                        "RESIDUO_INSUFFICIENTE"});
+#line 115
  testRunner.Then("la risposta è la seguente", ((string)(null)), table27, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("6. PT con frequenza di 2w, erogazione con molti movimenti, alcuni nel passato, e " +
-            "disponibilità", SourceLine=124)]
-        public virtual void _6_PTConFrequenzaDi2WErogazioneConMoltiMovimentiAlcuniNelPassatoEDisponibilita()
+        [TechTalk.SpecRun.ScenarioAttribute("4BIS. Erogazione con 3 movimenti, 2 annullati, e residuo insufficiente", SourceLine=119)]
+        public virtual void _4BIS_ErogazioneCon3Movimenti2AnnullatiEResiduoInsufficiente()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("6. PT con frequenza di 2w, erogazione con molti movimenti, alcuni nel passato, e " +
-                    "disponibilità", ((string[])(null)));
-#line 125
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("4BIS. Erogazione con 3 movimenti, 2 annullati, e residuo insufficiente", ((string[])(null)));
+#line 120
 this.ScenarioSetup(scenarioInfo);
-#line 7
+#line 6
 this.FeatureBackground();
 #line hidden
             TechTalk.SpecFlow.Table table28 = new TechTalk.SpecFlow.Table(new string[] {
@@ -795,13 +778,13 @@ this.FeatureBackground();
                         "R03DX05",
                         "SOLUZIONE INIETTABILE",
                         "01/07/2017",
-                        "525 mg ogni 2 settimane per 6 mesi",
+                        "525 mg ogni 4 settimane per 6 mesi",
                         "525 mg",
-                        "2 settimane",
+                        "4 settimane",
                         "6 mesi",
                         "7a2c3353-12b6-47b1-b566-3f2779f6fc9d",
                         "NH6F5J20K2C5TCPD"});
-#line 126
+#line 121
  testRunner.Given("Il seguente piano terapeutico", ((string)(null)), table28, "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table29 = new TechTalk.SpecFlow.Table(new string[] {
@@ -811,72 +794,36 @@ this.FeatureBackground();
                         "DataRicetta",
                         "DataErogazione",
                         "NumeroRicetta",
-                        "CodiceFarmacia"});
+                        "CodiceFarmacia",
+                        "Annullato"});
             table29.AddRow(new string[] {
                         "NH6F5J20K2C5TCPD",
                         "1",
                         "036892053",
                         "05/07/2017",
                         "",
-                        "",
-                        ""});
+                        "120011000000001",
+                        "1234",
+                        "true"});
             table29.AddRow(new string[] {
                         "NH6F5J20K2C5TCPD",
                         "1",
                         "036892053",
                         "10/07/2017",
                         "",
-                        "",
-                        ""});
+                        "120012000000002",
+                        "2345",
+                        "true"});
             table29.AddRow(new string[] {
                         "NH6F5J20K2C5TCPD",
                         "1",
                         "036892053",
                         "29/07/2017",
                         "",
-                        "",
-                        ""});
-            table29.AddRow(new string[] {
-                        "NH6F5J20K2C5TCPD",
-                        "3",
-                        "036892089",
-                        "29/07/2017",
-                        "",
-                        "",
-                        ""});
-            table29.AddRow(new string[] {
-                        "NH6F5J20K2C5TCPD",
-                        "3",
-                        "036892089",
-                        "05/08/2017",
-                        "",
-                        "",
-                        ""});
-            table29.AddRow(new string[] {
-                        "NH6F5J20K2C5TCPD",
-                        "3",
-                        "036892089",
-                        "05/08/2017",
-                        "",
-                        "",
-                        ""});
-            table29.AddRow(new string[] {
-                        "NH6F5J20K2C5TCPD",
-                        "3",
-                        "036892089",
-                        "05/08/2017",
-                        "",
-                        "",
-                        ""});
-            table29.AddRow(new string[] {
-                        "NH6F5J20K2C5TCPD",
-                        "3",
-                        "036892089",
-                        "10/08/2017",
-                        "",
-                        "",
-                        ""});
-#line 129
+                        "120013000000003",
+                        "4566",
+                        "false"});
+#line 124
  testRunner.And("le seguenti erogazioni di prodotti associate al PT = NH6F5J20K2C5TCPD", ((string)(null)), table29, "And ");
 #line hidden
             TechTalk.SpecFlow.Table table30 = new TechTalk.SpecFlow.Table(new string[] {
@@ -885,11 +832,11 @@ this.FeatureBackground();
                         "DataRicetta",
                         "CodiceFiscale"});
             table30.AddRow(new string[] {
-                        "036892089",
-                        "3",
-                        "22/08/2017",
+                        "036892053",
+                        "2",
+                        "30/07/2017",
                         "MDGDGI70B12E704B"});
-#line 139
+#line 129
  testRunner.When("viene effettuata la chiamata al servizio VerificaPT con i seguenti parametri", ((string)(null)), table30, "When ");
 #line hidden
             TechTalk.SpecFlow.Table table31 = new TechTalk.SpecFlow.Table(new string[] {
@@ -905,30 +852,28 @@ this.FeatureBackground();
                         "DescrizioneErrore"});
             table31.AddRow(new string[] {
                         "true",
-                        "15",
-                        "3",
-                        "12/08/2017",
-                        "20/10/2017",
+                        "2",
+                        "1",
+                        "29/07/2017",
+                        "22/09/2017",
                         "01/07/2017",
                         "31/12/2017",
                         "NH6F5J20K2C5TCPD",
-                        "0",
-                        ""});
-#line 142
+                        "5",
+                        "RESIDUO_INSUFFICIENTE"});
+#line 132
  testRunner.Then("la risposta è la seguente", ((string)(null)), table31, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("7. PT con frequenza di 2w, erogazione con molti movimenti, alcuni nel passato, a " +
-            "fine pt e residuo insufficiente", SourceLine=146)]
-        public virtual void _7_PTConFrequenzaDi2WErogazioneConMoltiMovimentiAlcuniNelPassatoAFinePtEResiduoInsufficiente()
+        [TechTalk.SpecRun.ScenarioAttribute("5. PT con frequenza di 2w, erogazione con molti movimenti, 1 annullato", SourceLine=136)]
+        public virtual void _5_PTConFrequenzaDi2WErogazioneConMoltiMovimenti1Annullato()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("7. PT con frequenza di 2w, erogazione con molti movimenti, alcuni nel passato, a " +
-                    "fine pt e residuo insufficiente", ((string[])(null)));
-#line 147
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("5. PT con frequenza di 2w, erogazione con molti movimenti, 1 annullato", ((string[])(null)));
+#line 137
 this.ScenarioSetup(scenarioInfo);
-#line 7
+#line 6
 this.FeatureBackground();
 #line hidden
             TechTalk.SpecFlow.Table table32 = new TechTalk.SpecFlow.Table(new string[] {
@@ -951,7 +896,7 @@ this.FeatureBackground();
                         "6 mesi",
                         "7a2c3353-12b6-47b1-b566-3f2779f6fc9d",
                         "NH6F5J20K2C5TCPD"});
-#line 148
+#line 138
  testRunner.Given("Il seguente piano terapeutico", ((string)(null)), table32, "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table33 = new TechTalk.SpecFlow.Table(new string[] {
@@ -961,72 +906,54 @@ this.FeatureBackground();
                         "DataRicetta",
                         "DataErogazione",
                         "NumeroRicetta",
-                        "CodiceFarmacia"});
+                        "CodiceFarmacia",
+                        "Annullato"});
             table33.AddRow(new string[] {
                         "NH6F5J20K2C5TCPD",
                         "1",
                         "036892053",
                         "05/07/2017",
                         "",
-                        "",
-                        ""});
+                        "120011000000001",
+                        "1234",
+                        "false"});
             table33.AddRow(new string[] {
                         "NH6F5J20K2C5TCPD",
                         "1",
                         "036892053",
                         "10/07/2017",
                         "",
-                        "",
-                        ""});
+                        "120012000000002",
+                        "2345",
+                        "false"});
             table33.AddRow(new string[] {
                         "NH6F5J20K2C5TCPD",
                         "1",
                         "036892053",
                         "29/07/2017",
                         "",
-                        "",
-                        ""});
+                        "120013000000003",
+                        "4566",
+                        "false"});
             table33.AddRow(new string[] {
                         "NH6F5J20K2C5TCPD",
-                        "3",
+                        "6",
                         "036892089",
-                        "29/07/2017",
+                        "28/07/2017",
                         "",
-                        "",
-                        ""});
-            table33.AddRow(new string[] {
-                        "NH6F5J20K2C5TCPD",
-                        "3",
-                        "036892089",
-                        "05/08/2017",
-                        "",
-                        "",
-                        ""});
+                        "120014000000004",
+                        "1234",
+                        "true"});
             table33.AddRow(new string[] {
                         "NH6F5J20K2C5TCPD",
                         "3",
                         "036892089",
                         "05/08/2017",
                         "",
-                        "",
-                        ""});
-            table33.AddRow(new string[] {
-                        "NH6F5J20K2C5TCPD",
-                        "3",
-                        "036892089",
-                        "10/08/2017",
-                        "",
-                        "",
-                        ""});
-            table33.AddRow(new string[] {
-                        "NH6F5J20K2C5TCPD",
-                        "1",
-                        "036892089",
-                        "31/12/2017",
-                        "",
-                        "",
-                        ""});
-#line 151
+                        "120015000000005",
+                        "1234",
+                        "false"});
+#line 141
  testRunner.And("le seguenti erogazioni di prodotti associate al PT = NH6F5J20K2C5TCPD", ((string)(null)), table33, "And ");
 #line hidden
             TechTalk.SpecFlow.Table table34 = new TechTalk.SpecFlow.Table(new string[] {
@@ -1037,9 +964,9 @@ this.FeatureBackground();
             table34.AddRow(new string[] {
                         "036892089",
                         "3",
-                        "30/12/2017",
+                        "11/08/2017",
                         "MDGDGI70B12E704B"});
-#line 161
+#line 148
  testRunner.When("viene effettuata la chiamata al servizio VerificaPT con i seguenti parametri", ((string)(null)), table34, "When ");
 #line hidden
             TechTalk.SpecFlow.Table table35 = new TechTalk.SpecFlow.Table(new string[] {
@@ -1055,17 +982,286 @@ this.FeatureBackground();
                         "DescrizioneErrore"});
             table35.AddRow(new string[] {
                         "true",
+                        "15",
+                        "12",
+                        "29/07/2017",
+                        "06/10/2017",
+                        "01/07/2017",
+                        "31/12/2017",
+                        "NH6F5J20K2C5TCPD",
+                        "",
+                        ""});
+#line 151
+ testRunner.Then("la risposta è la seguente", ((string)(null)), table35, "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("6. PT con frequenza di 2w, erogazione con molti movimenti, 1 annullato", SourceLine=174)]
+        public virtual void _6_PTConFrequenzaDi2WErogazioneConMoltiMovimenti1Annullato()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("6. PT con frequenza di 2w, erogazione con molti movimenti, 1 annullato", ((string[])(null)));
+#line 175
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
+#line hidden
+            TechTalk.SpecFlow.Table table36 = new TechTalk.SpecFlow.Table(new string[] {
+                        "ATC",
+                        "FormaFarmaceutica",
+                        "DataInizio",
+                        "Prescrizione",
+                        "Posologia",
+                        "Frequenza",
+                        "Durata",
+                        "GuidCodiceFiscale",
+                        "CodicePT"});
+            table36.AddRow(new string[] {
+                        "R03DX05",
+                        "SOLUZIONE INIETTABILE",
+                        "01/07/2017",
+                        "525 mg ogni 2 settimane per 6 mesi",
+                        "525 mg",
+                        "2 settimane",
+                        "6 mesi",
+                        "7a2c3353-12b6-47b1-b566-3f2779f6fc9d",
+                        "NH6F5J20K2C5TCPD"});
+#line 176
+ testRunner.Given("Il seguente piano terapeutico", ((string)(null)), table36, "Given ");
+#line hidden
+            TechTalk.SpecFlow.Table table37 = new TechTalk.SpecFlow.Table(new string[] {
+                        "CodicePT",
+                        "Confezioni",
+                        "Minsan",
+                        "DataRicetta",
+                        "DataErogazione",
+                        "NumeroRicetta",
+                        "CodiceFarmacia",
+                        "Annullato"});
+            table37.AddRow(new string[] {
+                        "NH6F5J20K2C5TCPD",
+                        "1",
+                        "036892053",
+                        "05/07/2017",
+                        "",
+                        "120011000000001",
+                        "1234",
+                        "false"});
+            table37.AddRow(new string[] {
+                        "NH6F5J20K2C5TCPD",
+                        "1",
+                        "036892053",
+                        "10/07/2017",
+                        "",
+                        "120012000000002",
+                        "2345",
+                        "false"});
+            table37.AddRow(new string[] {
+                        "NH6F5J20K2C5TCPD",
+                        "1",
+                        "036892053",
+                        "29/07/2017",
+                        "",
+                        "120013000000003",
+                        "4566",
+                        "false"});
+            table37.AddRow(new string[] {
+                        "NH6F5J20K2C5TCPD",
                         "3",
-                        "2",
+                        "036892089",
+                        "29/07/2017",
+                        "",
+                        "120014000000004",
+                        "1234",
+                        "true"});
+            table37.AddRow(new string[] {
+                        "NH6F5J20K2C5TCPD",
+                        "6",
+                        "036892089",
+                        "05/08/2017",
+                        "",
+                        "120015000000005",
+                        "1234",
+                        "false"});
+            table37.AddRow(new string[] {
+                        "NH6F5J20K2C5TCPD",
+                        "3",
+                        "036892089",
+                        "05/08/2017",
+                        "",
+                        "120016000000006",
+                        "1234",
+                        "false"});
+            table37.AddRow(new string[] {
+                        "NH6F5J20K2C5TCPD",
+                        "3",
+                        "036892089",
+                        "10/08/2017",
+                        "",
+                        "120017000000007",
+                        "1234",
+                        "false"});
+            table37.AddRow(new string[] {
+                        "NH6F5J20K2C5TCPD",
+                        "6",
+                        "036892089",
+                        "23/09/2017",
+                        "",
+                        "120018000000008",
+                        "1234",
+                        "false"});
+            table37.AddRow(new string[] {
+                        "NH6F5J20K2C5TCPD",
+                        "3",
+                        "036892089",
+                        "23/09/2017",
+                        "",
+                        "120010000000011",
+                        "1234",
+                        "false"});
+#line 179
+ testRunner.And("le seguenti erogazioni di prodotti associate al PT = NH6F5J20K2C5TCPD", ((string)(null)), table37, "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table38 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Minsan",
+                        "Confezioni",
+                        "DataRicetta",
+                        "CodiceFiscale"});
+            table38.AddRow(new string[] {
+                        "036892089",
+                        "3",
+                        "23/09/2017",
+                        "MDGDGI70B12E704B"});
+#line 190
+ testRunner.When("viene effettuata la chiamata al servizio VerificaPT con i seguenti parametri", ((string)(null)), table38, "When ");
+#line hidden
+            TechTalk.SpecFlow.Table table39 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Esito",
+                        "ConfezioniAutorizzate",
+                        "ConfezioniResidue",
+                        "DataInizioPeriodo",
+                        "DataFinePeriodo",
+                        "DataInizioPiano",
+                        "DataFinePiano",
+                        "CodicePT",
+                        "KeyError",
+                        "DescrizioneErrore"});
+            table39.AddRow(new string[] {
+                        "true",
+                        "12",
+                        "3",
+                        "23/09/2017",
+                        "17/11/2017",
+                        "01/07/2017",
+                        "31/12/2017",
+                        "NH6F5J20K2C5TCPD",
+                        "",
+                        ""});
+#line 193
+ testRunner.Then("la risposta è la seguente", ((string)(null)), table39, "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("7. PT con frequenza di 2w, erogazione con movimento annullato a fine pt", SourceLine=197)]
+        public virtual void _7_PTConFrequenzaDi2WErogazioneConMovimentoAnnullatoAFinePt()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("7. PT con frequenza di 2w, erogazione con movimento annullato a fine pt", ((string[])(null)));
+#line 198
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
+#line hidden
+            TechTalk.SpecFlow.Table table40 = new TechTalk.SpecFlow.Table(new string[] {
+                        "ATC",
+                        "FormaFarmaceutica",
+                        "DataInizio",
+                        "Prescrizione",
+                        "Posologia",
+                        "Frequenza",
+                        "Durata",
+                        "GuidCodiceFiscale",
+                        "CodicePT"});
+            table40.AddRow(new string[] {
+                        "R03DX05",
+                        "SOLUZIONE INIETTABILE",
+                        "01/07/2017",
+                        "525 mg ogni 2 settimane per 6 mesi",
+                        "525 mg",
+                        "2 settimane",
+                        "6 mesi",
+                        "7a2c3353-12b6-47b1-b566-3f2779f6fc9d",
+                        "NH6F5J20K2C5TCPD"});
+#line 199
+ testRunner.Given("Il seguente piano terapeutico", ((string)(null)), table40, "Given ");
+#line hidden
+            TechTalk.SpecFlow.Table table41 = new TechTalk.SpecFlow.Table(new string[] {
+                        "CodicePT",
+                        "Confezioni",
+                        "Minsan",
+                        "DataRicetta",
+                        "DataErogazione",
+                        "NumeroRicetta",
+                        "CodiceFarmacia",
+                        "Annullato"});
+            table41.AddRow(new string[] {
+                        "NH6F5J20K2C5TCPD",
+                        "1",
+                        "036892053",
+                        "31/12/2017",
+                        "",
+                        "120011000000001",
+                        "1234",
+                        "false"});
+            table41.AddRow(new string[] {
+                        "NH6F5J20K2C5TCPD",
+                        "3",
+                        "036892089",
+                        "31/12/2017",
+                        "",
+                        "120010000000011",
+                        "1234",
+                        "true"});
+#line 202
+ testRunner.And("le seguenti erogazioni di prodotti associate al PT = NH6F5J20K2C5TCPD", ((string)(null)), table41, "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table42 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Minsan",
+                        "Confezioni",
+                        "DataRicetta",
+                        "CodiceFiscale"});
+            table42.AddRow(new string[] {
+                        "036892089",
+                        "3",
+                        "30/12/2017",
+                        "MDGDGI70B12E704B"});
+#line 206
+ testRunner.When("viene effettuata la chiamata al servizio VerificaPT con i seguenti parametri", ((string)(null)), table42, "When ");
+#line hidden
+            TechTalk.SpecFlow.Table table43 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Esito",
+                        "ConfezioniAutorizzate",
+                        "ConfezioniResidue",
+                        "DataInizioPeriodo",
+                        "DataFinePeriodo",
+                        "DataInizioPiano",
+                        "DataFinePiano",
+                        "CodicePT",
+                        "KeyError",
+                        "DescrizioneErrore"});
+            table43.AddRow(new string[] {
+                        "true",
+                        "3",
+                        "3",
                         "30/12/2017",
                         "31/12/2017",
                         "01/07/2017",
                         "31/12/2017",
                         "NH6F5J20K2C5TCPD",
-                        "5",
-                        "RESIDUO_INSUFFICIENTE"});
-#line 164
- testRunner.Then("la risposta è la seguente", ((string)(null)), table35, "Then ");
+                        "",
+                        ""});
+#line 209
+ testRunner.Then("la risposta è la seguente", ((string)(null)), table43, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

@@ -1,7 +1,7 @@
-﻿Feature: WBC-1002_Verifica_Presenza_PT
-	IN ORDER TO sapere se posso procedere con un ordine di OMALIZUMAB 
-	AS farmacia
-	I WANT TO verificare la presenza di un PT di OMALIZUMAB 
+﻿Feature: DPC-1146_Gestione CodicePT per integrazione PTOL
+	IN ORDER TO gestire correttamente i PT sul nuovo PTOL
+	AS studiofarma
+	I WANT TO inoltrare in fase di erogazione il CodicePT restituito dopo la verifica del PT
 
 Scenario: 1. Memorizzazione e trasmissione del CodicePT 
 	Given la seguente risposta al servizio VerificaPT delle ricetta ="120171000000001"

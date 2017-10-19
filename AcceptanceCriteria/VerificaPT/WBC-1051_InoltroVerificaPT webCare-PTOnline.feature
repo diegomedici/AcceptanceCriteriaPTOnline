@@ -33,8 +33,8 @@ Scenario: 1. Inoltro Chiamata
 	| Minsan    | Confezioni | DataRicetta | CodiceFiscale    |
 	| 036892053 | 2          | 13/07/2017  | MDGDGI70B12E704B |
 	Then la risposta è la seguente
-	| Esito | ConfezioniAutorizzate | ConfezioniResidue | DataInizioPeriodo | DataFinePeriodo | DataInizioPiano | DataFinePiano | CodicePT         | KeyError | DescrizioneErrore     |
-	| true  | 2                     | 1                 | 01/07/2017        | 25/08/2017      | 01/07/2017      | 31/12/2017    | NH6F5J20K2C5TCPD | 5        | RESIDUO_INSUFFICIENTE |
+	| Esito | ConfezioniAutorizzate | ConfezioniResidue | DataInizioPeriodo | DataFinePeriodo | DataInizioPiano | DataFinePiano | CodicePT         | KeyError | DescrizioneErrore |
+	| true  | 2                     | 2                 | 01/07/2017        | 25/08/2017      | 01/07/2017      | 31/12/2017    | NH6F5J20K2C5TCPD |          |                   |
 
 Scenario: 2. PT presente in WBC e PTOL
 	Given  Il seguente piano terapeutico su PTOL
@@ -76,8 +76,8 @@ Scenario: 4. PT scaduto su WBC e presente PTOL
 	| Minsan    | Confezioni | DataRicetta | CodiceFiscale    |
 	| 036892053 | 2          | 13/07/2017  | MDGDGI70B12E704B |
 	Then la risposta è la seguente
-	| Esito | ConfezioniAutorizzate | ConfezioniResidue | DataInizioPeriodo | DataFinePeriodo | DataInizioPiano | DataFinePiano | CodicePT         | KeyError | DescrizioneErrore     |
-	| true  | 2                     | 1                 | 01/07/2017        | 25/08/2017      | 01/07/2017      | 31/12/2017    | NH6F5J20K2C5TCPD | 5        | RESIDUO_INSUFFICIENTE |
+	| Esito | ConfezioniAutorizzate | ConfezioniResidue | DataInizioPeriodo | DataFinePeriodo | DataInizioPiano | DataFinePiano | CodicePT         | KeyError | DescrizioneErrore |
+	| true  | 2                     | 2                 | 01/07/2017        | 25/08/2017      | 01/07/2017      | 31/12/2017    | NH6F5J20K2C5TCPD |          |                   |
 	# In questo caso viene preso il PT di PTOL
 
 Scenario: 5. PT futuro su WBC e presente PTOL
@@ -91,8 +91,8 @@ Scenario: 5. PT futuro su WBC e presente PTOL
 	| Minsan    | Confezioni | DataRicetta | CodiceFiscale    |
 	| 036892053 | 2          | 13/07/2017  | MDGDGI70B12E704B |
 	Then la risposta è la seguente
-	| Esito | ConfezioniAutorizzate | ConfezioniResidue | DataInizioPeriodo | DataFinePeriodo | DataInizioPiano | DataFinePiano | CodicePT         | KeyError | DescrizioneErrore     |
-	| true  | 2                     | 1                 | 01/07/2017        | 25/08/2017      | 01/07/2017      | 31/12/2017    | NH6F5J20K2C5TCPD | 5        | RESIDUO_INSUFFICIENTE |
+	| Esito | ConfezioniAutorizzate | ConfezioniResidue | DataInizioPeriodo | DataFinePeriodo | DataInizioPiano | DataFinePiano | CodicePT         | KeyError | DescrizioneErrore |
+	| true  | 2                     | 2                 | 01/07/2017        | 25/08/2017      | 01/07/2017      | 31/12/2017    | NH6F5J20K2C5TCPD |          |                   |
 	# In questo caso viene preso il PT di PTOL
 
 
@@ -125,8 +125,8 @@ Scenario: 7. PT scaduto su WBC e NON presente PTOL
 	| Minsan    | Confezioni | DataRicetta | CodiceFiscale    |
 	| 036892053 | 2          | 13/07/2017  | MDGDGI70B12E704B |
 	Then la risposta è la seguente
-	| Esito | ConfezioniAutorizzate | ConfezioniResidue | DataInizioPeriodo | DataFinePeriodo | DataInizioPiano | DataFinePiano | KeyError | DescrizioneErrore | CodicePT         |
-	| true  | 0                     | 0                 |                   |                 |                 |               | 2        | PT_INESISTENTE    |                  |
+	| Esito | ConfezioniAutorizzate | ConfezioniResidue | DataInizioPeriodo | DataFinePeriodo | DataInizioPiano | DataFinePiano | KeyError | DescrizioneErrore | CodicePT |
+	| true  | 0                     | 0                 |                   |                 |                 |               | 3        | PT_SCADUTO        |          |
 	
 
 Scenario: 8. PT alternativo presente in WBC e PTOL

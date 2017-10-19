@@ -216,14 +216,14 @@ this.FeatureBackground();
             table7.AddRow(new string[] {
                         "true",
                         "2",
-                        "1",
+                        "2",
                         "01/07/2017",
                         "25/08/2017",
                         "01/07/2017",
                         "31/12/2017",
                         "NH6F5J20K2C5TCPD",
-                        "5",
-                        "RESIDUO_INSUFFICIENTE"});
+                        "",
+                        ""});
 #line 35
  testRunner.Then("la risposta è la seguente", ((string)(null)), table7, "Then ");
 #line hidden
@@ -468,14 +468,14 @@ this.FeatureBackground();
             table19.AddRow(new string[] {
                         "true",
                         "2",
-                        "1",
+                        "2",
                         "01/07/2017",
                         "25/08/2017",
                         "01/07/2017",
                         "31/12/2017",
                         "NH6F5J20K2C5TCPD",
-                        "5",
-                        "RESIDUO_INSUFFICIENTE"});
+                        "",
+                        ""});
 #line 78
  testRunner.Then("la risposta è la seguente", ((string)(null)), table19, "Then ");
 #line hidden
@@ -556,14 +556,14 @@ this.FeatureBackground();
             table23.AddRow(new string[] {
                         "true",
                         "2",
-                        "1",
+                        "2",
                         "01/07/2017",
                         "25/08/2017",
                         "01/07/2017",
                         "31/12/2017",
                         "NH6F5J20K2C5TCPD",
-                        "5",
-                        "RESIDUO_INSUFFICIENTE"});
+                        "",
+                        ""});
 #line 93
  testRunner.Then("la risposta è la seguente", ((string)(null)), table23, "Then ");
 #line hidden
@@ -734,8 +734,8 @@ this.FeatureBackground();
                         "",
                         "",
                         "",
-                        "2",
-                        "PT_INESISTENTE",
+                        "3",
+                        "PT_SCADUTO",
                         ""});
 #line 127
  testRunner.Then("la risposta è la seguente", ((string)(null)), table32, "Then ");

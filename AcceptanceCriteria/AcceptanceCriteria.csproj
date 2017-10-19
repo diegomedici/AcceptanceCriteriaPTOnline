@@ -83,6 +83,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="VerificaPT\WBC-1015_Erogazione PT - Copy.feature.cs">
+      <DependentUpon>WBC-1015_Erogazione PT - Copy.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="VerificaPT\WBC-1048_Verifica_Presenza_PT_ConAnnulloErogazioni.feature.cs">
+      <DependentUpon>WBC-1048_Verifica_Presenza_PT_ConAnnulloErogazioni.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="VerificaPT\WBC-1028_Verifica_Presenza_PT_ConErogazioni.feature.cs">
       <DependentUpon>WBC-1028_Verifica_Presenza_PT_ConErogazioni.feature</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -98,8 +108,8 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="VerificaPT\WBC-1015_Erogazione PT.feature.cs">
-      <DependentUpon>WBC-1015_Erogazione PT.feature</DependentUpon>
+    <Compile Include="VerificaPT\WBC-1019_AnnulloErogazione PT.feature.cs">
+      <DependentUpon>WBC-1019_AnnulloErogazione PT.feature</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -135,6 +145,14 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DPC-1146_Gestione CodicePT per integrazione PTOL.feature.cs</LastGenOutput>
     </None>
+    <None Include="VerificaPT\WBC-1015_Erogazione PT - Copy.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>WBC-1015_Erogazione PT - Copy.feature.cs</LastGenOutput>
+    </None>
+    <None Include="VerificaPT\WBC-1048_Verifica_Presenza_PT_ConAnnulloErogazioni.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>WBC-1048_Verifica_Presenza_PT_ConAnnulloErogazioni.feature.cs</LastGenOutput>
+    </None>
     <None Include="VerificaPT\WBC-1028_Verifica_Presenza_PT_ConErogazioni.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>WBC-1028_Verifica_Presenza_PT_ConErogazioni.feature.cs</LastGenOutput>
@@ -147,9 +165,9 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>WBC-1051_InoltroVerificaPT webCare-PTOnline.feature.cs</LastGenOutput>
     </None>
-    <None Include="VerificaPT\WBC-1015_Erogazione PT.feature">
+    <None Include="VerificaPT\WBC-1019_AnnulloErogazione PT.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>WBC-1015_Erogazione PT.feature.cs</LastGenOutput>
+      <LastGenOutput>WBC-1019_AnnulloErogazione PT.feature.cs</LastGenOutput>
     </None>
     <None Include="VerificaPT\WBC-1002_Verifica_Presenza_PT.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
